@@ -98,6 +98,36 @@ function ContactPage() {
             <style>{`.field-input{width:100%;border-radius:0.75rem;border:1px solid var(--color-border);background:var(--color-cream);padding:0.75rem 1rem;font-size:0.875rem;color:var(--color-foreground);outline:none;transition:border-color .15s}.field-input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 18%, transparent)}`}</style>
           </form>
         </div>
+
+        {/* Transparent Pricing */}
+        <div className="mt-20 text-center">
+          <div className="eyebrow">Transparent Pricing</div>
+          <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">
+            Investment in Your Health
+          </h2>
+        </div>
+        <div className="mt-10 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { name: "Free Consultation", time: "15–20 min", price: "Free", desc: "Phone or video call to discuss your needs", featured: false },
+            { name: "Initial Session", time: "60+ min", price: "$200", desc: "Comprehensive in-home evaluation & treatment", featured: true },
+            { name: "Follow-Up", time: "50 min", price: "$150", desc: "Continued in-home therapy session", featured: false },
+            { name: "Telehealth", time: "60 min", price: "$85", desc: "Video session from anywhere in California", featured: false },
+          ].map((p) => (
+            <div
+              key={p.name}
+              className={`ring-soft rounded-2xl p-6 text-center transition-transform hover:-translate-y-1 ${
+                p.featured
+                  ? "bg-primary text-primary-foreground"
+                  : "border border-border bg-card text-foreground"
+              }`}
+            >
+              <div className={`font-display text-lg font-semibold ${p.featured ? "" : "text-foreground"}`}>{p.name}</div>
+              <div className={`mt-1 text-sm ${p.featured ? "text-primary-foreground/80" : "text-muted-foreground"}`}>{p.time}</div>
+              <div className={`mt-5 font-display text-5xl font-semibold ${p.featured ? "" : "text-primary"}`}>{p.price}</div>
+              <p className={`mt-4 text-sm ${p.featured ? "text-primary-foreground/85" : "text-muted-foreground"}`}>{p.desc}</p>
+            </div>
+          ))}
+        </div>
       </section>
     </>
   );
