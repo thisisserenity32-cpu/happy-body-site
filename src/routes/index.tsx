@@ -20,11 +20,17 @@ export const Route = createFileRoute("/")({
 });
 
 const clients = [
-  { name: "Georges St-Pierre", tag: "MMA / UFC", note: "3× UFC Welterweight Champion", img: "https://images.unsplash.com/photo-1583473848882-f9a5bc7fd2ee?auto=format&fit=crop&w=900&q=80" },
-  { name: "Jon Jones", tag: "MMA / UFC", note: "UFC Light Heavyweight Champion", img: "https://images.unsplash.com/photo-1547347298-4074fc3086f0?auto=format&fit=crop&w=900&q=80" },
-  { name: "Rashad Evans", tag: "MMA / UFC", note: "UFC Light Heavyweight Champion", img: "https://images.unsplash.com/photo-1509824227185-9c5a01ceba0d?auto=format&fit=crop&w=900&q=80" },
-  { name: "Kris Letang", tag: "NHL Hockey", note: "2× Stanley Cup Champion", img: "https://images.unsplash.com/photo-1515703407324-5f51d2ad8423?auto=format&fit=crop&w=900&q=80" },
-  { name: "Jean Pascal", tag: "Boxing", note: "World Boxing Champion", img: "https://images.unsplash.com/photo-1549719386-74dfcbf7dbed?auto=format&fit=crop&w=900&q=80" },
+  { name: "Jonathan Chaimberg", tag: "Strength & Conditioning Coach", note: "Mentor — Owner of Adrenaline Performance Center, Montreal", img: "https://static.wixstatic.com/media/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg" },
+  { name: "Voráček & Letang", tag: "NHL — Ice Hockey", note: "Philadelphia Flyers · 2× Stanley Cup Champion", img: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg" },
+  { name: "Firas Zahabi & GSP", tag: "Tristar Gym — UFC", note: "3× UFC Welterweight Champion", img: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg" },
+  { name: "Chad Laprise", tag: "UFC — Mixed Martial Arts", note: "Winner — The Ultimate Fighter Nations", img: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg" },
+  { name: "Jiří Hudler", tag: "NHL — Ice Hockey", note: "Calgary Flames · Detroit Red Wings", img: "https://static.wixstatic.com/media/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg" },
+  { name: "Jean Pascal", tag: "Boxing — Professional", note: "World Boxing Champion", img: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg" },
+  { name: "Cheick Kongo", tag: "MMA — Professional", note: "Heavyweight MMA & Kickboxing", img: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg" },
+  { name: "Alex Garcia", tag: "UFC — Mixed Martial Arts", note: "'Dominican Nightmare' — UFC Welterweight", img: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg" },
+  { name: "Rory MacDonald", tag: "UFC — Mixed Martial Arts", note: "Bellator Welterweight Champion — 'The Red King'", img: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg" },
+  { name: "Kris Letang", tag: "NHL — Pittsburgh Penguins", note: "2× Stanley Cup Champion Defenseman", img: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg" },
+  { name: "Pascal & Chris Byrd", tag: "Boxing — World Champions", note: "Former IBF/WBO Heavyweight Champion", img: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg" },
 ];
 
 const treatments = [
