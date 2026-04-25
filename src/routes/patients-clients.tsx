@@ -44,9 +44,6 @@ const featured: FeaturedCard[] = [
   { src: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg",
     alt: "Cheick Kongo", badge: "MMA — Professional", name: "Cheick Kongo",
     description: "MMA Professional Fighter and former Kickboxer. A powerful heavyweight competitor with a long career in professional MMA and kickboxing." },
-  { src: "https://static.wixstatic.com/media/64b1f1_332512f85b5b41299ec930f589e64470~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_332512f85b5b41299ec930f589e64470~mv2.jpg",
-    alt: "Group photo APC Montreal", badge: "Adrenaline Performance Center", name: "APC Montreal",
-    description: "Group photo from Adrenaline Performance Center in Montreal — where Dr. Uriah trained alongside elite world-class athletes." },
   { src: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg",
     alt: "Alex Garcia", badge: "UFC — Mixed Martial Arts", name: "Alex Garcia",
     description: "'Dominican Nightmare' — Dominican-Canadian MMA fighter competing in the UFC Welterweight division. Known for his aggressive power striking." },
@@ -70,15 +67,11 @@ const featured: FeaturedCard[] = [
 type ExtraImage = { src: string; alt: string; height: number };
 
 const extras: ExtraImage[] = [
-  { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg", alt: "APC training moment", height: 280 },
-  { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg", alt: "APC elite training", height: 320 },
   { src: "https://static.wixstatic.com/media/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg", alt: "APC Montreal session", height: 280 },
   { src: "https://static.wixstatic.com/media/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg", alt: "APC athletes", height: 340 },
   { src: "https://static.wixstatic.com/media/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg", alt: "APC performance training", height: 280 },
   { src: "https://static.wixstatic.com/media/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg", alt: "APC group training", height: 300 },
   { src: "https://static.wixstatic.com/media/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg/v1/fill/w_450,h_563,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg", alt: "APC Montreal group photo", height: 360 },
-  { src: "https://static.wixstatic.com/media/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg", alt: "APC elite athletes training", height: 300 },
-  { src: "https://static.wixstatic.com/media/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg/v1/fill/w_450,h_563,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg", alt: "APC performance center session", height: 360 },
   { src: "https://static.wixstatic.com/media/64b1f1_fb6c975027644fa18e32dd77d221257a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_fb6c975027644fa18e32dd77d221257a~mv2.jpg", alt: "APC training floor", height: 280 },
   { src: "https://static.wixstatic.com/media/64b1f1_5f688eed99a4412ba8537a92852d7534~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_5f688eed99a4412ba8537a92852d7534~mv2.jpg", alt: "APC athletes working out", height: 300 },
   { src: "https://static.wixstatic.com/media/64b1f1_bad2e55a19b747be8dfbd7ec941cab60~mv2.jpg/v1/fill/w_450,h_601,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_bad2e55a19b747be8dfbd7ec941cab60~mv2.jpg", alt: "APC performance moment", height: 360 },
