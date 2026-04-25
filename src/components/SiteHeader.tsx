@@ -40,20 +40,22 @@ export function SiteHeader() {
           ))}
         </nav>
 
-        <Link
-          to="/contact"
-          className="hidden rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-[1.02] lg:inline-flex"
-        >
-          Start Your Recovery
-        </Link>
+        <div className="flex items-center gap-2">
+          <Link
+            to="/contact"
+            className="rounded-full bg-primary px-4 py-2 text-xs font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-[1.02] sm:px-5 sm:py-2.5 sm:text-sm"
+          >
+            Start Your Recovery
+          </Link>
 
-        <button
-          aria-label="Toggle menu"
-          onClick={() => setOpen((v) => !v)}
-          className="rounded-full p-2 text-foreground hover:bg-primary-soft lg:hidden"
-        >
-          {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
-        </button>
+          <button
+            aria-label="Toggle menu"
+            onClick={() => setOpen((v) => !v)}
+            className="rounded-full p-2 text-foreground hover:bg-primary-soft lg:hidden"
+          >
+            {open ? <X className="h-5 w-5" /> : <Menu className="h-5 w-5" />}
+          </button>
+        </div>
       </div>
 
       {open && (

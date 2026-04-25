@@ -140,12 +140,6 @@ export function InteractiveGuide() {
 
           {/* Figure */}
           <div className="relative order-1 mx-auto h-[420px] w-[280px] rounded-2xl border border-border bg-white md:order-2 md:h-[460px] md:w-[320px]">
-            <Link
-              to="/contact"
-              className="absolute right-3 top-3 z-10 rounded-full bg-primary px-3 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-105"
-            >
-              Start Your Recovery
-            </Link>
             <img src={figure} alt="Body diagram" className="h-full w-full object-contain p-4" />
           </div>
 
