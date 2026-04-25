@@ -51,8 +51,8 @@ function HomePage() {
     <>
       <Hero />
       <CertificationsBar />
-      <ClientsCarousel />
       <InteractiveGuide />
+      <ClientsCarousel />
       <AboutPreview />
       <WhatWeTreat />
       <HowWeServe />
