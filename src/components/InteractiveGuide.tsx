@@ -148,25 +148,14 @@ export function InteractiveGuide() {
           </div>
 
           {/* Figure */}
-          <div className="relative order-1 mx-auto h-[420px] w-[280px] rounded-2xl border border-border bg-card md:order-2 md:h-[460px] md:w-[320px]">
+          <div className="relative order-1 mx-auto h-[420px] w-[280px] rounded-2xl border border-border bg-white md:order-2 md:h-[460px] md:w-[320px]">
+            <Link
+              to="/contact"
+              className="absolute right-3 top-3 z-10 rounded-full bg-primary px-3 py-1.5 text-[11px] font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-105"
+            >
+              Start Your Recovery
+            </Link>
             <img src={figure} alt="Body diagram" className="h-full w-full object-contain p-4" />
-            {regions.map((r) => {
-              const pos = hotspots[r.id];
-              const isActive = active === r.id;
-              return (
-                <button
-                  key={r.id}
-                  onClick={() => setActive(r.id)}
-                  aria-label={r.label}
-                  className={`absolute -translate-x-1/2 -translate-y-1/2 rounded-full transition-all ${
-                    isActive
-                      ? "h-5 w-5 bg-primary ring-4 ring-primary/25"
-                      : "h-4 w-4 bg-accent ring-2 ring-cream hover:scale-125"
-                  }`}
-                  style={{ top: pos.top, left: pos.left }}
-                />
-              );
-            })}
           </div>
 
           {/* Right labels */}
