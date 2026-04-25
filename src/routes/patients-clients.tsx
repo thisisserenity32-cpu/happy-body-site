@@ -1,59 +1,105 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { useEffect, useState } from "react";
-import { User, Camera, X, ChevronLeft, ChevronRight } from "lucide-react";
+import { useEffect, useRef, useState } from "react";
+import { X, ChevronLeft, ChevronRight } from "lucide-react";
 
 export const Route = createFileRoute("/patients-clients")({
   head: () => ({
     meta: [
       { title: "Patients & Clients — Absolute PT South Bay" },
-      { name: "description", content: "Dr. Uriah has trained alongside UFC champions, Stanley Cup winners, and world boxing champions. A glimpse into that journey." },
-      { property: "og:title", content: "Patients & Clients — Absolute PT South Bay" },
-      { property: "og:description", content: "Elite athletes, champions, and legends Dr. Uriah has trained alongside." },
+      { name: "description", content: "Dr. Uriah trained alongside UFC champions, NHL stars, and boxing legends at the Adrenaline Performance Center in Montreal." },
+      { property: "og:title", content: "Trained Alongside Legends — Absolute PT South Bay" },
+      { property: "og:description", content: "UFC Champions, NHL Stars, Boxing Legends — Dr. Uriah's journey through elite athletic performance." },
     ],
   }),
   component: PatientsClientsPage,
 });
 
-type Athlete = { badge: string; name: string; description: string };
+type FeaturedCard = {
+  src: string;
+  alt: string;
+  badge: string;
+  name: string;
+  description: string;
+};
 
-const athletes: Athlete[] = [
-  { badge: "Strength & Conditioning Coach", name: "Jonathan Chaimberg",
-    description: "Dr. Uriah's mentor and one of the most renowned Strength & Conditioning coaches in the world. Jonathan Chaimberg is the President and Owner of Adrenaline Performance Center (APC) in Montreal, Quebec — a facility specialising in athletic performance enhancement for top-level athletes. On the short list of world-class athletes J.C. has worked with are UFC legends and champions including Georges St-Pierre, Rashad Evans, Shane Carwin, and Jon Jones." },
-  { badge: "UFC — Mixed Martial Arts", name: "Georges St-Pierre (GSP)",
-    description: "Often referred to as GSP and Rush, Georges St-Pierre is a retired Canadian mixed martial artist and the former 3-time Welterweight Champion of the Ultimate Fighting Championship. Widely regarded as one of the greatest MMA fighters of all time. Dr. Uriah had the privilege of being in the same performance environment as GSP during his time at Adrenaline Performance Center, trained under coach Jonathan Chaimberg and Firas Zahabi at Tristar Gym in Montreal." },
-  { badge: "UFC — Mixed Martial Arts", name: "Rashad Evans",
-    description: "Former UFC Light Heavyweight Champion known for his explosive power, elite wrestling base, and fierce competitive spirit. Rashad trained at the Adrenaline Performance Center in Montreal under Jonathan Chaimberg." },
-  { badge: "UFC — Mixed Martial Arts", name: "Shane Carwin",
-    description: "Former UFC Interim Heavyweight Champion and one of the hardest punchers in UFC history. Shane trained at the Adrenaline Performance Center in Montreal under Jonathan Chaimberg alongside Dr. Uriah." },
-  { badge: "UFC — Mixed Martial Arts", name: "Jon Jones",
-    description: "UFC Light Heavyweight Champion and one of the most dominant fighters in UFC history. Known for his extraordinary reach, creative striking, and unmatched grappling. Jon trained at the Adrenaline Performance Center in Montreal." },
-  { badge: "NHL — Ice Hockey", name: "Jakub Voráček",
-    description: "Czech professional ice hockey right winger who played for the Philadelphia Flyers of the National Hockey League. Drafted seventh overall by the Columbus Blue Jackets at the 2007 NHL Entry Draft. Trained under Jonathan Chaimberg at the Adrenaline Performance Center in Montreal, alongside Dr. Uriah." },
-  { badge: "NHL — Ice Hockey", name: "Kris Letang",
-    description: "2x Stanley Cup Champion Kristopher Allen Letang is a Canadian professional ice hockey defenseman currently playing for the Pittsburgh Penguins of the National Hockey League. One of the most elite blue-liners of his generation. Trained at Adrenaline Performance Center in Montreal under Jonathan Chaimberg." },
-  { badge: "NHL — Ice Hockey", name: "Jiří Hudler",
-    description: "Czech professional ice hockey player who played for the Calgary Flames and Detroit Red Wings of the National Hockey League. Trained at the Adrenaline Performance Center in Montreal under Jonathan Chaimberg alongside Dr. Uriah." },
-  { badge: "Tristar Gym — MMA & Kickboxing", name: "Firas Zahabi",
-    description: "Owner and Head Instructor at the legendary Tristar Fight Gym in Montreal — one of the most famous MMA gyms in the world. Former world kickboxing champion. Dr. Uriah thanks Firas and his brother Aiemann Zahabi for their guidance and the opportunity to be part of the Tristar environment." },
-  { badge: "UFC — Mixed Martial Arts", name: "Chad Laprise",
-    description: "Canadian mixed martial artist competing in the UFC Lightweight division. Winner of The Ultimate Fighter Nations: Canada vs. Australia. Chad trained at the Adrenaline Performance Center in Montreal under Jonathan Chaimberg." },
-  { badge: "Boxing — Professional", name: "Jean Pascal",
-    description: "Former Canadian Professional World Boxing Champion renowned for his speed, power, and elite conditioning. Jean Pascal trained at the Adrenaline Performance Center in Montreal." },
-  { badge: "Boxing — Professional", name: "Chris Byrd",
-    description: "Former IBF and WBO Heavyweight Champion of the World, known for his exceptional defensive boxing technique and movement. Pictured alongside Jean Pascal. Boxing Champions Jean Pascal and Chris Byrd." },
-  { badge: "UFC — Mixed Martial Arts", name: "Alex Garcia",
-    description: "Alex Garcia — 'Dominican Nightmare' — is a Dominican-Canadian mixed martial artist competing in the Welterweight division of the UFC. Known for his aggressive style and powerful striking." },
-  { badge: "UFC — Mixed Martial Arts", name: "Rory MacDonald",
-    description: "Canadian mixed martial artist signed with the UFC in the Welterweight division. Former King of the Cage and Bellator Welterweight Champion, known as 'The Red King.' One of the most technically gifted welterweights of his era." },
-  { badge: "MMA — Professional", name: "Nordine Taleb",
-    description: "French professional mixed martial artist and professional MMA competitor since 2007. Most known for competing in Bellator Fighting Championships and participating in the Bellator Season 7 Welterweight Tournament." },
-  { badge: "MMA — Fighter & Coach", name: "Antoni McKee",
-    description: "MMA Professional Fighter and Coach Antoni McKee — a highly skilled fighter and trainer connected to the elite performance world Dr. Uriah was part of during his time in Montreal." },
-  { badge: "MMA — Professional", name: "Cheick Kongo",
-    description: "MMA Professional Fighter and former Kickboxer Cheick Kongo — a powerful and durable heavyweight competitor with a long career in professional mixed martial arts and kickboxing." },
+const featured: FeaturedCard[] = [
+  { src: "https://static.wixstatic.com/media/64b1f1_f30b39d12e1e4cc7b1b046aca931864c~mv2.jpeg/v1/fill/w_270,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_f30b39d12e1e4cc7b1b046aca931864c~mv2.jpeg",
+    alt: "Dr. Uriah Maimone", badge: "Physical Therapist · DPT CSCS", name: "Dr. Uriah J. Maimone",
+    description: "Board Certified Doctor of Physical Therapy, CSCS, and EP-C. South Bay native and owner of Absolute PT South Bay." },
+  { src: "https://static.wixstatic.com/media/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg",
+    alt: "Dr. Uriah with Jonathan Chaimberg", badge: "Strength & Conditioning Coach", name: "Jonathan Chaimberg",
+    description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
+  { src: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg",
+    alt: "Jakub Voracek and Kris Letang", badge: "NHL — Ice Hockey", name: "Voráček & Letang",
+    description: "Jakub Voráček (Far Left) — Philadelphia Flyers, 7th overall pick 2007 Draft. Kris Letang (Far Right) — 2x Stanley Cup Champion, Pittsburgh Penguins." },
+  { src: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg",
+    alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym — UFC", name: "Firas Zahabi & GSP",
+    description: "Firas Zahabi — Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre — retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
+  { src: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg",
+    alt: "Chad Laprise", badge: "UFC — Mixed Martial Arts", name: "Chad Laprise",
+    description: "Canadian MMA fighter competing in the UFC Lightweight division. Winner of The Ultimate Fighter Nations: Canada vs. Australia." },
+  { src: "https://static.wixstatic.com/media/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg",
+    alt: "Jiri Hudler", badge: "NHL — Ice Hockey", name: "Jiří Hudler",
+    description: "Czech professional ice hockey player with the Calgary Flames of the National Hockey League." },
+  { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg",
+    alt: "Jean Pascal", badge: "Boxing — Professional", name: "Jean Pascal",
+    description: "Former Canadian Professional World Boxing Champion. Renowned for his speed, power, and elite conditioning." },
+  { src: "https://static.wixstatic.com/media/64b1f1_8c531ebe9506473ab18fa23404e775bb~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8c531ebe9506473ab18fa23404e775bb~mv2.jpg",
+    alt: "Jean Pascal additional", badge: "Boxing — Professional", name: "Jean Pascal",
+    description: "Former Canadian Professional World Boxing Champion. Trained at Adrenaline Performance Center in Montreal." },
+  { src: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg",
+    alt: "Cheick Kongo", badge: "MMA — Professional", name: "Cheick Kongo",
+    description: "MMA Professional Fighter and former Kickboxer. A powerful heavyweight competitor with a long career in professional MMA and kickboxing." },
+  { src: "https://static.wixstatic.com/media/64b1f1_332512f85b5b41299ec930f589e64470~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_332512f85b5b41299ec930f589e64470~mv2.jpg",
+    alt: "Group photo APC Montreal", badge: "Adrenaline Performance Center", name: "APC Montreal",
+    description: "Group photo from Adrenaline Performance Center in Montreal — where Dr. Uriah trained alongside elite world-class athletes." },
+  { src: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg",
+    alt: "Alex Garcia", badge: "UFC — Mixed Martial Arts", name: "Alex Garcia",
+    description: "'Dominican Nightmare' — Dominican-Canadian MMA fighter competing in the UFC Welterweight division. Known for his aggressive power striking." },
+  { src: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg",
+    alt: "Rory MacDonald", badge: "UFC — Mixed Martial Arts", name: "Rory MacDonald",
+    description: "Canadian MMA fighter signed with the UFC Welterweight division. Former King of the Cage and Bellator Welterweight Champion — 'The Red King.'" },
+  { src: "https://static.wixstatic.com/media/64b1f1_3c5a787ed95d488fbfd3475599bf3f85~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_3c5a787ed95d488fbfd3475599bf3f85~mv2.jpg",
+    alt: "Nordine Taleb", badge: "Bellator MMA", name: "Nordine Taleb",
+    description: "French professional MMA fighter. Competed in Bellator Fighting Championships and the Bellator Season 7 Welterweight Tournament." },
+  { src: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg",
+    alt: "Kris Letang", badge: "NHL — Pittsburgh Penguins", name: "Kris Letang",
+    description: "2x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins — one of the NHL's most elite blue-liners." },
+  { src: "https://static.wixstatic.com/media/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg",
+    alt: "Kris Letang additional", badge: "NHL — Pittsburgh Penguins", name: "Kris Letang",
+    description: "2x Stanley Cup Champion Kris Letang — one of the greatest defensemen of his generation in the NHL." },
+  { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg",
+    alt: "Jean Pascal and Chris Byrd", badge: "Boxing — World Champions", name: "Pascal & Chris Byrd",
+    description: "Boxing Champions Jean Pascal and Chris Byrd (left to right). Chris Byrd is a former IBF and WBO Heavyweight Champion of the World." },
+  { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg",
+    alt: "Antoni McKee", badge: "MMA — Fighter & Coach", name: "Antoni McKee",
+    description: "MMA Professional Fighter and Coach Antoni McKee — a highly skilled fighter connected to the elite performance world Dr. Uriah was part of in Montreal." },
 ];
 
-const aspectRatios = ["1/1","3/4","1/1","4/3","3/4","1/1","4/3","1/1","3/4","1/1","1/1","4/3","3/4","1/1","4/3","1/1"];
+type ExtraImage = { src: string; alt: string; height: number };
+
+const extras: ExtraImage[] = [
+  { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg", alt: "APC training moment", height: 280 },
+  { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg", alt: "APC elite training", height: 320 },
+  { src: "https://static.wixstatic.com/media/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg", alt: "APC Montreal session", height: 280 },
+  { src: "https://static.wixstatic.com/media/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg", alt: "APC athletes", height: 340 },
+  { src: "https://static.wixstatic.com/media/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg", alt: "APC performance training", height: 280 },
+  { src: "https://static.wixstatic.com/media/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg", alt: "APC group training", height: 300 },
+  { src: "https://static.wixstatic.com/media/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg/v1/fill/w_450,h_563,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg", alt: "APC Montreal group photo", height: 360 },
+  { src: "https://static.wixstatic.com/media/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_828fb9448b1445128237ced00837399a~mv2.jpg", alt: "APC elite athletes training", height: 300 },
+  { src: "https://static.wixstatic.com/media/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg/v1/fill/w_450,h_563,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1c28d51a4ce143e096596fd0a77f37d6~mv2.jpg", alt: "APC performance center session", height: 360 },
+  { src: "https://static.wixstatic.com/media/64b1f1_fb6c975027644fa18e32dd77d221257a~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_fb6c975027644fa18e32dd77d221257a~mv2.jpg", alt: "APC training floor", height: 280 },
+  { src: "https://static.wixstatic.com/media/64b1f1_5f688eed99a4412ba8537a92852d7534~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_5f688eed99a4412ba8537a92852d7534~mv2.jpg", alt: "APC athletes working out", height: 300 },
+  { src: "https://static.wixstatic.com/media/64b1f1_bad2e55a19b747be8dfbd7ec941cab60~mv2.jpg/v1/fill/w_450,h_601,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_bad2e55a19b747be8dfbd7ec941cab60~mv2.jpg", alt: "APC performance moment", height: 360 },
+  { src: "https://static.wixstatic.com/media/64b1f1_c5ddb26a7d564a58aab613884c2bae76~mv2.jpg/v1/fill/w_451,h_601,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c5ddb26a7d564a58aab613884c2bae76~mv2.jpg", alt: "Dr. Uriah at APC Montreal", height: 340 },
+];
+
+type LightboxItem = { src: string; alt: string; name?: string; description?: string };
+
+const allLightboxItems: LightboxItem[] = [
+  ...featured.map((f) => ({ src: f.src, alt: f.alt, name: f.name, description: f.description })),
+  ...extras.map((e) => ({ src: e.src, alt: e.alt })),
+];
 
 function PatientsClientsPage() {
   const [lightboxIdx, setLightboxIdx] = useState<number | null>(null);
@@ -62,8 +108,8 @@ function PatientsClientsPage() {
     if (lightboxIdx === null) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === "Escape") setLightboxIdx(null);
-      if (e.key === "ArrowRight") setLightboxIdx((i) => (i === null ? null : (i + 1) % aspectRatios.length));
-      if (e.key === "ArrowLeft") setLightboxIdx((i) => (i === null ? null : (i - 1 + aspectRatios.length) % aspectRatios.length));
+      if (e.key === "ArrowRight") setLightboxIdx((i) => (i === null ? null : (i + 1) % allLightboxItems.length));
+      if (e.key === "ArrowLeft") setLightboxIdx((i) => (i === null ? null : (i - 1 + allLightboxItems.length) % allLightboxItems.length));
     };
     window.addEventListener("keydown", onKey);
     document.body.style.overflow = "hidden";
@@ -77,89 +123,159 @@ function PatientsClientsPage() {
     <>
       {/* HERO */}
       <section
-        className="flex items-center justify-center px-6 py-24 text-center"
-        style={{
-          minHeight: "420px",
-          background: "linear-gradient(180deg, #0f1a12 0%, #142019 100%)",
-        }}
+        className="flex items-center justify-center px-6 py-20 text-center"
+        style={{ minHeight: "380px", background: "#0f1a12" }}
       >
         <div className="max-w-3xl">
-          <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "#1a7a4a" }}>
-            Elite Athletes · Champions · Legends
+          <div style={{ color: "#1a7a4a", fontSize: "0.74rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" }}>
+            UFC Champions · NHL Stars · Boxing Legends
           </div>
-          <h1 className="mt-5 font-display text-5xl font-extrabold leading-[1.05] text-white md:text-6xl lg:text-7xl">
-            Patients &amp; Clients
+          <h1
+            className="mt-5 font-display text-white"
+            style={{ fontWeight: 900, fontSize: "clamp(2.6rem, 5vw, 4rem)", lineHeight: 1.05 }}
+          >
+            Trained Alongside Legends
           </h1>
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-relaxed md:text-lg" style={{ color: "rgba(255,255,255,0.75)" }}>
-            Dr. Uriah has had the privilege of training alongside and working with some of the most
-            elite athletes in the world — from UFC champions to Stanley Cup winners. This is a
-            glimpse into that journey.
+          <p
+            className="mx-auto mt-6"
+            style={{ color: "rgba(255,255,255,0.7)", fontSize: "1rem", maxWidth: 580, lineHeight: 1.7 }}
+          >
+            During his time at the Adrenaline Performance Center in Montreal under world-renowned
+            coach Jonathan Chaimberg, Dr. Uriah worked alongside some of the greatest athletes in
+            combat sports and professional hockey.
           </p>
         </div>
       </section>
 
-      {/* SECTION 1 — FEATURED CARDS */}
-      <section className="bg-white" style={{ padding: "90px 7%" }}>
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "#1a7a4a" }}>
-              Trained Alongside Legends
+      {/* SECTION 1 — FEATURED GALLERY */}
+      <section style={{ background: "#ffffff", padding: "80px 6%" }}>
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="text-center">
+              <div style={{ color: "#1a7a4a", fontSize: "0.74rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" }}>
+                Clients & Connections
+              </div>
+              <h2
+                className="font-display"
+                style={{ fontWeight: 900, fontSize: "clamp(1.9rem, 3.5vw, 2.8rem)", color: "#0f1a12", marginTop: "0.6rem" }}
+              >
+                The Athletes
+              </h2>
+              <p
+                className="mx-auto"
+                style={{ color: "#566059", fontSize: "1rem", maxWidth: 560, marginTop: "1rem", marginBottom: "3.5rem", lineHeight: 1.7 }}
+              >
+                Each photo represents a real connection from Dr. Uriah's career. Click any card to
+                view the full photo.
+              </p>
             </div>
-            <h2 className="mt-3 font-display text-4xl font-extrabold md:text-5xl" style={{ color: "#0f1a12" }}>
-              Notable Athletes &amp; Connections
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "#566059" }}>
-              During his time at the Adrenaline Performance Center in Montreal under coach
-              Jonathan Chaimberg, Dr. Uriah trained alongside and supported some of the greatest
-              combat sports and hockey athletes on the planet.
-            </p>
+          </Reveal>
+
+          <div
+            className="grid"
+            style={{
+              background: "#c8e6d4",
+              gap: "1.5px",
+              gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
+            }}
+          >
+            <style>{`
+              @media (min-width: 480px) { .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+              @media (min-width: 768px) { .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+              @media (min-width: 1280px) { .featured-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
+              .featured-card:hover .card-desc { opacity: 1; transform: translateY(0); }
+              .extras-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+              @media (min-width: 480px) { .extras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+              @media (min-width: 768px) { .extras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+              @media (min-width: 1280px) { .extras-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+              .extra-tile img { transition: transform 0.22s ease, filter 0.22s ease; }
+              .extra-tile:hover img { transform: scale(1.02); filter: brightness(1.15); }
+            `}</style>
           </div>
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
-            {athletes.map((a) => (
-              <AthleteCard key={a.name} athlete={a} />
+          <div
+            className="featured-grid grid"
+            style={{ background: "#c8e6d4", gap: "1.5px", gridTemplateColumns: "repeat(1, minmax(0, 1fr))" }}
+          >
+            {featured.map((card, i) => (
+              <Reveal key={card.src + i} delay={i * 60}>
+                <FeaturedCardEl card={card} onClick={() => setLightboxIdx(i)} />
+              </Reveal>
             ))}
           </div>
         </div>
       </section>
 
-      {/* SECTION 2 — GALLERY */}
-      <section style={{ background: "#0f1a12", padding: "90px 7%" }}>
-        <div className="mx-auto max-w-6xl">
-          <div className="text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.18em]" style={{ color: "#1a7a4a" }}>
-              Behind the Scenes
-            </div>
-            <h2 className="mt-3 font-display text-4xl font-extrabold text-white md:text-5xl">
-              More From the Journey
-            </h2>
-            <p className="mx-auto mt-4 max-w-2xl text-base leading-relaxed" style={{ color: "rgba(255,255,255,0.65)" }}>
-              Additional moments from Dr. Uriah's time training alongside elite athletes at the
-              Adrenaline Performance Center in Montreal and beyond.
-            </p>
-          </div>
-
-          <div className="mt-12 columns-1 gap-4 sm:columns-2 lg:columns-3">
-            {aspectRatios.map((ratio, i) => (
-              <button
-                key={i}
-                onClick={() => setLightboxIdx(i)}
-                className="group mb-4 block w-full overflow-hidden rounded-lg border transition-all hover:brightness-125"
-                style={{
-                  aspectRatio: ratio,
-                  background: "rgba(255,255,255,0.06)",
-                  borderColor: "rgba(255,255,255,0.1)",
-                }}
-                onMouseEnter={(e) => (e.currentTarget.style.borderColor = "rgba(26,122,74,0.6)")}
-                onMouseLeave={(e) => (e.currentTarget.style.borderColor = "rgba(255,255,255,0.1)")}
+      {/* SECTION 2 — ADDITIONAL PHOTOS */}
+      <section style={{ background: "#0f1a12", padding: "80px 6%" }}>
+        <div className="mx-auto max-w-7xl">
+          <Reveal>
+            <div className="text-center">
+              <div style={{ color: "#1a7a4a", fontSize: "0.74rem", fontWeight: 700, letterSpacing: "0.16em", textTransform: "uppercase" }}>
+                Behind the Scenes
+              </div>
+              <h2
+                className="font-display text-white"
+                style={{ fontWeight: 900, fontSize: "clamp(1.8rem, 3vw, 2.6rem)", marginTop: "0.6rem" }}
               >
-                <div className="flex h-full w-full flex-col items-center justify-center gap-2">
-                  <Camera className="h-12 w-12" style={{ color: "rgba(255,255,255,0.2)" }} />
-                  <div className="text-[0.65rem]" style={{ color: "rgba(255,255,255,0.35)" }}>
-                    Photo Placeholder
+                More From the Training Floor
+              </h2>
+              <p
+                className="mx-auto"
+                style={{ color: "rgba(255,255,255,0.6)", fontSize: "0.95rem", marginTop: "1rem", marginBottom: "3rem", maxWidth: 560, lineHeight: 1.7 }}
+              >
+                Additional moments from Dr. Uriah's time training alongside elite athletes at the
+                Adrenaline Performance Center in Montreal and beyond.
+              </p>
+            </div>
+          </Reveal>
+
+          <div
+            className="extras-grid grid"
+            style={{ background: "#1a3020", gap: "3px" }}
+          >
+            {extras.map((ex, i) => (
+              <Reveal key={ex.src + i} delay={i * 60}>
+                <button
+                  onClick={() => setLightboxIdx(featured.length + i)}
+                  className="extra-tile block w-full overflow-hidden"
+                  style={{ cursor: "pointer", padding: 0, border: 0, background: "#0f1a12" }}
+                  aria-label={ex.alt}
+                >
+                  <img
+                    src={ex.src}
+                    alt={ex.alt}
+                    loading="lazy"
+                    style={{
+                      display: "block",
+                      width: "100%",
+                      height: `${ex.height}px`,
+                      objectFit: "cover",
+                      objectPosition: "center top",
+                    }}
+                    onError={(e) => {
+                      const t = e.currentTarget;
+                      t.style.display = "none";
+                      const fb = t.nextElementSibling as HTMLElement | null;
+                      if (fb) fb.style.display = "flex";
+                    }}
+                  />
+                  <div
+                    style={{
+                      display: "none",
+                      width: "100%",
+                      height: `${ex.height}px`,
+                      background: "#0f1a12",
+                      color: "white",
+                      alignItems: "center",
+                      justifyContent: "center",
+                      fontSize: "0.85rem",
+                    }}
+                  >
+                    Photo
                   </div>
-                </div>
-              </button>
+                </button>
+              </Reveal>
             ))}
           </div>
         </div>
@@ -168,32 +284,35 @@ function PatientsClientsPage() {
       {/* SECTION 3 — CTA */}
       <section className="text-center" style={{ background: "#1a7a4a", padding: "90px 7%" }}>
         <div className="mx-auto max-w-2xl">
-          <div className="text-xs font-bold uppercase text-white" style={{ letterSpacing: "0.14em", opacity: 0.75, fontSize: "0.78rem" }}>
+          <div style={{ color: "white", fontSize: "0.74rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.72 }}>
             Your Story Starts Here
           </div>
-          <h2 className="mt-4 font-display font-extrabold text-white" style={{ fontSize: "clamp(2rem, 4vw, 3.2rem)", lineHeight: 1.1 }}>
-            The Next Chapter Is<br />
-            <span className="italic">Yours.</span>
+          <h2
+            className="font-display text-white"
+            style={{ fontWeight: 900, fontSize: "clamp(2rem, 4vw, 3.2rem)", marginTop: "1rem", lineHeight: 1.1 }}
+          >
+            With Future Patients<br />
+            <span className="italic">Like You.</span>
           </h2>
           <p
-            className="mx-auto mt-6 text-center"
-            style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.05rem", lineHeight: 1.88, maxWidth: 560 }}
+            className="mx-auto"
+            style={{ color: "rgba(255,255,255,0.85)", fontSize: "1.02rem", maxWidth: 540, margin: "1.5rem auto 2.5rem", lineHeight: 1.9 }}
           >
-            Every athlete and patient you've seen on this page started exactly where you are now.
-            Whether you're recovering from injury, preparing for surgery, managing a chronic
-            condition, or simply looking to move and feel better — Dr. Uriah is ready to build a
-            plan around you.
+            Every person on this page started exactly where you are right now. Whether you're
+            recovering from injury, preparing for surgery, managing chronic pain, or looking to
+            move and perform better — Dr. Uriah builds a plan around you specifically.
             <br /><br />
             Join the roster of people who trusted Absolute PT South Bay with their health, their
             performance, and their future.
           </p>
 
-          <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <div className="flex flex-col items-center justify-center sm:flex-row" style={{ gap: "0.8rem" }}>
             <Link
               to="/contact"
-              className="rounded-full font-bold transition-all"
               style={{
-                background: "white", color: "#1a7a4a", padding: "1rem 2.4rem", fontSize: "0.95rem",
+                background: "white", color: "#1a7a4a", fontWeight: 700, fontSize: "0.95rem",
+                padding: "1rem 2.4rem", borderRadius: "50px", transition: "all 0.2s ease",
+                display: "inline-block",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.background = "#f3f7f4"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "white"; e.currentTarget.style.transform = "translateY(0)"; }}
@@ -202,21 +321,21 @@ function PatientsClientsPage() {
             </Link>
             <Link
               to="/about"
-              className="rounded-full font-bold text-white transition-all"
               style={{
-                background: "transparent",
-                border: "2px solid rgba(255,255,255,0.55)",
-                padding: "0.95rem 2.2rem", fontSize: "0.92rem",
+                background: "transparent", color: "white", fontWeight: 700, fontSize: "0.92rem",
+                padding: "0.95rem 2.2rem", borderRadius: "50px",
+                border: "2px solid rgba(255,255,255,0.5)", transition: "all 0.2s ease",
+                display: "inline-block",
               }}
               onMouseEnter={(e) => { e.currentTarget.style.borderColor = "white"; e.currentTarget.style.background = "rgba(255,255,255,0.1)"; }}
-              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.55)"; e.currentTarget.style.background = "transparent"; }}
+              onMouseLeave={(e) => { e.currentTarget.style.borderColor = "rgba(255,255,255,0.5)"; e.currentTarget.style.background = "transparent"; }}
             >
               Learn About Dr. Uriah
             </Link>
           </div>
 
-          <p className="mt-5 italic text-white" style={{ opacity: 0.65, fontSize: "0.82rem" }}>
-            Free 15–20 minute consultation — no commitment, no pressure.
+          <p className="italic text-white" style={{ opacity: 0.6, fontSize: "0.8rem", marginTop: "1.2rem" }}>
+            Free 15–20 minute consultation — no commitment required.
           </p>
         </div>
       </section>
@@ -225,48 +344,52 @@ function PatientsClientsPage() {
       {lightboxIdx !== null && (
         <div
           className="fixed inset-0 z-[100] flex items-center justify-center animate-fade-in"
-          style={{ background: "rgba(0,0,0,0.95)" }}
+          style={{ background: "rgba(0,0,0,0.96)", padding: "2rem" }}
           onClick={() => setLightboxIdx(null)}
         >
           <button
             onClick={(e) => { e.stopPropagation(); setLightboxIdx(null); }}
-            className="absolute right-6 top-6 text-white"
-            style={{ fontSize: "2rem" }}
+            className="absolute top-4 right-6 text-white"
+            style={{ fontSize: "2.5rem", lineHeight: 1, background: "transparent", border: 0, cursor: "pointer" }}
             aria-label="Close"
           >
-            <X className="h-8 w-8" />
+            <X className="h-10 w-10" />
           </button>
           <button
-            onClick={(e) => { e.stopPropagation(); setLightboxIdx((i) => (i === null ? null : (i - 1 + aspectRatios.length) % aspectRatios.length)); }}
-            className="absolute left-4 text-white md:left-8"
+            onClick={(e) => { e.stopPropagation(); setLightboxIdx((i) => (i === null ? null : (i - 1 + allLightboxItems.length) % allLightboxItems.length)); }}
+            className="absolute left-4 top-1/2 -translate-y-1/2 text-white md:left-8"
+            style={{ background: "transparent", border: 0, cursor: "pointer" }}
             aria-label="Previous"
           >
-            <ChevronLeft className="h-10 w-10" />
+            <ChevronLeft className="h-12 w-12" />
           </button>
           <button
-            onClick={(e) => { e.stopPropagation(); setLightboxIdx((i) => (i === null ? null : (i + 1) % aspectRatios.length)); }}
-            className="absolute right-4 text-white md:right-8"
+            onClick={(e) => { e.stopPropagation(); setLightboxIdx((i) => (i === null ? null : (i + 1) % allLightboxItems.length)); }}
+            className="absolute right-4 top-1/2 -translate-y-1/2 text-white md:right-8"
+            style={{ background: "transparent", border: 0, cursor: "pointer" }}
             aria-label="Next"
-            style={{ top: "50%" }}
           >
-            <ChevronRight className="h-10 w-10" />
+            <ChevronRight className="h-12 w-12" />
           </button>
-          <div
-            className="flex items-center justify-center rounded-lg border"
-            style={{
-              width: "min(80vw, 700px)",
-              aspectRatio: aspectRatios[lightboxIdx],
-              background: "rgba(255,255,255,0.06)",
-              borderColor: "rgba(255,255,255,0.15)",
-            }}
-            onClick={(e) => e.stopPropagation()}
-          >
-            <div className="flex flex-col items-center gap-3">
-              <Camera className="h-20 w-20" style={{ color: "rgba(255,255,255,0.25)" }} />
-              <div className="text-sm" style={{ color: "rgba(255,255,255,0.5)" }}>
-                Photo {lightboxIdx + 1} of {aspectRatios.length}
+
+          <div className="flex flex-col items-center" onClick={(e) => e.stopPropagation()} style={{ maxWidth: "90vw" }}>
+            <img
+              src={allLightboxItems[lightboxIdx].src}
+              alt={allLightboxItems[lightboxIdx].alt}
+              style={{ maxHeight: "80vh", maxWidth: "90vw", objectFit: "contain", display: "block" }}
+            />
+            {allLightboxItems[lightboxIdx].name && (
+              <div className="mt-4 text-center text-white" style={{ maxWidth: 640 }}>
+                <div className="font-display" style={{ fontWeight: 700, fontSize: "1.2rem" }}>
+                  {allLightboxItems[lightboxIdx].name}
+                </div>
+                {allLightboxItems[lightboxIdx].description && (
+                  <p style={{ color: "rgba(255,255,255,0.8)", fontSize: "0.9rem", lineHeight: 1.6, marginTop: "0.5rem" }}>
+                    {allLightboxItems[lightboxIdx].description}
+                  </p>
+                )}
               </div>
-            </div>
+            )}
           </div>
         </div>
       )}
@@ -274,62 +397,110 @@ function PatientsClientsPage() {
   );
 }
 
-function AthleteCard({ athlete }: { athlete: Athlete }) {
+function FeaturedCardEl({ card, onClick }: { card: FeaturedCard; onClick: () => void }) {
+  const [errored, setErrored] = useState(false);
   return (
-    <article
-      className="flex flex-col overflow-hidden transition-all md:flex-row"
-      style={{
-        background: "#f3f7f4",
-        border: "1.5px solid #c8e6d4",
-        borderRadius: "12px",
-        transition: "all 0.22s ease",
-      }}
-      onMouseEnter={(e) => {
-        e.currentTarget.style.borderColor = "#1a7a4a";
-        e.currentTarget.style.boxShadow = "0 4px 20px rgba(26,122,74,0.12)";
-      }}
-      onMouseLeave={(e) => {
-        e.currentTarget.style.borderColor = "#c8e6d4";
-        e.currentTarget.style.boxShadow = "none";
-      }}
+    <button
+      onClick={onClick}
+      className="featured-card relative block w-full overflow-hidden text-left"
+      style={{ background: "white", padding: 0, border: 0, cursor: "pointer" }}
+      aria-label={card.name}
     >
-      <div
-        className="flex shrink-0 flex-col items-center justify-center p-6"
-        style={{
-          width: "100%",
-          minHeight: "220px",
-          background: "linear-gradient(135deg, #0f1a12 0%, #1a7a4a 100%)",
-        }}
-      >
-        <div className="md:w-[280px]">
-          <User className="mx-auto" style={{ width: 64, height: 64, color: "white", opacity: 0.3 }} />
-          <div
-            className="mt-3 text-center"
-            style={{ color: "white", opacity: 0.5, fontSize: "0.7rem" }}
-          >
-            {athlete.name}
-          </div>
-        </div>
-      </div>
-      <div className="flex-1 p-8">
-        <span
-          className="inline-block"
+      {!errored ? (
+        <img
+          src={card.src}
+          alt={card.alt}
+          loading="lazy"
+          onError={() => setErrored(true)}
           style={{
-            background: "#1a7a4a", color: "white",
-            fontSize: "0.68rem", fontWeight: 700, letterSpacing: "0.12em",
-            textTransform: "uppercase", padding: "0.3rem 0.85rem",
-            borderRadius: "50px", marginBottom: "0.6rem",
+            display: "block",
+            width: "100%",
+            height: "280px",
+            objectFit: "cover",
+            objectPosition: "center top",
+          }}
+        />
+      ) : (
+        <div
+          style={{
+            width: "100%", height: "280px", background: "#0f1a12", color: "white",
+            display: "flex", alignItems: "center", justifyContent: "center",
+            fontWeight: 700, fontSize: "1rem", padding: "0 1rem", textAlign: "center",
           }}
         >
-          {athlete.badge}
-        </span>
-        <h3 className="font-display font-extrabold" style={{ color: "#0f1a12", fontSize: "1.25rem", marginBottom: "0.5rem" }}>
-          {athlete.name}
-        </h3>
-        <p style={{ color: "#566059", fontSize: "0.92rem", lineHeight: 1.78 }}>
-          {athlete.description}
+          {card.name}
+        </div>
+      )}
+
+      <div
+        style={{
+          position: "absolute", left: 0, right: 0, bottom: 0,
+          background:
+            "linear-gradient(to top, rgba(15,26,18,0.97) 0%, rgba(15,26,18,0.85) 60%, rgba(15,26,18,0) 100%)",
+          padding: "1.4rem 1.2rem 1.2rem",
+        }}
+      >
+        <p
+          className="card-desc"
+          style={{
+            color: "rgba(255,255,255,0.82)", fontSize: "0.8rem", lineHeight: 1.6,
+            opacity: 0, transform: "translateY(6px)", transition: "all 0.25s ease",
+            display: "-webkit-box", WebkitLineClamp: 2, WebkitBoxOrient: "vertical",
+            overflow: "hidden", marginBottom: "0.5rem",
+          }}
+        >
+          {card.description}
         </p>
+        <span
+          style={{
+            background: "#1a7a4a", color: "white", fontSize: "0.62rem", fontWeight: 700,
+            letterSpacing: "0.1em", textTransform: "uppercase", padding: "0.22rem 0.7rem",
+            borderRadius: "50px", marginBottom: "0.4rem", display: "inline-block",
+          }}
+        >
+          {card.badge}
+        </span>
+        <div
+          className="font-display"
+          style={{ color: "white", fontWeight: 700, fontSize: "1rem", lineHeight: 1.2, marginTop: "0.3rem" }}
+        >
+          {card.name}
+        </div>
       </div>
-    </article>
+    </button>
+  );
+}
+
+function Reveal({ children, delay = 0 }: { children: React.ReactNode; delay?: number }) {
+  const ref = useRef<HTMLDivElement>(null);
+  const [shown, setShown] = useState(false);
+
+  useEffect(() => {
+    const el = ref.current;
+    if (!el) return;
+    const obs = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setTimeout(() => setShown(true), delay);
+          obs.disconnect();
+        }
+      },
+      { threshold: 0.07 },
+    );
+    obs.observe(el);
+    return () => obs.disconnect();
+  }, [delay]);
+
+  return (
+    <div
+      ref={ref}
+      style={{
+        opacity: shown ? 1 : 0,
+        transform: shown ? "translateY(0)" : "translateY(16px)",
+        transition: "opacity 0.65s ease, transform 0.65s ease",
+      }}
+    >
+      {children}
+    </div>
   );
 }
