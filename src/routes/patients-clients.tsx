@@ -68,9 +68,6 @@ const featured: FeaturedCard[] = [
   { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg",
     alt: "Antoni Mckee", badge: "MMA Professional Fighter and Coach", name: "Antoni Mckee",
     description: "MMA Professional Fighter and Coach Antoni Mckee — a highly skilled fighter connected to the elite performance world." },
-  { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg",
-    alt: "Antoni McKee", badge: "MMA — Fighter & Coach", name: "Antoni McKee",
-    description: "MMA Professional Fighter and Coach Antoni McKee — a highly skilled fighter connected to the elite performance world Dr. Uriah was part of in Montreal." },
 ];
 
 type ExtraImage = { src: string; alt: string; height: number };
