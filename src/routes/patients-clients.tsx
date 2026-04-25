@@ -162,27 +162,18 @@ function PatientsClientsPage() {
             </div>
           </Reveal>
 
-          <div
-            className="grid"
-            style={{
-              background: "#c8e6d4",
-              gap: "1.5px",
-              gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
-            }}
-          >
-            <style>{`
-              @media (min-width: 480px) { .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
-              @media (min-width: 768px) { .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
-              @media (min-width: 1280px) { .featured-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
-              .featured-card:hover .card-desc { opacity: 1; transform: translateY(0); }
-              .extras-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-              @media (min-width: 480px) { .extras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-              @media (min-width: 768px) { .extras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-              @media (min-width: 1280px) { .extras-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-              .extra-tile img { transition: transform 0.22s ease, filter 0.22s ease; }
-              .extra-tile:hover img { transform: scale(1.02); filter: brightness(1.15); }
-            `}</style>
-          </div>
+          <style>{`
+            @media (min-width: 480px) { .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+            @media (min-width: 768px) { .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+            @media (min-width: 1280px) { .featured-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
+            .featured-card:hover .card-desc { opacity: 1; transform: translateY(0); }
+            .extras-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            @media (min-width: 480px) { .extras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            @media (min-width: 768px) { .extras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+            @media (min-width: 1280px) { .extras-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+            .extra-tile img { transition: transform 0.22s ease, filter 0.22s ease; }
+            .extra-tile:hover img { transform: scale(1.02); filter: brightness(1.15); }
+          `}</style>
 
           <div
             className="featured-grid grid"
