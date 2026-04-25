@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import figure from "@/assets/body-figure.png";
+import figure from "@/assets/body-runner.png";
 
 type Condition = { name: string; desc: string };
 type Region = {
@@ -129,9 +129,9 @@ export function InteractiveGuide() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-5xl items-center gap-4 md:grid-cols-[1fr_auto_1fr]">
+        <div className="mx-auto mt-12 grid max-w-6xl items-center gap-5 md:grid-cols-[1fr_auto_1fr] md:gap-6">
           {/* Left labels */}
-          <div className="order-2 flex flex-col gap-3 md:order-1">
+          <div className="order-2 flex flex-col gap-4 md:order-1">
             {leftIds.map((id) => {
               const r = regions.find((x) => x.id === id)!;
               return <RegionButton key={id} region={r} active={active === id} onClick={() => setActive(id)} align="right" />;
@@ -139,12 +139,12 @@ export function InteractiveGuide() {
           </div>
 
           {/* Figure */}
-          <div className="relative order-1 mx-auto h-[420px] w-[280px] rounded-2xl border border-border bg-white md:order-2 md:h-[460px] md:w-[320px]">
+          <div className="relative order-1 mx-auto h-[480px] w-[340px] rounded-2xl border border-border bg-white md:order-2 md:h-[540px] md:w-[420px]">
             <img src={figure} alt="Body diagram" className="h-full w-full object-contain p-4" />
           </div>
 
           {/* Right labels */}
-          <div className="order-3 flex flex-col gap-3">
+          <div className="order-3 flex flex-col gap-4">
             {rightIds.map((id) => {
               const r = regions.find((x) => x.id === id)!;
               return <RegionButton key={id} region={r} active={active === id} onClick={() => setActive(id)} align="left" />;
@@ -216,13 +216,13 @@ function RegionButton({
   return (
     <button
       onClick={onClick}
-      className={`group rounded-xl border px-4 py-3 text-${align} transition-all ${
+      className={`group rounded-2xl border-2 px-6 py-5 text-${align} transition-all ${
         active
-          ? "border-primary bg-primary text-primary-foreground shadow-md"
-          : "border-border bg-card text-foreground hover:border-primary/40 hover:bg-primary-soft/40"
+          ? "border-primary bg-primary text-primary-foreground shadow-lg"
+          : "border-border bg-card text-foreground hover:border-primary/50 hover:bg-primary-soft/40 hover:shadow-md"
       }`}
     >
-      <div className="font-display text-base font-semibold">{region.label}</div>
+      <div className="font-display text-xl font-semibold md:text-2xl">{region.label}</div>
     </button>
   );
 }
