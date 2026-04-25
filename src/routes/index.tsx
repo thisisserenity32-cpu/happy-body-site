@@ -56,8 +56,57 @@ function HomePage() {
       <InteractiveGuide />
       <HowWeServe />
       <WhatWeTreat />
+      <FAQSection />
       <CTASection />
     </>
+  );
+}
+
+function FAQSection() {
+  const faqs = [
+    {
+      q: "Do I need a doctor's referral to see a physical therapist?",
+      a: "In California, you can see a physical therapist without a physician referral through direct access. However, some insurance plans may require one. We'll help guide you through the process.",
+    },
+    {
+      q: "Do you accept insurance?",
+      a: "We work with insurance through Luna Physical Therapy. Call 834-444-LUNA and request Dr. Uriah Maimone, and we'll handle verification from there.",
+    },
+    {
+      q: "What areas do you serve?",
+      a: "In-home visits across South Bay including Manhattan Beach, Hermosa Beach, Redondo Beach, Torrance, Palos Verdes, El Segundo, and surrounding cities. Telehealth is available statewide across California.",
+    },
+    {
+      q: "How long is each session?",
+      a: "Initial in-home evaluations run 60+ minutes. Follow-up sessions are 50 minutes, and telehealth visits are 60 minutes — fully personalized one-on-one with Dr. Uriah.",
+    },
+    {
+      q: "What should I expect during my first visit?",
+      a: "A comprehensive evaluation, hands-on treatment, and a personalized plan with home exercises — all in the comfort of your own space, with no commute or waiting room.",
+    },
+  ];
+  return (
+    <section className="bg-cream-deep py-20">
+      <div className="container-prose">
+        <div className="text-center">
+          <div className="eyebrow">Common Questions</div>
+          <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">
+            Frequently Asked Questions
+          </h2>
+        </div>
+        <div className="mx-auto mt-10 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
+          {faqs.map((f) => (
+            <details key={f.q} className="group p-6">
+              <summary className="flex cursor-pointer items-center justify-between gap-4 font-display text-lg font-semibold text-foreground marker:hidden [&::-webkit-details-marker]:hidden">
+                {f.q}
+                <span className="text-2xl text-primary transition-transform group-open:rotate-45">+</span>
+              </summary>
+              <p className="mt-3 text-muted-foreground">{f.a}</p>
+            </details>
+          ))}
+        </div>
+      </div>
+    </section>
   );
 }
 
