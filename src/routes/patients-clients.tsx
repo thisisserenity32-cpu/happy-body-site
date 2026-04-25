@@ -62,7 +62,7 @@ const featured: FeaturedCard[] = [
   { src: "https://static.wixstatic.com/media/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg",
     alt: "Jean Pascal and Chris Byrd", badge: "Boxing — World Champions", name: "Pascal & Chris Byrd",
     description: "Boxing Champions Jean Pascal and Chris Byrd (left to right). Chris Byrd is a former IBF and WBO Heavyweight Champion of the World." },
-  { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg",
+  { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg",
     alt: "Antoni Mckee", badge: "MMA Professional Fighter and Coach", name: "Antoni Mckee",
     description: "MMA Professional Fighter and Coach Antoni Mckee — a highly skilled fighter connected to the elite performance world." },
 ];
@@ -71,7 +71,7 @@ type ExtraImage = { src: string; alt: string; height: number };
 
 const extras: ExtraImage[] = [
   { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg", alt: "APC training moment", height: 280 },
-  { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg", alt: "APC elite training", height: 320 },
+  { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg", alt: "APC elite training", height: 320 },
   { src: "https://static.wixstatic.com/media/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg", alt: "APC Montreal session", height: 280 },
   { src: "https://static.wixstatic.com/media/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg", alt: "APC athletes", height: 340 },
   { src: "https://static.wixstatic.com/media/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg", alt: "APC performance training", height: 280 },
