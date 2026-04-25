@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { X, ArrowRight } from "lucide-react";
 import { Link } from "@tanstack/react-router";
-import figure from "@/assets/body-runner.png";
+import figure from "@/assets/body-runner.jpg";
 
 type Condition = { name: string; desc: string };
 type Region = {
