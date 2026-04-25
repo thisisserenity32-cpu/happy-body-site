@@ -3,8 +3,9 @@ import { useState } from "react";
 import heroImg from "@/assets/dr-uriah-hero.jpg";
 import portrait from "@/assets/dr-uriah-portrait.png";
 import {
-  ChevronLeft, ChevronRight, ArrowRight, Home, Video, CheckCircle2, Plus, Minus,
+  ChevronLeft, ChevronRight, ArrowRight, Home, Video, CheckCircle2,
 } from "lucide-react";
+import { InteractiveGuide } from "@/components/InteractiveGuide";
 
 export const Route = createFileRoute("/")({
   head: () => ({
@@ -203,49 +204,6 @@ function AboutPreview() {
             Learn More About Dr. Uriah <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
-      </div>
-    </section>
-  );
-}
-
-function InteractiveGuide() {
-  const [open, setOpen] = useState<string | null>("back");
-  return (
-    <section className="container-prose py-20">
-      <div className="text-center">
-        <div className="eyebrow">Interactive Guide</div>
-        <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">Where Does It Hurt?</h2>
-        <p className="mx-auto mt-3 max-w-xl text-muted-foreground">
-          Tap a region to learn what the issue feels like and how Dr. Uriah treats it.
-        </p>
-      </div>
-
-      <div className="mx-auto mt-10 max-w-3xl divide-y divide-border rounded-2xl border border-border bg-card">
-        {bodyRegions.map((r) => {
-          const isOpen = open === r.id;
-          return (
-            <div key={r.id}>
-              <button
-                onClick={() => setOpen(isOpen ? null : r.id)}
-                className="flex w-full items-center justify-between gap-4 px-6 py-5 text-left transition-colors hover:bg-primary-soft/40"
-              >
-                <span className="font-display text-xl font-semibold text-foreground">{r.label}</span>
-                <span className="rounded-full bg-primary-soft p-1.5 text-primary">
-                  {isOpen ? <Minus className="h-4 w-4" /> : <Plus className="h-4 w-4" />}
-                </span>
-              </button>
-              {isOpen && (
-                <div className="space-y-4 px-6 pb-6 text-muted-foreground">
-                  <p><span className="font-semibold text-foreground">What it is — </span>{r.desc}</p>
-                  <p><span className="font-semibold text-foreground">What it feels like — </span>{r.feels}</p>
-                  <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
-                    Talk to Dr. Uriah <ArrowRight className="h-4 w-4" />
-                  </Link>
-                </div>
-              )}
-            </div>
-          );
-        })}
       </div>
     </section>
   );
