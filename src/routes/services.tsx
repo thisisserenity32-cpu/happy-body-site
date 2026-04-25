@@ -1,5 +1,6 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight } from "lucide-react";
+import { InteractiveGuide } from "@/components/InteractiveGuide";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -59,6 +60,7 @@ function ServicesPage() {
         subtitle="Comprehensive physical therapy across 11 specialties — all delivered to your home across South Bay."
         image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
       />
+      <InteractiveGuide />
       <section className="container-prose py-20">
         <div className="grid gap-6 lg:grid-cols-2">
           {services.map((s) => (
