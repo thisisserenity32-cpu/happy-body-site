@@ -30,7 +30,7 @@ const clients = [
   { name: "Alex Garcia", tag: "UFC — Mixed Martial Arts", note: "'Dominican Nightmare' — UFC Welterweight", img: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg" },
   { name: "Rory MacDonald", tag: "UFC — Mixed Martial Arts", note: "Bellator Welterweight Champion — 'The Red King'", img: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg" },
   { name: "Kris Letang", tag: "NHL — Pittsburgh Penguins", note: "2× Stanley Cup Champion Defenseman", img: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg" },
-  { name: "Pascal & Chris Byrd", tag: "Boxing — World Champions", note: "Former IBF/WBO Heavyweight Champion", img: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg" },
+  { name: "Antoni Mckee", tag: "MMA Professional Fighter and Coach", note: "Professional MMA Fighter and Coach", img: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg" },
 ];
 
 const treatments = [
