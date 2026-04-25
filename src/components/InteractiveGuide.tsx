@@ -97,16 +97,7 @@ const regions: Region[] = [
   },
 ];
 
-// Approximate hotspot positions on the figure (% of container)
-const hotspots: Record<string, { top: string; left: string }> = {
-  neck:     { top: "14%", left: "62%" },
-  shoulder: { top: "26%", left: "55%" },
-  arm:      { top: "38%", left: "38%" },
-  back:     { top: "40%", left: "58%" },
-  hip:      { top: "52%", left: "50%" },
-  knee:     { top: "72%", left: "48%" },
-  foot:     { top: "92%", left: "38%" },
-};
+// (hotspot dots removed per design — labels flank the figure instead)
 
 export function InteractiveGuide() {
   const [active, setActive] = useState<string | null>(null);
