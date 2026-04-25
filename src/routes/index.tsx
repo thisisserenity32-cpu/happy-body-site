@@ -222,7 +222,7 @@ function ClientsCarousel() {
       </div>
 
       <div className="mt-8 flex justify-center">
-        <Link to="/about" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
+        <Link to="/patients-clients" className="inline-flex items-center gap-2 rounded-full border border-primary/20 px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
           View More <ArrowRight className="h-4 w-4" />
         </Link>
       </div>

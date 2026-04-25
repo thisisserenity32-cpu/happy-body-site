@@ -6,7 +6,7 @@ const nav = [
   { to: "/", label: "Home" },
   { to: "/services", label: "What We Treat" },
   { to: "/about", label: "About" },
-  { to: "/patients-clients", label: "Patients" },
+  { to: "/patients-clients", label: "Clients" },
   { to: "/fitness-principles", label: "Fitness" },
   { to: "/nutrition", label: "Nutrition" },
   { to: "/contact", label: "Contact" },
