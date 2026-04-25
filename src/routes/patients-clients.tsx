@@ -23,9 +23,6 @@ type FeaturedCard = {
 };
 
 const featured: FeaturedCard[] = [
-  { src: "https://static.wixstatic.com/media/64b1f1_f30b39d12e1e4cc7b1b046aca931864c~mv2.jpeg/v1/fill/w_270,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_f30b39d12e1e4cc7b1b046aca931864c~mv2.jpeg",
-    alt: "Dr. Uriah Maimone", badge: "Physical Therapist · DPT CSCS", name: "Dr. Uriah J. Maimone",
-    description: "Board Certified Doctor of Physical Therapy, CSCS, and EP-C. South Bay native and owner of Absolute PT South Bay." },
   { src: "https://static.wixstatic.com/media/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg",
     alt: "Dr. Uriah with Jonathan Chaimberg", badge: "Strength & Conditioning Coach", name: "Jonathan Chaimberg",
     description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
