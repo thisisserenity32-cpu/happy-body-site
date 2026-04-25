@@ -64,6 +64,7 @@ const featured: FeaturedCard[] = [
 type ExtraImage = { src: string; alt: string; height: number };
 
 const extras: ExtraImage[] = [
+  { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg", alt: "Jean Pascal at APC Montreal", height: 300 },
   { src: "https://static.wixstatic.com/media/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_63388dd153f2458fae12b3a9f253ed8e~mv2.jpg", alt: "APC Montreal session", height: 280 },
   { src: "https://static.wixstatic.com/media/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1863f89c08844f3f9cba224fa0b0000d~mv2.jpg", alt: "APC athletes", height: 340 },
   { src: "https://static.wixstatic.com/media/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_295be27a2ff044d3a63e864794cb8ace~mv2.jpg", alt: "APC performance training", height: 280 },
