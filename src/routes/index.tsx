@@ -52,10 +52,10 @@ function HomePage() {
       <Hero />
       <CertificationsBar />
       <ClientsCarousel />
-      <AboutPreview />
       <InteractiveGuide />
-      <HowWeServe />
+      <AboutPreview />
       <WhatWeTreat />
+      <HowWeServe />
       <FAQSection />
       <CTASection />
     </>
