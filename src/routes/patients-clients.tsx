@@ -28,7 +28,7 @@ const featured: FeaturedCard[] = [
     description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
   { src: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg",
     alt: "Jakub Voracek and Kris Letang", badge: "NHL — Ice Hockey", name: "Voráček & Letang",
-    description: "Jakub Voráček (Far Left) — Philadelphia Flyers, 7th overall pick 2007 Draft. Kris Letang (Far Right) — 2x Stanley Cup Champion, Pittsburgh Penguins." },
+    description: "Jakub Voráček (left) — former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right) — 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
   { src: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg",
     alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym — UFC", name: "Firas Zahabi & GSP",
     description: "Firas Zahabi — Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre — retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
