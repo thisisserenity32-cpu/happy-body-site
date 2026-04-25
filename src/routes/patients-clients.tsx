@@ -28,7 +28,7 @@ const featured: FeaturedCard[] = [
     description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
   { src: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg",
     alt: "Jakub Voracek and Kris Letang", badge: "NHL — Ice Hockey", name: "Voráček & Letang",
-    description: "Jakub Voráček (Far Left) — Philadelphia Flyers, 7th overall pick 2007 Draft. Kris Letang (Far Right) — 2x Stanley Cup Champion, Pittsburgh Penguins." },
+    description: "Jakub Voráček (left) — former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right) — 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
   { src: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg",
     alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym — UFC", name: "Firas Zahabi & GSP",
     description: "Firas Zahabi — Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre — retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
@@ -39,11 +39,8 @@ const featured: FeaturedCard[] = [
     alt: "Jiri Hudler", badge: "NHL — Ice Hockey", name: "Jiří Hudler",
     description: "Czech professional ice hockey player with the Calgary Flames of the National Hockey League." },
   { src: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg",
-    alt: "Jean Pascal", badge: "Boxing — Professional", name: "Jean Pascal",
-    description: "Former Canadian Professional World Boxing Champion. Renowned for his speed, power, and elite conditioning." },
-  { src: "https://static.wixstatic.com/media/64b1f1_8c531ebe9506473ab18fa23404e775bb~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8c531ebe9506473ab18fa23404e775bb~mv2.jpg",
-    alt: "Jean Pascal additional", badge: "Boxing — Professional", name: "Jean Pascal",
-    description: "Former Canadian Professional World Boxing Champion. Trained at Adrenaline Performance Center in Montreal." },
+    alt: "Jean Pascal", badge: "Boxing — World Champion", name: "Jean Pascal",
+    description: "Former WBC Light Heavyweight Champion of the World. Canadian professional boxer renowned for his speed, power, and elite conditioning — trained at Adrenaline Performance Center in Montreal." },
   { src: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg",
     alt: "Cheick Kongo", badge: "MMA — Professional", name: "Cheick Kongo",
     description: "MMA Professional Fighter and former Kickboxer. A powerful heavyweight competitor with a long career in professional MMA and kickboxing." },
@@ -61,10 +58,10 @@ const featured: FeaturedCard[] = [
     description: "French professional MMA fighter. Competed in Bellator Fighting Championships and the Bellator Season 7 Welterweight Tournament." },
   { src: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg",
     alt: "Kris Letang", badge: "NHL — Pittsburgh Penguins", name: "Kris Letang",
-    description: "2x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins — one of the NHL's most elite blue-liners." },
+    description: "3x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins — one of the NHL's most elite blue-liners." },
   { src: "https://static.wixstatic.com/media/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg",
-    alt: "Jean Pascal and Chris Byrd", badge: "\u200bBoxing", name: "Boxing Champions Jean Pascal and Chris Byrd (from Left to the Right).",
-    description: "Boxing Champions Jean Pascal and Chris Byrd (from Left to the Right)." },
+    alt: "Jean Pascal and Chris Byrd", badge: "Boxing — World Champions", name: "Pascal & Chris Byrd",
+    description: "Boxing Champions Jean Pascal and Chris Byrd (left to right). Chris Byrd is a former IBF and WBO Heavyweight Champion of the World." },
   { src: "https://static.wixstatic.com/media/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e640a1972ada43269dc562deb36aa587~mv2.jpg",
     alt: "Antoni Mckee", badge: "MMA Professional Fighter and Coach", name: "Antoni Mckee",
     description: "MMA Professional Fighter and Coach Antoni Mckee — a highly skilled fighter connected to the elite performance world." },
@@ -165,27 +162,18 @@ function PatientsClientsPage() {
             </div>
           </Reveal>
 
-          <div
-            className="grid"
-            style={{
-              background: "#c8e6d4",
-              gap: "1.5px",
-              gridTemplateColumns: "repeat(1, minmax(0, 1fr))",
-            }}
-          >
-            <style>{`
-              @media (min-width: 480px) { .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
-              @media (min-width: 768px) { .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
-              @media (min-width: 1280px) { .featured-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
-              .featured-card:hover .card-desc { opacity: 1; transform: translateY(0); }
-              .extras-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
-              @media (min-width: 480px) { .extras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
-              @media (min-width: 768px) { .extras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
-              @media (min-width: 1280px) { .extras-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
-              .extra-tile img { transition: transform 0.22s ease, filter 0.22s ease; }
-              .extra-tile:hover img { transform: scale(1.02); filter: brightness(1.15); }
-            `}</style>
-          </div>
+          <style>{`
+            @media (min-width: 480px) { .featured-grid { grid-template-columns: repeat(2, minmax(0, 1fr)) !important; } }
+            @media (min-width: 768px) { .featured-grid { grid-template-columns: repeat(3, minmax(0, 1fr)) !important; } }
+            @media (min-width: 1280px) { .featured-grid { grid-template-columns: repeat(4, minmax(0, 1fr)) !important; } }
+            .featured-card:hover .card-desc { opacity: 1; transform: translateY(0); }
+            .extras-grid { grid-template-columns: repeat(1, minmax(0, 1fr)); }
+            @media (min-width: 480px) { .extras-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
+            @media (min-width: 768px) { .extras-grid { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+            @media (min-width: 1280px) { .extras-grid { grid-template-columns: repeat(4, minmax(0, 1fr)); } }
+            .extra-tile img { transition: transform 0.22s ease, filter 0.22s ease; }
+            .extra-tile:hover img { transform: scale(1.02); filter: brightness(1.15); }
+          `}</style>
 
           <div
             className="featured-grid grid"
