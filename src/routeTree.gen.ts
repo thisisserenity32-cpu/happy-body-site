@@ -10,6 +10,7 @@
 
 import { Route as rootRouteImport } from './routes/__root'
 import { Route as ServicesRouteImport } from './routes/services'
+import { Route as PatientsClientsRouteImport } from './routes/patients-clients'
 import { Route as NutritionRouteImport } from './routes/nutrition'
 import { Route as FitnessPrinciplesRouteImport } from './routes/fitness-principles'
 import { Route as ContactRouteImport } from './routes/contact'
@@ -19,6 +20,11 @@ import { Route as IndexRouteImport } from './routes/index'
 const ServicesRoute = ServicesRouteImport.update({
   id: '/services',
   path: '/services',
+  getParentRoute: () => rootRouteImport,
+} as any)
+const PatientsClientsRoute = PatientsClientsRouteImport.update({
+  id: '/patients-clients',
+  path: '/patients-clients',
   getParentRoute: () => rootRouteImport,
 } as any)
 const NutritionRoute = NutritionRouteImport.update({
@@ -53,6 +59,7 @@ export interface FileRoutesByFullPath {
   '/contact': typeof ContactRoute
   '/fitness-principles': typeof FitnessPrinciplesRoute
   '/nutrition': typeof NutritionRoute
+  '/patients-clients': typeof PatientsClientsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesByTo {
@@ -61,6 +68,7 @@ export interface FileRoutesByTo {
   '/contact': typeof ContactRoute
   '/fitness-principles': typeof FitnessPrinciplesRoute
   '/nutrition': typeof NutritionRoute
+  '/patients-clients': typeof PatientsClientsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRoutesById {
@@ -70,6 +78,7 @@ export interface FileRoutesById {
   '/contact': typeof ContactRoute
   '/fitness-principles': typeof FitnessPrinciplesRoute
   '/nutrition': typeof NutritionRoute
+  '/patients-clients': typeof PatientsClientsRoute
   '/services': typeof ServicesRoute
 }
 export interface FileRouteTypes {
@@ -80,6 +89,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/fitness-principles'
     | '/nutrition'
+    | '/patients-clients'
     | '/services'
   fileRoutesByTo: FileRoutesByTo
   to:
@@ -88,6 +98,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/fitness-principles'
     | '/nutrition'
+    | '/patients-clients'
     | '/services'
   id:
     | '__root__'
@@ -96,6 +107,7 @@ export interface FileRouteTypes {
     | '/contact'
     | '/fitness-principles'
     | '/nutrition'
+    | '/patients-clients'
     | '/services'
   fileRoutesById: FileRoutesById
 }
@@ -105,6 +117,7 @@ export interface RootRouteChildren {
   ContactRoute: typeof ContactRoute
   FitnessPrinciplesRoute: typeof FitnessPrinciplesRoute
   NutritionRoute: typeof NutritionRoute
+  PatientsClientsRoute: typeof PatientsClientsRoute
   ServicesRoute: typeof ServicesRoute
 }
 
@@ -115,6 +128,13 @@ declare module '@tanstack/react-router' {
       path: '/services'
       fullPath: '/services'
       preLoaderRoute: typeof ServicesRouteImport
+      parentRoute: typeof rootRouteImport
+    }
+    '/patients-clients': {
+      id: '/patients-clients'
+      path: '/patients-clients'
+      fullPath: '/patients-clients'
+      preLoaderRoute: typeof PatientsClientsRouteImport
       parentRoute: typeof rootRouteImport
     }
     '/nutrition': {
@@ -161,6 +181,7 @@ const rootRouteChildren: RootRouteChildren = {
   ContactRoute: ContactRoute,
   FitnessPrinciplesRoute: FitnessPrinciplesRoute,
   NutritionRoute: NutritionRoute,
+  PatientsClientsRoute: PatientsClientsRoute,
   ServicesRoute: ServicesRoute,
 }
 export const routeTree = rootRouteImport
