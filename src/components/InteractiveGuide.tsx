@@ -125,9 +125,9 @@ export function InteractiveGuide() {
     { id: "shoulder", top: "24%", left: "50%", size: 56 },
     { id: "arm",      top: "32%", left: "27%", size: 52 },
     { id: "back",     top: "40%", left: "52%", size: 64 },
-    { id: "hip",      top: "52%", left: "55%", size: 64 },
-    { id: "knee",     top: "82%", left: "38%", size: 56 },
-    { id: "foot",     top: "97%", left: "52%", size: 52 },
+    { id: "hip",      top: "50%", left: "53%", size: 60 },
+    { id: "knee",     top: "73%", left: "42%", size: 56 },
+    { id: "foot",     top: "87%", left: "55%", size: 52 },
   ];
 
   return (
