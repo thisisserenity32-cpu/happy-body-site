@@ -219,3 +219,28 @@ function RegionButton({
     </button>
   );
 }
+
+function ConditionItem({ condition }: { condition: Condition }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-colors ${
+          open
+            ? "border-primary bg-primary-soft/40"
+            : "border-border bg-cream-deep/50 hover:border-primary/40 hover:bg-primary-soft/30"
+        }`}
+      >
+        <span className="font-display text-base font-semibold text-foreground">{condition.name}</span>
+        <span className={`text-primary transition-transform ${open ? "rotate-45" : ""}`} aria-hidden>+</span>
+      </button>
+      {open && (
+        <p className="mt-2 rounded-xl bg-card px-4 py-3 text-sm text-muted-foreground animate-fade-in">
+          {condition.desc}
+        </p>
+      )}
+    </li>
+  );
+}
