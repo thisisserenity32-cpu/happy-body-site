@@ -33,7 +33,7 @@ const boneNutrients = [
   {
     name: "Vitamin K",
     icon: Leaf,
-    img: "https://images.unsplash.com/photo-1515envelope?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80",
     body: "Vitamin K1 aids blood clotting; Vitamin K2 supports a healthy heart and bones. No formal daily dose recommendation.",
     foods: "Eggs, spinach, kale, greens, cabbage",
   },
