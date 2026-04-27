@@ -257,11 +257,11 @@ function NutritionPage() {
           <h3 className="text-center font-display text-2xl font-semibold text-foreground">Food Sources for Muscle Growth</h3>
           <div className="mt-8 grid gap-4 md:grid-cols-5">
             {[
-              { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80" },
-              { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" },
-              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80" },
-              { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" },
-              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?auto=format&fit=crop&w=600&q=80" },
+              { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" },
+              { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80" },
+              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1607623488851-fe1213c47fb6?auto=format&fit=crop&w=600&q=80" },
+              { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" },
+              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=600&q=80" },
             ].map((f) => (
               <div key={f.label} className="ring-soft overflow-hidden rounded-xl bg-card">
                 <img src={f.img} alt={f.label} loading="lazy" className="aspect-square w-full object-cover" />
