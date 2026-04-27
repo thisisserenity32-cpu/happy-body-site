@@ -118,15 +118,16 @@ export function InteractiveGuide() {
   const leftIds = ["neck", "shoulder", "arm"];
   const rightIds = ["back", "hip", "knee", "foot"];
 
-  // Hotspot positions on the figure (percent of container)
+  // Hotspot positions on the figure (percent of container).
+  // Figure is a side-view runner facing left; coordinates tuned to that pose.
   const hotspots: { id: string; top: string; left: string; size: number }[] = [
-    { id: "neck",     top: "10%", left: "50%", size: 64 },
-    { id: "shoulder", top: "22%", left: "32%", size: 80 },
-    { id: "arm",      top: "38%", left: "22%", size: 72 },
-    { id: "back",     top: "36%", left: "50%", size: 96 },
-    { id: "hip",      top: "52%", left: "50%", size: 88 },
-    { id: "knee",     top: "70%", left: "42%", size: 72 },
-    { id: "foot",     top: "92%", left: "50%", size: 72 },
+    { id: "neck",     top: "16%", left: "38%", size: 48 },
+    { id: "shoulder", top: "24%", left: "50%", size: 56 },
+    { id: "arm",      top: "32%", left: "27%", size: 52 },
+    { id: "back",     top: "40%", left: "52%", size: 64 },
+    { id: "hip",      top: "47%", left: "53%", size: 60 },
+    { id: "knee",     top: "68%", left: "58%", size: 56 },
+    { id: "foot",     top: "82%", left: "70%", size: 50 },
   ];
 
   return (
@@ -168,11 +169,16 @@ export function InteractiveGuide() {
                     height: h.size,
                     transform: "translate(-50%, -50%)",
                     background: isActive
-                      ? "radial-gradient(circle, rgba(251,146,60,0.85) 0%, rgba(249,115,22,0.55) 40%, rgba(234,88,12,0) 75%)"
-                      : "radial-gradient(circle, rgba(251,146,60,0.0) 0%, rgba(249,115,22,0.0) 60%)",
+                      ? "radial-gradient(circle, rgba(251,146,60,0.95) 0%, rgba(249,115,22,0.7) 30%, rgba(234,88,12,0.25) 60%, rgba(234,88,12,0) 80%)"
+                      : "radial-gradient(circle, rgba(251,146,60,0.55) 0%, rgba(249,115,22,0.3) 35%, rgba(234,88,12,0) 70%)",
                   }}
-                  className="absolute rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:[background:radial-gradient(circle,rgba(251,146,60,0.75)_0%,rgba(249,115,22,0.45)_40%,rgba(234,88,12,0)_75%)]"
-                />
+                  className={`absolute rounded-full transition-all duration-300 hover:scale-125 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent ${isActive ? "animate-pulse" : ""}`}
+                >
+                  <span
+                    aria-hidden
+                    className="absolute left-1/2 top-1/2 h-3 w-3 -translate-x-1/2 -translate-y-1/2 rounded-full bg-orange-500 shadow-[0_0_10px_rgba(249,115,22,0.9)]"
+                  />
+                </button>
               );
             })}
           </div>
