@@ -114,7 +114,7 @@ function NutritionPage() {
         eyebrow="Foundation"
         title="Nutrition"
         subtitle="Fuel your body for optimal performance, recovery, and long-term health with evidence-based nutrition guidance."
-        image="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80"
       />
 
       {/* Foundation: Bone Health */}
