@@ -173,18 +173,11 @@ export function InteractiveGuide() {
 
             <div className="eyebrow">Treatment Area</div>
             <h3 className="mt-2 font-display text-3xl font-semibold text-foreground md:text-4xl">{region.label}</h3>
-            <p className="mt-3 text-muted-foreground">{region.intro}</p>
+            <p className="mt-3 text-sm text-muted-foreground">Tap an ailment to see a short description.</p>
 
-            <div className="mt-6 text-sm font-semibold uppercase tracking-wider text-primary">
-              Common conditions Dr. Uriah treats:
-            </div>
-
-            <ul className="mt-4 space-y-4">
+            <ul className="mt-6 space-y-2">
               {region.conditions.map((c) => (
-                <li key={c.name} className="rounded-xl border border-border bg-cream-deep/50 p-4">
-                  <div className="font-display text-lg font-semibold text-foreground">{c.name}</div>
-                  <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
-                </li>
+                <ConditionItem key={c.name} condition={c} />
               ))}
             </ul>
 
@@ -224,5 +217,30 @@ function RegionButton({
     >
       <div className="font-display text-xl font-semibold md:text-2xl">{region.label}</div>
     </button>
+  );
+}
+
+function ConditionItem({ condition }: { condition: Condition }) {
+  const [open, setOpen] = useState(false);
+  return (
+    <li>
+      <button
+        onClick={() => setOpen((v) => !v)}
+        aria-expanded={open}
+        className={`flex w-full items-center justify-between gap-3 rounded-xl border px-4 py-3 text-left transition-colors ${
+          open
+            ? "border-primary bg-primary-soft/40"
+            : "border-border bg-cream-deep/50 hover:border-primary/40 hover:bg-primary-soft/30"
+        }`}
+      >
+        <span className="font-display text-base font-semibold text-foreground">{condition.name}</span>
+        <span className={`text-primary transition-transform ${open ? "rotate-45" : ""}`} aria-hidden>+</span>
+      </button>
+      {open && (
+        <p className="mt-2 rounded-xl bg-card px-4 py-3 text-sm text-muted-foreground animate-fade-in">
+          {condition.desc}
+        </p>
+      )}
+    </li>
   );
 }
