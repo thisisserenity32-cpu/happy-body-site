@@ -293,6 +293,39 @@ function HowWeServe() {
             </div>
           ))}
         </div>
+
+        {/* Pricing tiers */}
+        <div className="mt-16">
+          <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Transparent Pricing</div>
+          <h3 className="mt-3 font-display text-3xl font-semibold md:text-4xl">Choose the visit that fits you</h3>
+        </div>
+        <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
+          {[
+            { name: "Free Consultation", time: "15–20 min", price: "Free", desc: "Phone or video call to discuss your needs", featured: false },
+            { name: "Initial Session", time: "60+ min", price: "$200", desc: "Comprehensive in-home evaluation & treatment", featured: true },
+            { name: "Follow-Up", time: "50 min", price: "$150", desc: "Continued in-home therapy session", featured: false },
+            { name: "Telehealth", time: "60 min", price: "$85", desc: "Video session from anywhere in California", featured: false },
+          ].map((p) => (
+            <div
+              key={p.name}
+              className={`rounded-2xl p-6 text-center transition-transform hover:-translate-y-1 ${
+                p.featured
+                  ? "bg-accent text-accent-foreground ring-2 ring-accent"
+                  : "border border-primary-foreground/15 bg-primary-foreground/5 text-primary-foreground"
+              }`}
+            >
+              <div className="font-display text-lg font-semibold">{p.name}</div>
+              <div className={`mt-1 text-sm ${p.featured ? "text-accent-foreground/80" : "text-primary-foreground/70"}`}>{p.time}</div>
+              <div className="mt-5 font-display text-5xl font-semibold">{p.price}</div>
+              <p className={`mt-4 text-sm ${p.featured ? "text-accent-foreground/90" : "text-primary-foreground/80"}`}>{p.desc}</p>
+            </div>
+          ))}
+        </div>
+        <div className="mt-10 text-center">
+          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90">
+            Book Your Visit <ArrowRight className="h-4 w-4" />
+          </Link>
+        </div>
       </div>
     </section>
   );
