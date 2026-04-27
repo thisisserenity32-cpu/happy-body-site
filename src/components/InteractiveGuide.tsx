@@ -118,6 +118,17 @@ export function InteractiveGuide() {
   const leftIds = ["neck", "shoulder", "arm"];
   const rightIds = ["back", "hip", "knee", "foot"];
 
+  // Hotspot positions on the figure (percent of container)
+  const hotspots: { id: string; top: string; left: string; size: number }[] = [
+    { id: "neck",     top: "10%", left: "50%", size: 64 },
+    { id: "shoulder", top: "22%", left: "32%", size: 80 },
+    { id: "arm",      top: "38%", left: "22%", size: 72 },
+    { id: "back",     top: "36%", left: "50%", size: 96 },
+    { id: "hip",      top: "52%", left: "50%", size: 88 },
+    { id: "knee",     top: "70%", left: "42%", size: 72 },
+    { id: "foot",     top: "92%", left: "50%", size: 72 },
+  ];
+
   return (
     <section className="bg-cream-deep py-20">
       <div className="container-prose">
@@ -141,6 +152,29 @@ export function InteractiveGuide() {
           {/* Figure */}
           <div className="relative order-1 mx-auto h-[480px] w-[340px] rounded-2xl border border-border bg-white md:order-2 md:h-[540px] md:w-[420px]">
             <img src={figure} alt="Body diagram" className="h-full w-full object-contain p-4" />
+            {hotspots.map((h) => {
+              const r = regions.find((x) => x.id === h.id)!;
+              const isActive = active === h.id;
+              return (
+                <button
+                  key={h.id}
+                  onClick={() => setActive(h.id)}
+                  aria-label={r.label}
+                  title={r.label}
+                  style={{
+                    top: h.top,
+                    left: h.left,
+                    width: h.size,
+                    height: h.size,
+                    transform: "translate(-50%, -50%)",
+                    background: isActive
+                      ? "radial-gradient(circle, rgba(251,146,60,0.85) 0%, rgba(249,115,22,0.55) 40%, rgba(234,88,12,0) 75%)"
+                      : "radial-gradient(circle, rgba(251,146,60,0.0) 0%, rgba(249,115,22,0.0) 60%)",
+                  }}
+                  className="absolute rounded-full transition-all duration-300 hover:scale-110 focus:outline-none focus-visible:ring-2 focus-visible:ring-accent hover:[background:radial-gradient(circle,rgba(251,146,60,0.75)_0%,rgba(249,115,22,0.45)_40%,rgba(234,88,12,0)_75%)]"
+                />
+              );
+            })}
           </div>
 
           {/* Right labels */}
