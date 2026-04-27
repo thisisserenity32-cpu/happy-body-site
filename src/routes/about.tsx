@@ -49,6 +49,45 @@ function AboutPage() {
         image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80"
       />
 
+      {/* Mission */}
+      <section className="bg-primary py-20 text-primary-foreground">
+        <div className="container-prose">
+          <div className="mx-auto max-w-3xl text-center">
+            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Our Mission</div>
+            <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
+              Enhancing lives through movement
+            </h2>
+            <div className="mt-8 space-y-5 text-left text-primary-foreground/85 md:text-center">
+              <p>
+                Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to
+                enhance the quality of life for those facing mobility challenges, pain, disease
+                and disorders — helping people regain movement and prevent future injuries and
+                disabilities.
+              </p>
+              <p>
+                From geriatrics to youth, and recreational to elite athletes, we understand that
+                people want to push themselves to greater heights. Our mission is to communicate
+                and treat all aspects of pre-habilitation, rehabilitation, exercise, sports
+                science, and physiology in a way that is relevant, easy to understand, backed by
+                facts, and results-driven.
+              </p>
+              <p>
+                We are confident that you will enjoy and use our services to enhance your
+                performance and abilities — in your daily life, household chores, job duties, and
+                sports — and go far in your future career endeavors and quality of life. Thank you
+                for visiting, and hopefully choosing services from APTSB.
+              </p>
+            </div>
+            <Link
+              to="/contact"
+              className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
+            >
+              Start Your Recovery <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+        </div>
+      </section>
+
       {/* Intro / portrait */}
       <section className="container-prose py-20">
         <div className="grid items-start gap-12 lg:grid-cols-12">
@@ -152,45 +191,6 @@ function AboutPage() {
                 ))}
               </ul>
             </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Mission */}
-      <section className="bg-primary py-20 text-primary-foreground">
-        <div className="container-prose">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Our Mission</div>
-            <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-              Enhancing lives through movement
-            </h2>
-            <div className="mt-8 space-y-5 text-left text-primary-foreground/85 md:text-center">
-              <p>
-                Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to
-                enhance the quality of life for those facing mobility challenges, pain, disease
-                and disorders — helping people regain movement and prevent future injuries and
-                disabilities.
-              </p>
-              <p>
-                From geriatrics to youth, and recreational to elite athletes, we understand that
-                people want to push themselves to greater heights. Our mission is to communicate
-                and treat all aspects of pre-habilitation, rehabilitation, exercise, sports
-                science, and physiology in a way that is relevant, easy to understand, backed by
-                facts, and results-driven.
-              </p>
-              <p>
-                We are confident that you will enjoy and use our services to enhance your
-                performance and abilities — in your daily life, household chores, job duties, and
-                sports — and go far in your future career endeavors and quality of life. Thank you
-                for visiting, and hopefully choosing services from APTSB.
-              </p>
-            </div>
-            <Link
-              to="/contact"
-              className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
-            >
-              Start Your Recovery <ArrowRight className="h-4 w-4" />
-            </Link>
           </div>
         </div>
       </section>
