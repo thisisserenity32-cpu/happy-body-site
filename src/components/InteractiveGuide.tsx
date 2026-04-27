@@ -173,18 +173,11 @@ export function InteractiveGuide() {
 
             <div className="eyebrow">Treatment Area</div>
             <h3 className="mt-2 font-display text-3xl font-semibold text-foreground md:text-4xl">{region.label}</h3>
-            <p className="mt-3 text-muted-foreground">{region.intro}</p>
+            <p className="mt-3 text-sm text-muted-foreground">Tap an ailment to see a short description.</p>
 
-            <div className="mt-6 text-sm font-semibold uppercase tracking-wider text-primary">
-              Common conditions Dr. Uriah treats:
-            </div>
-
-            <ul className="mt-4 space-y-4">
+            <ul className="mt-6 space-y-2">
               {region.conditions.map((c) => (
-                <li key={c.name} className="rounded-xl border border-border bg-cream-deep/50 p-4">
-                  <div className="font-display text-lg font-semibold text-foreground">{c.name}</div>
-                  <p className="mt-1 text-sm text-muted-foreground">{c.desc}</p>
-                </li>
+                <ConditionItem key={c.name} condition={c} />
               ))}
             </ul>
 
