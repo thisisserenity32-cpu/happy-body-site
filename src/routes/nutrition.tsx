@@ -47,7 +47,7 @@ const boneNutrients = [
   {
     name: "Magnesium",
     icon: Wheat,
-    img: "https://images.unsplash.com/photo-1584473457409-ce95a9c00018?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=900&q=80",
     body: "Used in bone formation, increases calcium absorption from the small intestines, and influences bone mineralization. Daily recommended intake is 420mg for adults.",
     foods: "Nuts, grains, green vegetables, legumes, whole grains",
   },
