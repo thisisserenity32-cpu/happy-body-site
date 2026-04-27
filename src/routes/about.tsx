@@ -88,6 +88,30 @@ function AboutPage() {
         </div>
       </section>
 
+      {/* Experience & Achievements Band */}
+      <section className="bg-primary py-14 text-primary-foreground">
+        <div className="container-prose">
+          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4">
+            {[
+              ["20+", "Years Experience"],
+              ["3", "Advanced Degrees"],
+              ["11", "Specialties"],
+              ["100%", "Personalized Care"],
+            ].map(([num, label]) => (
+              <div key={label}>
+                <div
+                  className="font-display font-semibold leading-none"
+                  style={{ fontSize: "clamp(2.75rem, 5vw, 4rem)", fontFamily: "Georgia, 'Times New Roman', serif" }}
+                >
+                  {num}
+                </div>
+                <div className="mt-3 text-sm font-semibold tracking-wide text-primary-foreground/90">{label}</div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Intro / portrait */}
       <section className="container-prose py-20">
         <div className="grid items-start gap-12 lg:grid-cols-12">
