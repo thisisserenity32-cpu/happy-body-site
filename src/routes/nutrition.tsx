@@ -19,35 +19,35 @@ const boneNutrients = [
   {
     name: "Calcium",
     icon: Bone,
-    img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=80",
     body: "Stored inside bones for strength and protection from fractures. 99% is found in the bone — the most abundant mineral in our body. Adults need ~1,000mg per day.",
     foods: "Cheese, milk, cauliflower, nuts, yogurt, broccoli, cabbage, greens",
   },
   {
     name: "Vitamin D",
     icon: Sun,
-    img: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1504387828636-abeb50778c0c?auto=format&fit=crop&w=900&q=80",
     body: "Synthesized from direct sunlight in skin and consumed in food. Prevents bone loss, regulates blood calcium, and increases calcium absorption. Skin pigmentation, age, sunscreen, smog, and geography all affect production. Adults: 600–2,000 IU/day.",
     foods: "Milk, yogurt, fish, fatty fish, mushrooms exposed to UV light",
   },
   {
     name: "Vitamin K",
     icon: Leaf,
-    img: "https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1576045057995-568f588f82fb?auto=format&fit=crop&w=900&q=80",
     body: "Vitamin K1 aids blood clotting; Vitamin K2 supports a healthy heart and bones. No formal daily dose recommendation.",
     foods: "Eggs, spinach, kale, greens, cabbage",
   },
   {
     name: "Potassium",
     icon: Apple,
-    img: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80",
     body: "Regulates pH, prevents calcium loss through urine, and conserves bone mass. Recommended daily intake is 4,700mg for adults.",
     foods: "Bananas, vegetables, orange juice, citrus fruits, meats, potatoes",
   },
   {
     name: "Magnesium",
     icon: Wheat,
-    img: "https://images.unsplash.com/photo-1584473457409-ce95a9c00018?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1599599810769-bcde5a160d32?auto=format&fit=crop&w=900&q=80",
     body: "Used in bone formation, increases calcium absorption from the small intestines, and influences bone mineralization. Daily recommended intake is 420mg for adults.",
     foods: "Nuts, grains, green vegetables, legumes, whole grains",
   },
@@ -114,7 +114,7 @@ function NutritionPage() {
         eyebrow="Foundation"
         title="Nutrition"
         subtitle="Fuel your body for optimal performance, recovery, and long-term health with evidence-based nutrition guidance."
-        image="https://images.unsplash.com/photo-1490645935967-10de6ba17061?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80"
       />
 
       {/* Foundation: Bone Health */}
@@ -257,11 +257,11 @@ function NutritionPage() {
           <h3 className="text-center font-display text-2xl font-semibold text-foreground">Food Sources for Muscle Growth</h3>
           <div className="mt-8 grid gap-4 md:grid-cols-5">
             {[
-              { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1548839140-29a749e1cf4d?auto=format&fit=crop&w=600&q=80" },
-              { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=600&q=80" },
-              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1607623814075-e51df1bdc82f?auto=format&fit=crop&w=600&q=80" },
-              { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1525351484163-7529414344d8?auto=format&fit=crop&w=600&q=80" },
-              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1535914254981-b5012eebbd15?auto=format&fit=crop&w=600&q=80" },
+              { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" },
+              { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80" },
+              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1607623488851-fe1213c47fb6?auto=format&fit=crop&w=600&q=80" },
+              { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" },
+              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=600&q=80" },
             ].map((f) => (
               <div key={f.label} className="ring-soft overflow-hidden rounded-xl bg-card">
                 <img src={f.img} alt={f.label} loading="lazy" className="aspect-square w-full object-cover" />

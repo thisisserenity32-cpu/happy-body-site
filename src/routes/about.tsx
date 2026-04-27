@@ -46,7 +46,7 @@ function AboutPage() {
         eyebrow="About Me"
         title="Dr. Uriah J. Maimone"
         subtitle="South Bay native. Doctor of Physical Therapy with over 20 years in the performance and rehabilitation space."
-        image="https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80"
       />
 
       {/* Intro / portrait */}
