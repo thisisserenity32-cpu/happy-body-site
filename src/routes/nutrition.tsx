@@ -40,7 +40,7 @@ const boneNutrients = [
   {
     name: "Potassium",
     icon: Apple,
-    img: "https://images.unsplash.com/photo-1571771894821-ce9b6c11b08e?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1528825871115-3581a5387919?auto=format&fit=crop&w=900&q=80",
     body: "Regulates pH, prevents calcium loss through urine, and conserves bone mass. Recommended daily intake is 4,700mg for adults.",
     foods: "Bananas, vegetables, orange juice, citrus fruits, meats, potatoes",
   },
