@@ -26,7 +26,7 @@ const boneNutrients = [
   {
     name: "Vitamin D",
     icon: Sun,
-    img: "https://images.unsplash.com/photo-1502920917128-1aa500764cbd?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1504387828636-abeb50778c0c?auto=format&fit=crop&w=900&q=80",
     body: "Synthesized from direct sunlight in skin and consumed in food. Prevents bone loss, regulates blood calcium, and increases calcium absorption. Skin pigmentation, age, sunscreen, smog, and geography all affect production. Adults: 600–2,000 IU/day.",
     foods: "Milk, yogurt, fish, fatty fish, mushrooms exposed to UV light",
   },
