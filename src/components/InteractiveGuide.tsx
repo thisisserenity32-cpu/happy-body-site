@@ -118,6 +118,17 @@ export function InteractiveGuide() {
   const leftIds = ["neck", "shoulder", "arm"];
   const rightIds = ["back", "hip", "knee", "foot"];
 
+  // Hotspot positions on the figure (percent of container)
+  const hotspots: { id: string; top: string; left: string; size: number }[] = [
+    { id: "neck",     top: "10%", left: "50%", size: 64 },
+    { id: "shoulder", top: "22%", left: "32%", size: 80 },
+    { id: "arm",      top: "38%", left: "22%", size: 72 },
+    { id: "back",     top: "36%", left: "50%", size: 96 },
+    { id: "hip",      top: "52%", left: "50%", size: 88 },
+    { id: "knee",     top: "70%", left: "42%", size: 72 },
+    { id: "foot",     top: "92%", left: "50%", size: 72 },
+  ];
+
   return (
     <section className="bg-cream-deep py-20">
       <div className="container-prose">
