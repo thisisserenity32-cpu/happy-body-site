@@ -127,7 +127,7 @@ export function InteractiveGuide() {
     { id: "back",     top: "40%", left: "52%", size: 64 },
     { id: "hip",      top: "47%", left: "53%", size: 60 },
     { id: "knee",     top: "68%", left: "58%", size: 56 },
-    { id: "foot",     top: "84%", left: "65%", size: 52 },
+    { id: "foot",     top: "82%", left: "70%", size: 50 },
   ];
 
   return (
