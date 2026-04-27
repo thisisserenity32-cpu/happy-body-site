@@ -19,7 +19,7 @@ const boneNutrients = [
   {
     name: "Calcium",
     icon: Bone,
-    img: "https://images.unsplash.com/photo-1550583724-b2692b85b150?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=80",
     body: "Stored inside bones for strength and protection from fractures. 99% is found in the bone — the most abundant mineral in our body. Adults need ~1,000mg per day.",
     foods: "Cheese, milk, cauliflower, nuts, yogurt, broccoli, cabbage, greens",
   },
