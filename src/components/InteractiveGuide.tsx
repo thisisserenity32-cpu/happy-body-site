@@ -121,13 +121,13 @@ export function InteractiveGuide() {
   // Hotspot positions on the figure (percent of container).
   // Figure is a side-view runner facing left; coordinates tuned to that pose.
   const hotspots: { id: string; top: string; left: string; size: number }[] = [
-    { id: "neck",     top: "14%", left: "47%", size: 56 },
-    { id: "shoulder", top: "26%", left: "55%", size: 64 },
-    { id: "arm",      top: "38%", left: "38%", size: 60 },
-    { id: "back",     top: "40%", left: "60%", size: 76 },
-    { id: "hip",      top: "55%", left: "55%", size: 72 },
-    { id: "knee",     top: "75%", left: "48%", size: 64 },
-    { id: "foot",     top: "94%", left: "62%", size: 56 },
+    { id: "neck",     top: "16%", left: "38%", size: 48 },
+    { id: "shoulder", top: "24%", left: "50%", size: 56 },
+    { id: "arm",      top: "32%", left: "27%", size: 52 },
+    { id: "back",     top: "40%", left: "52%", size: 64 },
+    { id: "hip",      top: "52%", left: "55%", size: 64 },
+    { id: "knee",     top: "76%", left: "50%", size: 56 },
+    { id: "foot",     top: "94%", left: "55%", size: 52 },
   ];
 
   return (
