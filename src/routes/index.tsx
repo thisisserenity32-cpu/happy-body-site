@@ -209,7 +209,7 @@ function ClientsCarousel() {
           {clients.map((c) => (
             <article key={c.name} className="ring-soft shrink-0 basis-full overflow-hidden rounded-2xl bg-card sm:basis-1/2 lg:basis-1/3">
               <div className="aspect-[4/5] overflow-hidden">
-                <img src={c.img} alt={c.name} className="h-full w-full object-cover transition-transform duration-700 hover:scale-105" />
+                <img src={c.img} alt={c.name} className="h-full w-full object-cover object-top transition-transform duration-700 hover:scale-105" />
               </div>
               <div className="p-6">
                 <div className="text-[11px] font-semibold uppercase tracking-[0.18em] text-accent">{c.tag}</div>
