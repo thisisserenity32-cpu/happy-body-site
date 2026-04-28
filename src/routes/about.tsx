@@ -1,6 +1,5 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
-import { ArrowRight, CheckCircle2, GraduationCap, Award, Target } from "lucide-react";
-import { PageHero } from "./services";
+import { useEffect, useRef, useState, type ReactNode } from "react";
 import portrait from "@/assets/dr-uriah-portrait.png";
 
 export const Route = createFileRoute("/about")({
@@ -10,214 +9,600 @@ export const Route = createFileRoute("/about")({
       { name: "description", content: "South Bay native with over 20 years in performance and rehabilitation. Trained alongside UFC champions and NHL stars." },
       { property: "og:title", content: "About Dr. Uriah J. Maimone, DPT" },
       { property: "og:description", content: "Doctor of Physical Therapy with elite-level training experience, serving South Bay in your home." },
-      { property: "og:image", content: "https://images.unsplash.com/photo-1551601651-2a8555f1a136?auto=format&fit=crop&w=1600&q=80" },
     ],
   }),
   component: AboutPage,
 });
 
-const specialties = [
-  "Orthopedic and Sports Injuries",
-  "Pre-habilitation and Rehabilitation",
-  "Geriatrics",
-  "Parkinson's Dynamic Movement",
-  "Medical Exercise Programs",
-  "Strength and Conditioning",
-  "Weight Training and Exercise Plans",
-  "Sport Massage Therapy",
-  "Optimal Biomechanics Education and Training",
-  "Modalities for Faster Recovery",
-  "Pain Management",
+/* ------- Reveal helper ------- */
+function Reveal({
+  children,
+  delay = 0,
+  className = "",
+  as: Tag = "div",
+}: {
+  children: ReactNode;
+  delay?: number;
+  className?: string;
+  as?: "div" | "section" | "li" | "span" | "p" | "h2" | "h3" | "article";
+}) {
+  const ref = useRef<HTMLElement | null>(null);
+  const [show, setShow] = useState(false);
+  useEffect(() => {
+    if (typeof window === "undefined" || !ref.current) return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) {
+      setShow(true);
+      return;
+    }
+    const io = new IntersectionObserver(
+      (es) => es.forEach((e) => e.isIntersecting && (setShow(true), io.disconnect())),
+      { threshold: 0.08, rootMargin: "0px 0px -40px 0px" },
+    );
+    io.observe(ref.current);
+    return () => io.disconnect();
+  }, []);
+  return (
+    <Tag
+      ref={ref as never}
+      style={{
+        transitionDelay: `${delay}ms`,
+        opacity: show ? 1 : 0,
+        transform: show ? "translateY(0)" : "translateY(18px)",
+        transition: "opacity 0.7s ease, transform 0.7s ease",
+        willChange: "transform, opacity",
+      }}
+      className={className}
+    >
+      {children}
+    </Tag>
+  );
+}
+
+const PILLS = [
+  "Board Certified DPT",
+  "CSCS",
+  "EP-C",
+  "MS Kinesiology",
+  "20+ Yrs MMA",
+  "South Bay Native",
 ];
 
-const education = [
-  { title: "Doctor of Physical Therapy", school: "University of St. Augustine for Health Sciences" },
-  { title: "M.S. Kinesiology — Exercise Science", school: "Cal Polytechnic Humboldt" },
-  { title: "B.S. Kinesiology — Exercise Science", school: "Cal Polytechnic Humboldt" },
-  { title: "Clinical Rotations", school: "Orthopedic and Sports Physical Therapy" },
-  { title: "Certified Exercise Physiologist (EP-C)", school: "American College of Sports Medicine" },
-  { title: "Certified Strength & Conditioning Specialist (CSCS)", school: "National Strength and Conditioning Association" },
+const STATS: Array<[string, string]> = [
+  ["20+", "Years Experience"],
+  ["3", "Advanced Degrees"],
+  ["11", "Specialties"],
+  ["100%", "Personalized Care"],
+];
+
+const CREDENTIALS = [
+  "University of St. Augustine — Doctor of Physical Therapy (DPT)",
+  "Cal Polytechnic Humboldt — MS, Kinesiology: Exercise Science",
+  "Cal Polytechnic Humboldt — BS, Kinesiology: Exercise Science",
+  "ACSM — Certified Exercise Physiologist (EP-C)",
+  "NSCA — Certified Strength & Conditioning Specialist (CSCS)",
 ];
 
 function AboutPage() {
   return (
-    <>
-      <PageHero
-        eyebrow="About Me"
-        title="Dr. Uriah J. Maimone"
-        subtitle="South Bay native. Doctor of Physical Therapy with over 20 years in the performance and rehabilitation space."
-        image="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&w=1600&q=80"
-      />
-
-      {/* Mission */}
-      <section className="bg-primary py-20 text-primary-foreground">
-        <div className="container-prose">
-          <div className="mx-auto max-w-3xl text-center">
-            <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Our Mission</div>
-            <h2 className="mt-3 font-display text-4xl font-semibold md:text-5xl">
-              Enhancing lives through movement
-            </h2>
-            <div className="mt-8 space-y-5 text-left text-primary-foreground/85 md:text-center">
-              <p>
-                Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to
-                enhance the quality of life for those facing mobility challenges, pain, disease
-                and disorders — helping people regain movement and prevent future injuries and
-                disabilities.
-              </p>
-              <p>
-                From geriatrics to youth, and recreational to elite athletes, we understand that
-                people want to push themselves to greater heights. Our mission is to communicate
-                and treat all aspects of pre-habilitation, rehabilitation, exercise, sports
-                science, and physiology in a way that is relevant, easy to understand, backed by
-                facts, and results-driven.
-              </p>
-              <p>
-                We are confident that you will enjoy and use our services to enhance your
-                performance and abilities — in your daily life, household chores, job duties, and
-                sports — and go far in your future career endeavors and quality of life. Thank you
-                for visiting, and hopefully choosing services from APTSB.
-              </p>
-            </div>
-            <Link
-              to="/contact"
-              className="mt-10 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90"
+    <div style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
+      {/* ============ SECTION 1 — HERO ============ */}
+      <section
+        style={{
+          background: "#ffffff",
+          padding: "120px clamp(2rem,7%,7rem) 80px",
+          minHeight: "88vh",
+          overflow: "visible",
+        }}
+      >
+        <div
+          className="about-hero-grid"
+          style={{
+            display: "grid",
+            gap: "4rem",
+            alignItems: "center",
+            maxWidth: 1280,
+            margin: "0 auto",
+          }}
+        >
+          <Reveal>
+            <span
+              style={{
+                color: "#1a7a4a",
+                fontSize: "0.76rem",
+                fontWeight: 700,
+                letterSpacing: "0.14em",
+                textTransform: "uppercase",
+                marginBottom: "0.9rem",
+                display: "block",
+              }}
             >
-              Start Your Recovery <ArrowRight className="h-4 w-4" />
-            </Link>
-          </div>
+              About Dr. Uriah
+            </span>
+            <h1
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontWeight: 900,
+                fontSize: "clamp(2.4rem, 5vw, 3.8rem)",
+                color: "#0f1a12",
+                lineHeight: 1.06,
+                marginBottom: "0.6rem",
+                background: "transparent",
+                textDecoration: "none",
+                letterSpacing: "-0.01em",
+              }}
+            >
+              Dr. Uriah J. Maimone
+            </h1>
+            <div
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 600,
+                fontSize: "1.05rem",
+                color: "#1a7a4a",
+                letterSpacing: "0.06em",
+                marginBottom: "1.4rem",
+              }}
+            >
+              PT, DPT, CSCS, EP-C
+            </div>
+            <p
+              style={{
+                fontFamily: "Inter, sans-serif",
+                fontWeight: 400,
+                fontSize: "1.05rem",
+                color: "#566059",
+                lineHeight: 1.85,
+                maxWidth: 480,
+                marginBottom: "2rem",
+              }}
+            >
+              South Bay native. Board Certified Doctor of Physical Therapy with over 20 years in
+              the performance and rehabilitation space. Expert in sports rehab, geriatrics,
+              Parkinson's care, and strength and conditioning.
+            </p>
+            <div style={{ display: "flex", flexWrap: "wrap", margin: "-0.25rem" }}>
+              {PILLS.map((p, i) => (
+                <Reveal key={p} delay={i * 55} as="span">
+                  <span
+                    style={{
+                      display: "inline-block",
+                      background: "#e4f0e8",
+                      border: "1.5px solid #c8e6d4",
+                      color: "#1a7a4a",
+                      fontWeight: 700,
+                      fontSize: "0.7rem",
+                      padding: "0.34rem 0.88rem",
+                      borderRadius: 50,
+                      letterSpacing: "0.08em",
+                      margin: "0.25rem",
+                      textTransform: "uppercase",
+                    }}
+                  >
+                    {p}
+                  </span>
+                </Reveal>
+              ))}
+            </div>
+          </Reveal>
+
+          <Reveal delay={120}>
+            <img
+              src={portrait}
+              alt="Dr. Uriah J. Maimone, DPT"
+              style={{
+                width: "100%",
+                aspectRatio: "3 / 4",
+                objectFit: "cover",
+                objectPosition: "center top",
+                borderRadius: 14,
+                display: "block",
+              }}
+            />
+          </Reveal>
         </div>
       </section>
 
-      {/* Experience & Achievements Band */}
-      <section className="bg-primary py-14 text-primary-foreground">
-        <div className="container-prose">
-          <div className="grid grid-cols-2 gap-10 text-center md:grid-cols-4">
-            {[
-              ["20+", "Years Experience"],
-              ["3", "Advanced Degrees"],
-              ["11", "Specialties"],
-              ["100%", "Personalized Care"],
-            ].map(([num, label]) => (
-              <div key={label}>
-                <div
-                  className="font-display font-semibold leading-none"
-                  style={{ fontSize: "clamp(2.75rem, 5vw, 4rem)", fontFamily: "Georgia, 'Times New Roman', serif" }}
+      {/* ============ SECTION 2 — MISSION ============ */}
+      <section
+        style={{
+          background: "#1a7a4a",
+          padding: "90px clamp(2rem,7%,7rem)",
+        }}
+      >
+        <div
+          className="about-mission-grid"
+          style={{
+            display: "grid",
+            gap: "3rem",
+            maxWidth: 1280,
+            margin: "0 auto",
+          }}
+        >
+          <Reveal>
+            <span
+              style={{
+                color: "rgba(255,255,255,0.65)",
+                fontSize: "0.74rem",
+                textTransform: "uppercase",
+                letterSpacing: "0.14em",
+                fontWeight: 700,
+                marginBottom: "0.8rem",
+                display: "block",
+              }}
+            >
+              Our Mission
+            </span>
+            <h2
+              style={{
+                fontFamily: "'Playfair Display', Georgia, serif",
+                fontWeight: 900,
+                color: "white",
+                fontSize: "clamp(1.7rem, 3vw, 2.5rem)",
+                lineHeight: 1.18,
+                margin: 0,
+              }}
+            >
+              Enhancing Lives Through Movement
+            </h2>
+          </Reveal>
+          <Reveal delay={120}>
+            <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
+              {[
+                "Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to enhance the quality of life for those facing mobility challenges, pain, disease, and disorders — helping people regain movement and prevent future injuries and disabilities.",
+                "From geriatrics to youth, recreational to elite athletes — we understand that people want to push themselves to greater heights. Our mission is to communicate and treat all aspects of pre-habilitation, rehabilitation, exercise, sports science, and physiology in a way that is relevant, easy to understand, backed by facts, and results-driven.",
+                "We are confident that you will enjoy and use our services to enhance your performance and abilities — in your daily life, household chores, job duties, and sports. Thank you for visiting and hopefully choosing APTSB.",
+              ].map((p) => (
+                <p
+                  key={p.slice(0, 30)}
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 400,
+                    fontSize: "1rem",
+                    color: "rgba(255,255,255,0.88)",
+                    lineHeight: 1.88,
+                    margin: 0,
+                    textAlign: "left",
+                  }}
                 >
-                  {num}
+                  {p}
+                </p>
+              ))}
+            </div>
+          </Reveal>
+        </div>
+      </section>
+
+      {/* ============ SECTION 3 — STATS BAND ============ */}
+      <section
+        style={{
+          background: "#0f1a12",
+          padding: "56px clamp(2rem,7%,7rem)",
+        }}
+      >
+        <div
+          className="about-stats"
+          style={{
+            display: "flex",
+            justifyContent: "space-around",
+            alignItems: "center",
+            flexWrap: "wrap",
+            gap: "2rem",
+            maxWidth: 1280,
+            margin: "0 auto",
+          }}
+        >
+          {STATS.map(([num, label], i) => (
+            <Reveal key={label} delay={i * 80}>
+              <div style={{ display: "flex", alignItems: "center", gap: "2rem" }}>
+                <div style={{ textAlign: "center" }}>
+                  <div
+                    style={{
+                      fontFamily: "'Playfair Display', Georgia, serif",
+                      fontWeight: 900,
+                      fontSize: "clamp(2.6rem, 5vw, 3.8rem)",
+                      color: "#ffffff",
+                      lineHeight: 1,
+                    }}
+                  >
+                    {num}
+                  </div>
+                  <div
+                    style={{
+                      fontFamily: "Inter, sans-serif",
+                      fontWeight: 600,
+                      fontSize: "0.76rem",
+                      color: "rgba(255,255,255,0.52)",
+                      letterSpacing: "0.12em",
+                      textTransform: "uppercase",
+                      marginTop: "0.5rem",
+                    }}
+                  >
+                    {label}
+                  </div>
                 </div>
-                <div className="mt-3 text-sm font-semibold tracking-wide text-primary-foreground/90">{label}</div>
+                {i < STATS.length - 1 && (
+                  <div
+                    className="about-stat-divider"
+                    style={{
+                      width: 1,
+                      height: 48,
+                      background: "rgba(255,255,255,0.1)",
+                      alignSelf: "center",
+                    }}
+                  />
+                )}
               </div>
-            ))}
-          </div>
+            </Reveal>
+          ))}
         </div>
       </section>
 
-      {/* Intro / portrait */}
-      <section className="container-prose py-20">
-        <div className="grid items-start gap-12 lg:grid-cols-12">
-          <div className="lg:col-span-5">
-            <div className="ring-soft sticky top-24 rounded-3xl bg-cream-deep p-4">
-              <img src={portrait} alt="Dr. Uriah J. Maimone, DPT" className="w-full rounded-2xl object-cover" />
-              <div className="mt-5 px-2 pb-2">
-                <div className="font-display text-2xl font-semibold text-foreground">Dr. Uriah J. Maimone</div>
-                <div className="mt-1 text-sm font-semibold tracking-wider text-primary">PT, DPT, CSCS, EP-C</div>
-                <Link to="/contact" className="mt-5 inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
-                  Book a Free Consultation <ArrowRight className="h-4 w-4" />
-                </Link>
+      {/* ============ SECTION 4 — BIO ============ */}
+      <section
+        style={{
+          background: "#f3f7f4",
+          padding: "90px clamp(2rem,7%,7rem)",
+        }}
+      >
+        <div
+          className="about-bio-grid"
+          style={{
+            display: "grid",
+            gap: "5rem",
+            alignItems: "start",
+            maxWidth: 1280,
+            margin: "0 auto",
+          }}
+        >
+          <Reveal>
+            <div style={{ position: "relative" }}>
+              <img
+                src={portrait}
+                alt="Dr. Uriah J. Maimone"
+                style={{
+                  width: "100%",
+                  aspectRatio: "3 / 4",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  borderRadius: 16,
+                  display: "block",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "1rem",
+                  right: "1rem",
+                  background: "#1a7a4a",
+                  color: "white",
+                  padding: "0.65rem 1rem",
+                  borderRadius: 8,
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.68rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                }}
+              >
+                DPT · CSCS · EP-C
               </div>
             </div>
-          </div>
+          </Reveal>
 
-          <div className="lg:col-span-7 space-y-12">
-            {/* Bio */}
-            <div>
-              <div className="flex items-center gap-2 text-primary">
-                <Target className="h-5 w-5" />
-                <div className="eyebrow !text-primary">Bio</div>
+          <div>
+            <Reveal>
+              <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
+                <span
+                  style={{
+                    width: 8,
+                    height: 8,
+                    borderRadius: "50%",
+                    background: "#1a7a4a",
+                    display: "inline-block",
+                  }}
+                />
+                <span
+                  style={{
+                    color: "#1a7a4a",
+                    fontSize: "0.74rem",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.14em",
+                    fontWeight: 700,
+                  }}
+                >
+                  BIO
+                </span>
               </div>
-              <h2 className="mt-3 font-display text-3xl font-semibold text-foreground md:text-4xl">
-                Two decades of elite performance and rehabilitation
+              <h2
+                style={{
+                  fontFamily: "'Playfair Display', Georgia, serif",
+                  fontWeight: 900,
+                  fontSize: "clamp(1.55rem, 2.6vw, 2.1rem)",
+                  color: "#0f1a12",
+                  lineHeight: 1.22,
+                  marginTop: "0.6rem",
+                  marginBottom: "0.4rem",
+                }}
+              >
+                Two Decades of Elite Performance and Rehabilitation
               </h2>
-              <div className="mt-6 space-y-4 text-muted-foreground">
-                <p>
-                  Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of
-                  Science, both in Kinesiology from Cal Polytechnic Humboldt (CPH) with a focus in
-                  Exercise Science Human Performance. His thesis at CPH, the first of its kind,
-                  compared elite and amateur Mixed Martial Art (MMA) athletes in terms of various
-                  physical attributes, including body composition, skill-related physical tests,
-                  and muscular fitness. This research was submitted for publication in the Journal
-                  of Strength and Conditioning.
-                </p>
-                <p>
-                  Dr. Uriah interned and worked at an Elite Performance Center in Montreal,
-                  Quebec, specializing in athletic performance enhancement for top-level athletes,
-                  including those in the UFC and NHL.
-                </p>
-                <p>
-                  He pursued further education and obtained his Doctorate in Physical Therapy
-                  (DPT) from the University of St. Augustine for Health Sciences in San Marcos,
-                  CA. Dr. Uriah's extensive training includes manual techniques, movement-based
-                  approaches, and weight training methods. He utilizes functional movement
-                  assessments and current research to create personalized rehabilitation programs
-                  for patients, helping them manage pain and disease, regain movement, and prevent
-                  future injuries and disabilities.
-                </p>
-                <p>
-                  Outside of his work, Dr. Uriah is deeply involved in MMA, with over 20 years of
-                  experience in training and participation. He also enjoys movies, Marvel and DC
-                  comics, exercise, and spending time with family and friends. His unique
-                  perspective and experiences drive his commitment to pushing boundaries and
-                  advancing the field to better serve others.
-                </p>
-              </div>
-            </div>
+            </Reveal>
 
-            {/* Specialties */}
-            <div>
-              <div className="flex items-center gap-2 text-primary">
-                <Award className="h-5 w-5" />
-                <div className="eyebrow !text-primary">Specialties</div>
-              </div>
-              <h3 className="mt-3 font-display text-3xl font-semibold text-foreground">
-                Eleven areas of expertise
-              </h3>
-              <ul className="mt-6 grid gap-3 sm:grid-cols-2">
-                {specialties.map((s) => (
-                  <li
-                    key={s}
-                    className="flex items-start gap-3 rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground/90"
-                  >
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" />
-                    <span>{s}</span>
-                  </li>
-                ))}
-              </ul>
-            </div>
+            {[
+              {
+                h: "Education & Research",
+                p: "Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of Science in Kinesiology from Cal Polytechnic Humboldt with a focus in Exercise Science Human Performance. His thesis — the first of its kind — compared elite and amateur MMA athletes in body composition, skill-related physical tests, and muscular fitness. Submitted to the Journal of Strength and Conditioning.",
+              },
+              {
+                h: "Elite Performance Training",
+                p: "Dr. Uriah interned and worked at an Elite Performance Center in Montreal, Quebec, specializing in athletic performance enhancement for top-level athletes in the UFC and NHL. Working under world-renowned strength coach Jonathan Chaimberg alongside champions including Georges St-Pierre, Jon Jones, and Kris Letang.",
+              },
+              {
+                h: "Clinical Expertise",
+                p: "He earned his Doctorate in Physical Therapy from the University of St. Augustine for Health Sciences in San Marcos, CA. His training includes manual techniques, movement-based methods, and weight training — using functional movement assessments and current research to create personalized rehabilitation programs that help patients manage pain, regain movement, and prevent future injury.",
+              },
+            ].map((b, i) => (
+              <Reveal key={b.h} delay={i * 90}>
+                <h3
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.82rem",
+                    color: "#1a7a4a",
+                    letterSpacing: "0.1em",
+                    textTransform: "uppercase",
+                    marginTop: "1.6rem",
+                    marginBottom: "0.4rem",
+                  }}
+                >
+                  {b.h}
+                </h3>
+                <p
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 400,
+                    fontSize: "0.96rem",
+                    color: "#566059",
+                    lineHeight: 1.88,
+                    margin: 0,
+                  }}
+                >
+                  {b.p}
+                </p>
+              </Reveal>
+            ))}
 
-            {/* Education */}
-            <div>
-              <div className="flex items-center gap-2 text-primary">
-                <GraduationCap className="h-5 w-5" />
-                <div className="eyebrow !text-primary">Education & Certifications</div>
-              </div>
-              <h3 className="mt-3 font-display text-3xl font-semibold text-foreground">
-                Three degrees, two elite certifications
-              </h3>
-              <ul className="mt-6 space-y-3">
-                {education.map((e) => (
-                  <li
-                    key={e.title}
-                    className="rounded-xl border border-border bg-card px-5 py-4 transition-colors hover:border-primary/40"
-                  >
-                    <div className="font-display text-lg font-semibold text-foreground">{e.title}</div>
-                    <div className="mt-1 text-sm text-muted-foreground">{e.school}</div>
-                  </li>
+            <div
+              style={{
+                borderTop: "1px solid #c8e6d4",
+                marginTop: "1.6rem",
+                paddingTop: "1.4rem",
+              }}
+            >
+              <Reveal>
+                <div
+                  style={{
+                    fontFamily: "Inter, sans-serif",
+                    fontWeight: 700,
+                    fontSize: "0.76rem",
+                    color: "#1a7a4a",
+                    textTransform: "uppercase",
+                    letterSpacing: "0.1em",
+                    marginBottom: "1rem",
+                  }}
+                >
+                  Credentials & Education
+                </div>
+              </Reveal>
+              <ul style={{ listStyle: "none", padding: 0, margin: 0 }}>
+                {CREDENTIALS.map((c, i) => (
+                  <Reveal key={c} delay={i * 60} as="li">
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "flex-start",
+                        gap: "0.55rem",
+                        marginBottom: "0.55rem",
+                      }}
+                    >
+                      <span
+                        style={{
+                          width: 6,
+                          height: 6,
+                          borderRadius: "50%",
+                          background: "#1a7a4a",
+                          flexShrink: 0,
+                          marginTop: "0.6rem",
+                        }}
+                      />
+                      <span
+                        style={{
+                          fontFamily: "Inter, sans-serif",
+                          fontWeight: 400,
+                          fontSize: "0.9rem",
+                          color: "#566059",
+                          lineHeight: 1.65,
+                        }}
+                      >
+                        {c}
+                      </span>
+                    </div>
+                  </Reveal>
                 ))}
               </ul>
             </div>
           </div>
         </div>
       </section>
-    </>
+
+      {/* ============ SECTION 5 — CLOSING ============ */}
+      <section
+        style={{
+          background: "#0f1a12",
+          padding: "70px clamp(2rem,7%,7rem)",
+          textAlign: "center",
+        }}
+      >
+        <Reveal>
+          <h2
+            style={{
+              fontFamily: "'Playfair Display', Georgia, serif",
+              fontWeight: 900,
+              color: "white",
+              fontSize: "clamp(1.7rem, 3vw, 2.4rem)",
+              margin: 0,
+            }}
+          >
+            Ready to Start Your Recovery?
+          </h2>
+          <p
+            style={{
+              fontFamily: "Inter, sans-serif",
+              fontWeight: 400,
+              color: "rgba(255,255,255,0.72)",
+              fontSize: "1rem",
+              maxWidth: 480,
+              margin: "0.8rem auto 2rem",
+              lineHeight: 1.85,
+            }}
+          >
+            Book a free 15–20 minute consultation and let Dr. Uriah build a plan built
+            specifically around you.
+          </p>
+          <Link
+            to="/contact"
+            className="about-cta"
+            style={{
+              display: "inline-block",
+              background: "#1a7a4a",
+              color: "white",
+              fontWeight: 700,
+              fontSize: "0.95rem",
+              padding: "1rem 2.4rem",
+              borderRadius: 50,
+              textDecoration: "none",
+              transition: "background 0.2s ease, transform 0.2s ease",
+            }}
+          >
+            Book Free Consultation
+          </Link>
+        </Reveal>
+      </section>
+
+      <style>{`
+        .about-hero-grid { grid-template-columns: 1fr; }
+        .about-mission-grid { grid-template-columns: 1fr; }
+        .about-bio-grid { grid-template-columns: 1fr; }
+        @media (min-width: 900px) {
+          .about-hero-grid { grid-template-columns: 55fr 45fr; }
+          .about-mission-grid { grid-template-columns: 38fr 62fr; }
+          .about-bio-grid { grid-template-columns: 42fr 58fr; }
+        }
+        @media (max-width: 700px) {
+          .about-stat-divider { display: none !important; }
+        }
+        .about-cta:hover { background: #145c38 !important; transform: translateY(-2px); }
+      `}</style>
+    </div>
   );
 }
