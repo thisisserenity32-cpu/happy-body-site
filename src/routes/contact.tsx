@@ -27,7 +27,7 @@ function ContactPage() {
         eyebrow="Concierge Services"
         title="Contact Us"
         subtitle="Concierge services from the comfort of your home — let's start with a free 15–20 minute call."
-        image="https://images.unsplash.com/photo-1597466765990-64ad1c35dafc?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1600&q=80"
       />
 
       <section className="container-prose py-20">
