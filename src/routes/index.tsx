@@ -136,7 +136,7 @@ function Hero() {
               Book Now <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-cream px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
-              See What We Treat
+              See Treatment
             </Link>
           </div>
         </div>
@@ -337,7 +337,7 @@ function WhatWeTreat() {
       <div className="flex items-end justify-between gap-6">
         <div>
           <div className="eyebrow">Specialties</div>
-          <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">What We Treat</h2>
+          <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">Treatment</h2>
           <p className="mt-3 max-w-xl text-muted-foreground">
             Comprehensive physical therapy across 11 specialties — delivered with personalized attention in your home.
           </p>
