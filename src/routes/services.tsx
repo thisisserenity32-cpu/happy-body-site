@@ -75,17 +75,26 @@ function ServicesPage() {
       <section className="container-prose py-20">
         <div className="grid gap-6 lg:grid-cols-2">
           {services.map((s) => (
-            <article key={s.id} id={s.id} className="rounded-3xl border border-border bg-card p-8 transition-shadow hover:shadow-lg">
-              <h3 className="font-display text-2xl font-semibold text-foreground">{s.title}</h3>
-              <p className="mt-2 font-medium text-primary">{s.lead}</p>
-              <p className="mt-3 text-sm text-muted-foreground">{s.body}</p>
-              <ul className="mt-5 space-y-2">
-                {s.points.map((p) => (
-                  <li key={p} className="flex items-start gap-2 text-sm text-foreground/80">
-                    <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {p}
-                  </li>
-                ))}
-              </ul>
+            <article key={s.id} id={s.id} className="overflow-hidden rounded-3xl border border-border bg-card transition-shadow hover:shadow-lg">
+              <img
+                src={s.img}
+                alt={s.alt}
+                className="h-48 w-full object-cover"
+                style={{ objectPosition: "center top" }}
+                loading="lazy"
+              />
+              <div className="p-8">
+                <h3 className="font-display text-2xl font-semibold text-foreground">{s.title}</h3>
+                <p className="mt-2 font-medium text-primary">{s.lead}</p>
+                <p className="mt-3 text-sm text-muted-foreground">{s.body}</p>
+                <ul className="mt-5 space-y-2">
+                  {s.points.map((p) => (
+                    <li key={p} className="flex items-start gap-2 text-sm text-foreground/80">
+                      <CheckCircle2 className="mt-0.5 h-4 w-4 shrink-0 text-accent" /> {p}
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </article>
           ))}
         </div>
