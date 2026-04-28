@@ -223,6 +223,7 @@ function NutritionPage() {
                 <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> meat, fish, dried fruit, legumes.</p>
               </div>
             </div>
+          </div>
         </div>
       </section>
 
