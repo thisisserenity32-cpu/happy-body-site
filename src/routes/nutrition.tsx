@@ -265,7 +265,7 @@ function NutritionPage() {
             {[
               { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" },
               { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80" },
-              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1633933358116-a27b902fad35?auto=format&fit=crop&w=600&q=80" },
+              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=600&q=80" },
               { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" },
               { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=600&q=80" },
             ].map((f) => (
