@@ -30,7 +30,7 @@ export function SiteFooter() {
         <div>
           <div className="text-xs font-semibold uppercase tracking-[0.2em] text-accent">Explore</div>
           <ul className="mt-4 space-y-2 text-sm">
-            <li><Link to="/services" className="hover:text-accent">What We Treat</Link></li>
+            <li><Link to="/services" className="hover:text-accent">Treatment</Link></li>
             <li><Link to="/about" className="hover:text-accent">About Dr. Uriah</Link></li>
             <li><Link to="/fitness-principles" className="hover:text-accent">Fitness Principles</Link></li>
             <li><Link to="/nutrition" className="hover:text-accent">Nutrition</Link></li>

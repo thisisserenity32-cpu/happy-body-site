@@ -5,9 +5,9 @@ import { InteractiveGuide } from "@/components/InteractiveGuide";
 export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
-      { title: "What We Treat — Absolute PT South Bay" },
+      { title: "Treatment — Absolute PT South Bay" },
       { name: "description", content: "Comprehensive physical therapy across 11 specialties — orthopedic, sports, geriatrics, Parkinson's, and more, delivered to your home." },
-      { property: "og:title", content: "What We Treat — Absolute PT South Bay" },
+      { property: "og:title", content: "Treatment — Absolute PT South Bay" },
       { property: "og:description", content: "Eleven specialties, fully personalized, delivered in your home across South Bay." },
       { property: "og:image", content: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80" },
     ],
@@ -56,7 +56,7 @@ function ServicesPage() {
     <>
       <PageHero
         eyebrow="Specialties"
-        title="What We Treat"
+        title="Treatment"
         subtitle="Comprehensive physical therapy across 11 specialties — all delivered to your home across South Bay."
         image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
       />
