@@ -31,7 +31,7 @@ const services = [
   { id: "medical-exercise", title: "Medical Exercise Programs", lead: "Physician-guided exercise prescriptions for chronic conditions.",
     body: "Safe, progressive exercise programs for patients with chronic medical conditions, monitored by a certified exercise physiologist.",
     points: ["Diabetes management through exercise", "Cardiovascular rehabilitation", "Weight management programs", "Chronic disease self-management"] },
-  { id: "strength-conditioning", title: "Strength & Conditioning", lead: "Certified CSCS programming for athletes and active individuals.",
+  { id: "strength-conditioning", title: "Strength & Conditioning", lead: "Certified Strength & Conditioning Specialist programming for athletes and active individuals.",
     body: "Build functional strength, improve athletic performance, and reduce injury risk through periodized training programs designed by a certified Strength & Conditioning Specialist.",
     points: ["Periodized strength training", "Athletic performance optimization", "Injury prevention & movement screening", "Sport-specific conditioning"] },
   { id: "weight-training", title: "Weight Training & Exercise Plans", lead: "Customized training plans tailored to your goals and abilities.",
