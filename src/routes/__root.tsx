@@ -64,6 +64,36 @@ function RootShell({ children }: { children: React.ReactNode }) {
 
 
 function RootComponent() {
+  const location = useLocation();
+
+  useEffect(() => {
+    if (typeof window === "undefined") return;
+    if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+
+    const main = document.querySelector("main");
+    if (!main) return;
+
+    const sections = Array.from(main.querySelectorAll("main > section")) as HTMLElement[];
+    // Skip the first section (hero) — that animates via CSS on mount.
+    const targets = sections.slice(1);
+    targets.forEach((s) => s.classList.add("lov-reveal"));
+
+    const io = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add("is-visible");
+            io.unobserve(entry.target);
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" },
+    );
+    targets.forEach((t) => io.observe(t));
+
+    return () => io.disconnect();
+  }, [location.pathname]);
+
   return (
     <div className="flex min-h-screen flex-col bg-background">
       <SiteHeader />
