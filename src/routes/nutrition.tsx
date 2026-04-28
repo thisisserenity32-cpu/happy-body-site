@@ -190,15 +190,18 @@ function NutritionPage() {
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               <div>
                 <p className="text-sm font-semibold text-primary">Vitamin A</p>
-                <p className="mt-1 text-sm text-muted-foreground">Aids nerve and muscle function, reproduction, and maintains healthy bones and skin. Sources: milk, green vegetables, orange fruits.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Aids nerve and muscle function, reproduction, and maintains healthy bones and skin.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> milk, green vegetables, orange fruits.</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-primary">Vitamin C</p>
-                <p className="mt-1 text-sm text-muted-foreground">Protects cells from damage and supports wound healing. Sources: orange juice, mango, citrus, cabbage.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Protects cells from damage and supports wound healing.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> orange juice, mango, citrus, cabbage.</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-primary">Vitamin D</p>
-                <p className="mt-1 text-sm text-muted-foreground">Prevents bone loss, regulates blood calcium, increases calcium absorption. Sources: fish, greens, milk.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Prevents bone loss, regulates blood calcium, increases calcium absorption.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> fish, greens, milk.</p>
               </div>
             </div>
 
@@ -206,18 +209,20 @@ function NutritionPage() {
             <div className="mt-4 grid gap-4 md:grid-cols-3">
               <div>
                 <p className="text-sm font-semibold text-primary">Calcium</p>
-                <p className="mt-1 text-sm text-muted-foreground">Bone strength, fracture protection, blood clotting, nerve transmission. Sources: milk, nuts, cabbage.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Bone strength, fracture protection, blood clotting, nerve transmission.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> milk, nuts, cabbage.</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-primary">Potassium</p>
-                <p className="mt-1 text-sm text-muted-foreground">Helps prevent muscle cramps, supports nerve transmission and fluid balance. Sources: leafy greens, beans, bananas.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Helps prevent muscle cramps, supports nerve transmission and fluid balance.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> leafy greens, beans, bananas.</p>
               </div>
               <div>
                 <p className="text-sm font-semibold text-primary">Iron</p>
-                <p className="mt-1 text-sm text-muted-foreground">Supports energy metabolism, immune function, oxygen transport. Sources: meat, fish, dried fruit, legumes.</p>
+                <p className="mt-1 text-sm text-muted-foreground">Supports energy metabolism, immune function, oxygen transport.</p>
+                <p className="mt-3 text-xs text-foreground/70"><span className="font-semibold text-primary">Food sources:</span> meat, fish, dried fruit, legumes.</p>
               </div>
             </div>
-          </div>
         </div>
       </section>
 
@@ -259,9 +264,9 @@ function NutritionPage() {
             {[
               { label: "Water", value: "Electrolyte beverages, tea, plain water", img: "https://images.unsplash.com/photo-1523362628745-0c100150b504?auto=format&fit=crop&w=600&q=80" },
               { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80" },
-              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1607623488851-fe1213c47fb6?auto=format&fit=crop&w=600&q=80" },
+              { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1633933358116-a27b902fad35?auto=format&fit=crop&w=600&q=80" },
               { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" },
-              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1494256997604-768d1f608cac?auto=format&fit=crop&w=600&q=80" },
+              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=600&q=80" },
             ].map((f) => (
               <div key={f.label} className="ring-soft overflow-hidden rounded-xl bg-card">
                 <img src={f.img} alt={f.label} loading="lazy" className="aspect-square w-full object-cover" />
