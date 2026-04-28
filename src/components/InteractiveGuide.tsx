@@ -17,11 +17,11 @@ const regions: Region[] = [
     label: "Head & Neck",
     intro: "Cervical spine pain, headaches, and post-concussion mobility issues.",
     conditions: [
-      { name: "Cervical strain / whiplash", desc: "Soft-tissue injury of the neck from sudden acceleration-deceleration; manual therapy + graded mobility restore range and reduce guarding." },
-      { name: "Cervicogenic headaches", desc: "Headaches originating from upper cervical joints or musculature; treated with joint mobilizations, postural retraining, and deep neck flexor activation." },
-      { name: "TMJ dysfunction", desc: "Jaw pain, clicking, or limited opening; addressed with intra-/extra-oral release and motor control retraining." },
-      { name: "Cervical radiculopathy", desc: "Nerve root compression causing arm pain, tingling, or weakness; nerve glides, traction, and directional preference exercises." },
-      { name: "Post-concussion balance / vestibular issues", desc: "Dizziness and visual disturbance after concussion; vestibular and oculomotor rehab progressed to sport-specific activity." },
+      { name: "Cervical strain / whiplash", desc: "A soft-tissue injury of the neck, often from a sudden jolt like a car accident, fall, or sports collision that whips the head forward and back." },
+      { name: "Cervicogenic headaches", desc: "Headaches that originate from tight muscles or stiff joints in the upper neck, commonly triggered by poor posture, long screen time, or sleeping awkwardly." },
+      { name: "TMJ dysfunction", desc: "Jaw pain, clicking, or limited opening, often caused by clenching, grinding, stress, or trauma to the jaw." },
+      { name: "Cervical radiculopathy", desc: "A pinched nerve in the neck, often from a herniated disc or arthritis, that sends pain, tingling, or weakness down the arm." },
+      { name: "Post-concussion balance / vestibular issues", desc: "Lingering dizziness, fogginess, or visual disturbance after a head impact from sports, a fall, or a car accident." },
     ],
   },
   {
@@ -29,11 +29,11 @@ const regions: Region[] = [
     label: "Shoulder",
     intro: "Rotator cuff injuries, impingement, instability, and post-surgical recovery.",
     conditions: [
-      { name: "Rotator cuff strain / tear", desc: "Pain reaching overhead or sleeping on the shoulder; progressive cuff and scapular strengthening with manual therapy." },
-      { name: "Subacromial impingement", desc: "Pinching pain with elevation; addressed with scapular mechanics, posture, and graded loading." },
-      { name: "Frozen shoulder (adhesive capsulitis)", desc: "Stiffness and loss of motion; joint mobilizations, capsular stretching, and patient-specific dosing." },
-      { name: "Post-op rotator cuff / labral repair", desc: "Protocol-driven return to motion, strength, and sport after surgery." },
-      { name: "AC joint sprain", desc: "Top-of-shoulder pain after a fall or contact; taping, scapular control, and progressive loading." },
+      { name: "Rotator cuff strain / tear", desc: "Pain reaching overhead or sleeping on the shoulder, often from repetitive overhead activity, lifting, or a fall." },
+      { name: "Subacromial impingement", desc: "A pinching pain when raising the arm, usually from poor posture, weak scapular muscles, or repetitive overhead motion." },
+      { name: "Frozen shoulder (adhesive capsulitis)", desc: "Gradual stiffness and loss of motion in the shoulder, often appearing after a period of disuse, injury, or with diabetes." },
+      { name: "Post-op rotator cuff / labral repair", desc: "Recovery after shoulder surgery to repair a torn tendon or labrum, typically following a tear from injury or wear." },
+      { name: "AC joint sprain", desc: "Pain on the top of the shoulder, usually from a fall onto the shoulder or a direct contact hit in sports." },
     ],
   },
   {
@@ -41,10 +41,10 @@ const regions: Region[] = [
     label: "Arm & Elbow",
     intro: "Tendinopathies, nerve entrapments, and overuse injuries of the elbow and forearm.",
     conditions: [
-      { name: "Tennis elbow (lateral epicondylalgia)", desc: "Outer-elbow pain with gripping; eccentric loading, manual therapy, and ergonomic tweaks." },
-      { name: "Golfer's elbow (medial epicondylalgia)", desc: "Inner-elbow pain with wrist flexion; progressive tendon loading and grip mechanics." },
-      { name: "Cubital / radial tunnel syndrome", desc: "Tingling into the hand from nerve entrapment at the elbow; nerve glides and posture work." },
-      { name: "Distal biceps strain", desc: "Front-of-elbow pain after lifting; progressive isometric to heavy-slow loading." },
+      { name: "Tennis elbow (lateral epicondylalgia)", desc: "Outer-elbow pain from repetitive gripping or wrist extension — common in racquet sports, painters, and desk workers." },
+      { name: "Golfer's elbow (medial epicondylalgia)", desc: "Inner-elbow pain from repeated wrist flexion or gripping, common in golf, throwing sports, and manual labor." },
+      { name: "Cubital / radial tunnel syndrome", desc: "Numbness or tingling into the hand from a nerve being compressed at the elbow, often from leaning on the elbow or repetitive bending." },
+      { name: "Distal biceps strain", desc: "Front-of-elbow pain after sudden heavy lifting or an awkward catch that overstretched the biceps tendon." },
     ],
   },
   {
@@ -52,11 +52,11 @@ const regions: Region[] = [
     label: "Back & Core",
     intro: "Disc-related pain, postural fatigue, and core instability across the spine.",
     conditions: [
-      { name: "Lumbar disc herniation", desc: "Low back and leg pain with directional sensitivity; McKenzie-style exposure, nerve glides, and graded strengthening." },
-      { name: "SI joint dysfunction", desc: "One-sided low back / buttock pain; manual therapy and pelvic stabilization." },
-      { name: "Lumbar strain", desc: "Acute muscle guarding after lifting or twisting; pain-modulation, mobility, and re-loading." },
-      { name: "Thoracic stiffness / postural pain", desc: "Mid-back tightness from desk posture; mobility, breathing, and scapular control." },
-      { name: "Sciatica", desc: "Radiating leg pain; nerve mobilizations, directional exercise, and progressive return to activity." },
+      { name: "Lumbar disc herniation", desc: "Low back and leg pain caused when a spinal disc bulges and irritates a nearby nerve, often after lifting, twisting, or years of strain." },
+      { name: "SI joint dysfunction", desc: "One-sided low back or buttock pain from the joint between the pelvis and spine, often from pregnancy, a fall, or repetitive asymmetric activity." },
+      { name: "Lumbar strain", desc: "Acute muscle pain and guarding in the low back, typically after lifting something heavy, twisting, or a sudden movement." },
+      { name: "Thoracic stiffness / postural pain", desc: "Mid-back tightness and ache from prolonged sitting, slouched posture, or long hours at a desk or driving." },
+      { name: "Sciatica", desc: "Sharp pain radiating from the low back down the leg, caused by irritation of the sciatic nerve — often from a disc, tight muscles, or prolonged sitting." },
     ],
   },
   {
@@ -64,11 +64,11 @@ const regions: Region[] = [
     label: "Hip & Pelvis",
     intro: "Hip impingement, bursitis, labral injuries, and post-replacement rehab.",
     conditions: [
-      { name: "Femoroacetabular impingement (FAI)", desc: "Pinching with deep hip flexion; mobility, motor control, and hip strengthening." },
-      { name: "Greater trochanteric bursitis", desc: "Side-of-hip pain lying or walking; glute medius loading and load management." },
-      { name: "Labral tear", desc: "Catching or deep groin pain; capsular stability and progressive loading." },
-      { name: "Total hip replacement rehab", desc: "Protocol-driven return to walking, stairs, and full activity." },
-      { name: "Hip flexor / adductor strain", desc: "Front or inner-thigh pain in athletes; eccentric strengthening and return-to-sport." },
+      { name: "Femoroacetabular impingement (FAI)", desc: "A pinching sensation deep in the hip with squatting or sitting, caused by extra bone shape in the hip joint." },
+      { name: "Greater trochanteric bursitis", desc: "Pain on the side of the hip when lying on it or walking, from inflammation of the bursa — often linked to weak glutes or repetitive activity." },
+      { name: "Labral tear", desc: "Catching, clicking, or deep groin pain from a tear of the cartilage rim of the hip socket, often from sports or repetitive twisting." },
+      { name: "Total hip replacement rehab", desc: "Recovery after surgery to replace the hip joint, usually following years of arthritis pain and stiffness." },
+      { name: "Hip flexor / adductor strain", desc: "Front or inner-thigh pain from a sudden sprint, kick, or change of direction that overstretched the muscle." },
     ],
   },
   {
@@ -76,11 +76,11 @@ const regions: Region[] = [
     label: "Leg & Knee",
     intro: "ACL/MCL injuries, patellar tracking issues, tendinopathies, and arthritis.",
     conditions: [
-      { name: "ACL reconstruction rehab", desc: "Protocol-driven recovery through swelling control, strength, neuromuscular control, and return to sport." },
-      { name: "Patellofemoral pain", desc: "Front-of-knee pain with stairs and squatting; quad/glute strengthening and loading tweaks." },
-      { name: "Meniscus injury", desc: "Joint-line pain or catching; progressive loading and motor control." },
-      { name: "Patellar / quad tendinopathy", desc: "Jumper's knee; isometric and heavy-slow tendon loading." },
-      { name: "Knee osteoarthritis", desc: "Stiffness and ache with activity; strengthening, weight management, and education." },
+      { name: "ACL reconstruction rehab", desc: "Recovery after surgery to repair a torn ACL — a ligament commonly injured during pivoting sports like soccer, basketball, or skiing." },
+      { name: "Patellofemoral pain", desc: "Aching at the front of the knee with stairs, squatting, or sitting too long — often from muscle imbalance, overuse, or kneecap tracking." },
+      { name: "Meniscus injury", desc: "Pain along the joint line, sometimes with catching or locking, from a twist or squat that tore the cartilage cushion." },
+      { name: "Patellar / quad tendinopathy", desc: "Pain just below the kneecap, common in jumping sports, from repetitive loading that irritated the tendon." },
+      { name: "Knee osteoarthritis", desc: "Stiffness and ache that worsens with activity, from gradual wearing down of the cartilage in the knee over years." },
     ],
   },
   {
@@ -88,11 +88,11 @@ const regions: Region[] = [
     label: "Foot & Ankle",
     intro: "Plantar fasciitis, sprains, Achilles issues, and post-fracture recovery.",
     conditions: [
-      { name: "Plantar fasciitis", desc: "Stabbing heel pain with first morning steps; loading, mobility, and footwear guidance." },
-      { name: "Lateral ankle sprain", desc: "Outside ankle pain after rolling; balance, strength, and return-to-sport drills." },
-      { name: "Achilles tendinopathy", desc: "Back-of-heel pain that warms up with activity; eccentric and heavy-slow loading." },
-      { name: "Post-fracture recovery", desc: "Restoring motion, strength, and gait after immobilization." },
-      { name: "Posterior tibial tendon dysfunction", desc: "Inner-ankle pain and arch fatigue; orthotic guidance and progressive strengthening." },
+      { name: "Plantar fasciitis", desc: "Sharp heel pain with the first steps in the morning, from inflammation of the band of tissue along the bottom of the foot — often from long standing or new running." },
+      { name: "Lateral ankle sprain", desc: "Pain on the outside of the ankle after rolling it on uneven ground, in sports, or stepping off a curb." },
+      { name: "Achilles tendinopathy", desc: "Pain at the back of the heel that warms up with activity but stiffens after rest, often from a sudden increase in running or jumping." },
+      { name: "Post-fracture recovery", desc: "Restoring motion and strength after a broken bone in the foot or ankle, typically caused by a fall, twist, or impact." },
+      { name: "Posterior tibial tendon dysfunction", desc: "Pain along the inside of the ankle and arch fatigue, often from overuse, flat feet, or aging tendons." },
     ],
   },
 ];
@@ -124,10 +124,10 @@ export function InteractiveGuide() {
     { id: "neck",     top: "16%", left: "38%", size: 48 },
     { id: "shoulder", top: "24%", left: "50%", size: 56 },
     { id: "arm",      top: "32%", left: "27%", size: 52 },
-    { id: "back",     top: "40%", left: "52%", size: 64 },
+    { id: "back",     top: "36%", left: "46%", size: 64 },
     { id: "hip",      top: "47%", left: "53%", size: 60 },
     { id: "knee",     top: "68%", left: "58%", size: 56 },
-    { id: "foot",     top: "82%", left: "70%", size: 50 },
+    { id: "foot",     top: "86%", left: "78%", size: 50 },
   ];
 
   return (
@@ -213,7 +213,7 @@ export function InteractiveGuide() {
 
             <div className="eyebrow">Treatment Area</div>
             <h3 className="mt-2 font-display text-3xl font-semibold text-foreground md:text-4xl">{region.label}</h3>
-            <p className="mt-3 text-sm text-muted-foreground">Tap an ailment to see a short description.</p>
+            <p className="mt-3 text-sm text-muted-foreground">Tap an ailment to learn what it feels like and how it commonly happens.</p>
 
             <ul className="mt-6 space-y-2">
               {region.conditions.map((c) => (
@@ -249,7 +249,7 @@ function RegionButton({
   return (
     <button
       onClick={onClick}
-      className={`group rounded-2xl border-2 px-6 py-5 text-${align} transition-all ${
+      className={`group rounded-2xl border-2 px-6 py-5 text-center md:text-${align} transition-all ${
         active
           ? "border-primary bg-primary text-primary-foreground shadow-lg"
           : "border-border bg-card text-foreground hover:border-primary/50 hover:bg-primary-soft/40 hover:shadow-md"
