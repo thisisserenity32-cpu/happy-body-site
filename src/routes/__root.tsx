@@ -35,6 +35,13 @@ export const Route = createRootRoute({
       { title: "Absolute PT South Bay — Concierge Physical Therapy" },
       { name: "description", content: "Expert in-home orthopedic and sports physical therapy across South Bay, with telehealth statewide. Real results, in your home." },
       { property: "og:type", content: "website" },
+      { property: "og:title", content: "Absolute PT South Bay — Concierge Physical Therapy" },
+      { name: "twitter:title", content: "Absolute PT South Bay — Concierge Physical Therapy" },
+      { property: "og:description", content: "Expert in-home orthopedic and sports physical therapy across South Bay, with telehealth statewide. Real results, in your home." },
+      { name: "twitter:description", content: "Expert in-home orthopedic and sports physical therapy across South Bay, with telehealth statewide. Real results, in your home." },
+      { property: "og:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5c967b1e-46df-4859-bcb7-2da201bb61c5/id-preview-ec986fae--b1fedc16-7574-4f16-a707-101aa48e6767.lovable.app-1777438753626.png" },
+      { name: "twitter:image", content: "https://pub-bb2e103a32db4e198524a2e9ed8f35b4.r2.dev/5c967b1e-46df-4859-bcb7-2da201bb61c5/id-preview-ec986fae--b1fedc16-7574-4f16-a707-101aa48e6767.lovable.app-1777438753626.png" },
+      { name: "twitter:card", content: "summary_large_image" },
     ],
     links: [
       { rel: "stylesheet", href: appCss },
