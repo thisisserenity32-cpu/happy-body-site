@@ -1,5 +1,5 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { CheckCircle2 } from "lucide-react";
 import { InteractiveGuide } from "@/components/InteractiveGuide";
 import { BookingCTA } from "@/components/BookingCTA";
 
