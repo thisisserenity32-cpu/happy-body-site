@@ -270,7 +270,7 @@ function NutritionPage() {
               { label: "Carbohydrates", value: "Green vegetables, fruit, whole grains", img: "https://images.unsplash.com/photo-1505253758473-96b7015fcd40?auto=format&fit=crop&w=600&q=80" },
               { label: "Protein", value: "Meats, whey, eggs", img: "https://images.unsplash.com/photo-1432139509613-5c4255815697?auto=format&fit=crop&w=600&q=80" },
               { label: "Fat", value: "Olive oil, nuts, peanut butter, avocados, fatty fish", img: "https://images.unsplash.com/photo-1474979266404-7eaacbcd87c5?auto=format&fit=crop&w=600&q=80" },
-              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1517400508447-f8dd518b86db?auto=format&fit=crop&w=600&q=80" },
+              { label: "Vitamin D", value: "Sunlight, beef, fatty fish, greens, milk", img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80" },
             ].map((f) => (
               <div key={f.label} className="ring-soft overflow-hidden rounded-xl bg-card">
                 <img src={f.img} alt={f.label} loading="lazy" className="aspect-square w-full object-cover" />
