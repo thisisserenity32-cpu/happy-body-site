@@ -26,7 +26,7 @@ const boneNutrients = [
   {
     name: "Vitamin D",
     icon: Sun,
-    img: "https://images.unsplash.com/photo-1504387828636-abeb50778c0c?auto=format&fit=crop&w=900&q=80",
+    img: "https://images.unsplash.com/photo-1507525428034-b723cf961d3e?w=800&q=80",
     body: "Synthesized from direct sunlight in skin and consumed in food. Prevents bone loss, regulates blood calcium, and increases calcium absorption. Skin pigmentation, age, sunscreen, smog, and geography all affect production. Adults: 600–2,000 IU/day.",
     foods: "Milk, yogurt, fish, fatty fish, mushrooms exposed to UV light",
   },
@@ -114,7 +114,10 @@ function NutritionPage() {
         eyebrow="Foundation"
         title="Nutrition"
         subtitle="Fuel your body for optimal performance, recovery, and long-term health with evidence-based nutrition guidance."
-        image="https://images.unsplash.com/photo-1512621776951-a57141f2eefd?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1490645935967-10de6ba17061?w=1600&q=80"
+        imageAlt="Fresh healthy nutrition food background"
+        variant="dark"
+        overlay="rgba(10,20,12,0.62)"
       />
 
       {/* Foundation: Bone Health */}

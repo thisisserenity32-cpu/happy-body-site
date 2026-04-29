@@ -30,7 +30,7 @@ const services = [
     points: ["Fall prevention and balance training", "Mobility restoration and gait training", "Osteoporosis-safe programs", "Home safety assessment"] },
   { id: "parkinsons", title: "Parkinson's Dynamic Movement", lead: "Evidence-based movement therapy for Parkinson's disease management.",
     body: "Using LSVT BIG and other evidence-based protocols to combat the movement challenges of Parkinson's — large-amplitude movements, functional mobility, and independence.",
-    img: "https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?w=800&q=80", alt: "Balance and vestibular therapy",
+    img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", alt: "Parkinson's dynamic movement therapy balance training",
     points: ["LSVT BIG–style movement therapy", "Large-amplitude movement training", "Balance & fall prevention strategies", "Caregiver education and support"] },
   { id: "medical-exercise", title: "Medical Exercise Programs", lead: "Physician-guided exercise prescriptions for chronic conditions.",
     body: "Safe, progressive exercise programs for patients with chronic medical conditions, monitored by a certified exercise physiologist.",
@@ -46,19 +46,19 @@ const services = [
     points: ["Customized resistance programs", "Hypertrophy plans", "Body composition programs", "Progressive overload & periodization"] },
   { id: "sport-massage", title: "Sport Massage Therapy", lead: "Therapeutic massage to aid recovery and enhance performance.",
     body: "Therapeutic sports massage integrated into your treatment plan to improve tissue mobility, reduce muscle tension, and accelerate recovery.",
-    img: "https://images.unsplash.com/photo-1542577268-68b2d38cfd5c?w=800&q=80", alt: "Sport massage therapy",
+    img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80", alt: "Sports massage therapy hands on treatment",
     points: ["Deep tissue & myofascial release", "Pre/post-event sports massage", "Trigger point therapy", "Scar tissue management"] },
   { id: "biomechanics", title: "Optimal Biomechanics Education", lead: "Education and training for efficient, injury-free movement patterns.",
     body: "Learn how your body moves and how to move it better — gait analysis, posture correction, and movement pattern training.",
-    img: "https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?w=800&q=80", alt: "Biomechanics education",
+    img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80", alt: "Biomechanics movement education physical therapy",
     points: ["Gait analysis and correction", "Posture assessment & retraining", "Running mechanics", "Ergonomic workspace evaluation"] },
   { id: "modalities", title: "Modalities for Faster Recovery", lead: "Advanced recovery techniques alongside manual therapy and exercise.",
     body: "Evidence-based recovery modalities accelerate healing, reduce pain, and improve tissue recovery.",
-    img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", alt: "Recovery modalities",
+    img: "https://images.unsplash.com/photo-1559757148-5c350d0d3c56?w=800&q=80", alt: "Physical therapy modalities recovery treatment",
     points: ["Electrical stimulation (TENS, NMES)", "Therapeutic ultrasound", "Cryo & heat therapy", "Cupping, IASTM, kinesio taping"] },
   { id: "pain-management", title: "Pain Management", lead: "Comprehensive approaches to chronic and acute pain relief.",
     body: "Non-pharmacological pain management combining manual therapy, therapeutic exercise, neuroscience education, and self-management strategies.",
-    img: "https://images.unsplash.com/photo-1504439468489-c8920d796a29?w=800&q=80", alt: "Pain management therapy",
+    img: "https://images.unsplash.com/photo-1616279969856-759f316a5ac1?w=800&q=80", alt: "Pain management physical therapy treatment",
     points: ["Manual therapy & joint mobilization", "Pain neuroscience education", "Graded exposure & activity modification", "Long-term self-management"] },
 ];
 
@@ -69,7 +69,11 @@ function ServicesPage() {
         eyebrow="Specialties"
         title="Treatment"
         subtitle="Comprehensive physical therapy across 11 specialties — all delivered to your home across South Bay."
-        image="https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=1600&q=80"
+        imageAlt="Physical therapy hands on treatment rehabilitation"
+        variant="dark"
+        overlay="rgba(10,20,12,0.60)"
+        objectPosition="center top"
       />
       <InteractiveGuide />
       <section className="container-prose py-20">
@@ -108,18 +112,55 @@ function ServicesPage() {
   );
 }
 
-export function PageHero({ eyebrow, title, subtitle, image }: { eyebrow: string; title: string; subtitle: string; image: string }) {
+export function PageHero({
+  eyebrow,
+  title,
+  subtitle,
+  image,
+  imageAlt = "",
+  variant = "light",
+  overlay,
+  objectPosition = "center center",
+}: {
+  eyebrow: string;
+  title: string;
+  subtitle: string;
+  image: string;
+  imageAlt?: string;
+  variant?: "light" | "dark";
+  overlay?: string;
+  objectPosition?: string;
+}) {
+  const isDark = variant === "dark";
+  const overlayColor = overlay ?? (isDark ? "rgba(10,20,12,0.60)" : "");
   return (
-    <section className="relative overflow-hidden">
-      <div className="absolute inset-0 -z-10">
-        <img src={image} alt="" className="h-full w-full object-cover" />
-        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/85 to-cream/30" />
-      </div>
-      <div className="container-prose py-20 md:py-28">
+    <section className="relative overflow-hidden" style={{ position: "relative" }}>
+      <img
+        src={image}
+        alt={imageAlt}
+        onError={(e) => { (e.currentTarget as HTMLImageElement).style.display = "none"; }}
+        style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: "cover", objectPosition, zIndex: 0 }}
+      />
+      {isDark ? (
+        <div style={{ position: "absolute", inset: 0, background: overlayColor, zIndex: 1 }} />
+      ) : (
+        <div className="absolute inset-0 bg-gradient-to-r from-cream via-cream/85 to-cream/30" style={{ zIndex: 1 }} />
+      )}
+      <div className="container-prose py-20 md:py-28" style={{ position: "relative", zIndex: 2 }}>
         <div className="max-w-2xl">
-          <div className="eyebrow">{eyebrow}</div>
-          <h1 className="mt-4 font-display text-5xl font-semibold leading-[1.05] text-primary md:text-6xl">{title}</h1>
-          <p className="mt-5 max-w-lg text-lg text-muted-foreground">{subtitle}</p>
+          <div className="eyebrow" style={isDark ? { color: "#ffffff" } : undefined}>{eyebrow}</div>
+          <h1
+            className="mt-4 font-display text-5xl font-semibold leading-[1.05] md:text-6xl"
+            style={{ color: isDark ? "#ffffff" : undefined }}
+          >
+            {title}
+          </h1>
+          <p
+            className="mt-5 max-w-lg text-lg"
+            style={{ color: isDark ? "rgba(255,255,255,0.9)" : undefined }}
+          >
+            {subtitle}
+          </p>
         </div>
       </div>
     </section>

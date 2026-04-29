@@ -27,7 +27,10 @@ function ContactPage() {
         eyebrow="Concierge Services"
         title="Contact Us"
         subtitle="Concierge services from the comfort of your home — let's start with a free 15–20 minute call."
-        image="https://images.unsplash.com/photo-1581056771107-24ca5f033842?w=1600&q=80"
+        image="https://images.unsplash.com/photo-1499678329028-101435549a4e?w=1600&q=80"
+        imageAlt="Aerial view South Redondo Beach California South Bay coastal"
+        variant="dark"
+        overlay="rgba(10,26,18,0.58)"
       />
 
       <section className="container-prose py-20">

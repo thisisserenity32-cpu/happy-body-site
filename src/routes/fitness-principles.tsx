@@ -82,7 +82,10 @@ function FitnessPage() {
         eyebrow="Performance"
         title="Fitness Principles"
         subtitle="The training philosophy behind elite athletic performance — strength, power, conditioning, prehab, rehab, speed, agility, and skill."
-        image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?auto=format&fit=crop&w=1600&q=80"
+        image="https://images.unsplash.com/photo-1534438327276-14e5300c3a48?w=1600&q=80"
+        imageAlt="Athletic fitness training performance"
+        variant="dark"
+        overlay="rgba(10,20,12,0.65)"
       />
 
       {/* Pillars overview */}
