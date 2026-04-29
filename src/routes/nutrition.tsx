@@ -284,6 +284,13 @@ function NutritionPage() {
           </div>
         </div>
       </section>
+
+      <BookingCTA
+        eyebrow="Personalized Nutrition Coaching"
+        title="Pair smart fueling with expert physical therapy"
+        body="Nutrition and movement go hand in hand. In a free consultation, Dr. Uriah will discuss your training, recovery, and health goals — and how an in-home program that combines targeted physical therapy with practical nutrition guidance can help you perform, recover, and feel your best."
+        primaryLabel="Book Your Free Consultation"
+      />
     </>
   );
 }
