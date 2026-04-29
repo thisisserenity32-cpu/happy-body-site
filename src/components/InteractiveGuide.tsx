@@ -141,9 +141,9 @@ export function InteractiveGuide() {
           </p>
         </div>
 
-        <div className="mx-auto mt-12 grid max-w-6xl items-center gap-5 md:grid-cols-[1fr_auto_1fr] md:gap-6">
+        <div className="mx-auto mt-12 grid max-w-6xl items-center gap-5 lg:grid-cols-[1fr_auto_1fr] lg:gap-6">
           {/* Left labels */}
-          <div className="order-2 flex flex-col gap-4 md:order-1">
+          <div className="order-2 flex flex-col gap-4 lg:order-1">
             {leftIds.map((id) => {
               const r = regions.find((x) => x.id === id)!;
               return <RegionButton key={id} region={r} active={active === id} onClick={() => setActive(id)} align="right" />;
@@ -151,7 +151,7 @@ export function InteractiveGuide() {
           </div>
 
           {/* Figure */}
-          <div className="relative order-1 mx-auto h-[480px] w-[340px] rounded-2xl border border-border bg-white md:order-2 md:h-[540px] md:w-[420px]">
+          <div className="relative order-1 mx-auto h-[480px] w-[340px] rounded-2xl border border-border bg-white lg:order-2 lg:h-[540px] lg:w-[420px]">
             <img src={figure} alt="Body diagram" className="h-full w-full object-contain p-4" />
             {hotspots.map((h) => {
               const r = regions.find((x) => x.id === h.id)!;
