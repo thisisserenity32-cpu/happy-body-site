@@ -354,7 +354,7 @@ function AboutPage() {
             margin: "0 auto",
           }}
         >
-          <Reveal>
+          <div style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
             <div style={{ position: "relative" }}>
               <img
                 src={portrait}
@@ -387,7 +387,7 @@ function AboutPage() {
                 DPT · CSCS · EP-C
               </div>
             </div>
-          </Reveal>
+          </div>
 
           <div>
             <Reveal>

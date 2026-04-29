@@ -1,6 +1,7 @@
-import { createFileRoute, Link } from "@tanstack/react-router";
-import { CheckCircle2, ArrowRight } from "lucide-react";
+import { createFileRoute } from "@tanstack/react-router";
+import { CheckCircle2 } from "lucide-react";
 import { InteractiveGuide } from "@/components/InteractiveGuide";
+import { BookingCTA } from "@/components/BookingCTA";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
@@ -102,12 +103,14 @@ function ServicesPage() {
             </article>
           ))}
         </div>
-        <div className="mt-12 text-center">
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
-            Schedule a Free Consultation <ArrowRight className="h-4 w-4" />
-          </Link>
-        </div>
       </section>
+
+      <BookingCTA
+        eyebrow="How Dr. Uriah Treats"
+        title="A personalized, hands-on approach — delivered in your home"
+        body="Every session begins with a thorough evaluation: movement screens, joint and muscle testing, and a deep conversation about your goals. From there, Dr. Uriah blends manual therapy, corrective exercise, and progressive strength work into a plan built specifically for you. No cookie-cutter protocols — just one-on-one care, focused outcomes, and the convenience of treatment in your own home or via telehealth across California."
+        primaryLabel="Schedule a Free Consultation"
+      />
     </>
   );
 }
