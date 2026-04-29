@@ -109,6 +109,13 @@ function ServicesPage() {
           </Link>
         </div>
       </section>
+
+      <BookingCTA
+        eyebrow="How Dr. Uriah Treats"
+        title="A personalized, hands-on approach — delivered in your home"
+        body="Every session begins with a thorough evaluation: movement screens, joint and muscle testing, and a deep conversation about your goals. From there, Dr. Uriah blends manual therapy, corrective exercise, and progressive strength work into a plan built specifically for you. No cookie-cutter protocols — just one-on-one care, focused outcomes, and the convenience of treatment in your own home or via telehealth across California."
+        primaryLabel="Schedule a Free Consultation"
+      />
     </>
   );
 }
