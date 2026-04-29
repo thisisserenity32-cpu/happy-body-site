@@ -155,6 +155,14 @@ function FitnessPage() {
           })}
         </div>
       </section>
+
+      <BookingCTA
+        eyebrow="Train With Dr. Uriah"
+        title="Apply these principles to your own training"
+        body="Whether you're returning from injury, chasing a new PR, or building a foundation for life-long athleticism, Dr. Uriah designs in-home programs that put these seven pillars to work for you. Start with a free consultation to map out your goals, assess your current movement, and outline a plan that fits your sport, schedule, and home setup."
+        primaryLabel="Book Your Free Consultation"
+        variant="cream"
+      />
     </>
   );
 }
