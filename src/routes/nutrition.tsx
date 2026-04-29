@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "./services";
+import { BookingCTA } from "@/components/BookingCTA";
 import { Bone, Beef, Wheat, Droplets, Sun, Apple, Leaf } from "lucide-react";
 
 export const Route = createFileRoute("/nutrition")({
