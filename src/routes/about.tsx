@@ -354,42 +354,40 @@ function AboutPage() {
             margin: "0 auto",
           }}
         >
-          <Reveal>
-            <div style={{ position: "sticky", top: "6rem" }}>
-              <div style={{ position: "relative" }}>
-                <img
-                  src={portrait}
-                  alt="Dr. Uriah J. Maimone"
-                  style={{
-                    width: "100%",
-                    aspectRatio: "3 / 4",
-                    objectFit: "cover",
-                    objectPosition: "center top",
-                    borderRadius: 16,
-                    display: "block",
-                  }}
-                />
-                <div
-                  style={{
-                    position: "absolute",
-                    bottom: "1rem",
-                    right: "1rem",
-                    background: "#1a7a4a",
-                    color: "white",
-                    padding: "0.65rem 1rem",
-                    borderRadius: 8,
-                    fontFamily: "Inter, sans-serif",
-                    fontWeight: 700,
-                    fontSize: "0.68rem",
-                    letterSpacing: "0.08em",
-                    textTransform: "uppercase",
-                  }}
-                >
-                  DPT · CSCS · EP-C
-                </div>
+          <div style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
+            <div style={{ position: "relative" }}>
+              <img
+                src={portrait}
+                alt="Dr. Uriah J. Maimone"
+                style={{
+                  width: "100%",
+                  aspectRatio: "3 / 4",
+                  objectFit: "cover",
+                  objectPosition: "center top",
+                  borderRadius: 16,
+                  display: "block",
+                }}
+              />
+              <div
+                style={{
+                  position: "absolute",
+                  bottom: "1rem",
+                  right: "1rem",
+                  background: "#1a7a4a",
+                  color: "white",
+                  padding: "0.65rem 1rem",
+                  borderRadius: 8,
+                  fontFamily: "Inter, sans-serif",
+                  fontWeight: 700,
+                  fontSize: "0.68rem",
+                  letterSpacing: "0.08em",
+                  textTransform: "uppercase",
+                }}
+              >
+                DPT · CSCS · EP-C
               </div>
             </div>
-          </Reveal>
+          </div>
 
           <div>
             <Reveal>
