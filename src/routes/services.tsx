@@ -1,6 +1,7 @@
 import { createFileRoute, Link } from "@tanstack/react-router";
 import { CheckCircle2, ArrowRight } from "lucide-react";
 import { InteractiveGuide } from "@/components/InteractiveGuide";
+import { BookingCTA } from "@/components/BookingCTA";
 
 export const Route = createFileRoute("/services")({
   head: () => ({
