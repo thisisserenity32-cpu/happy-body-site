@@ -1,5 +1,6 @@
 import { createFileRoute } from "@tanstack/react-router";
 import { PageHero } from "./services";
+import { BookingCTA } from "@/components/BookingCTA";
 import { Dumbbell, Flame, ShieldCheck, HeartPulse, Zap, Move, Target } from "lucide-react";
 
 export const Route = createFileRoute("/fitness-principles")({
