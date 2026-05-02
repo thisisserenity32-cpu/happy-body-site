@@ -15,7 +15,7 @@ export function BookingCTA({
   eyebrow = "Get Started",
   title,
   body,
-  primaryLabel = "Schedule a Free Consultation",
+  primaryLabel = "Start Your Recovery",
   primaryTo = "/contact",
   variant = "dark",
 }: Props) {
@@ -90,7 +90,7 @@ export function BookingCTA({
 
             <Link
               to={primaryTo}
-              className={`inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold transition hover:opacity-90 ${
+              className={`btn-recovery inline-flex items-center justify-center gap-2 rounded-full px-6 py-3 text-sm font-semibold ${
                 isDark
                   ? "bg-accent text-accent-foreground"
                   : "bg-primary text-primary-foreground"

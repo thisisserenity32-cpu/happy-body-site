@@ -290,7 +290,7 @@ function PatientsClientsPage() {
               onMouseEnter={(e) => { e.currentTarget.style.background = "#f3f7f4"; e.currentTarget.style.transform = "translateY(-2px)"; }}
               onMouseLeave={(e) => { e.currentTarget.style.background = "white"; e.currentTarget.style.transform = "translateY(0)"; }}
             >
-              Book Your Free Consultation
+              Start Your Recovery
             </Link>
             <Link
               to="/about"

@@ -584,7 +584,7 @@ function AboutPage() {
               transition: "background 0.2s ease, transform 0.2s ease",
             }}
           >
-            Book Free Consultation
+            Start Your Recovery
           </Link>
         </Reveal>
       </section>

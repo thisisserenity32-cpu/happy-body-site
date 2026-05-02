@@ -47,7 +47,8 @@ export const Route = createRootRoute({
       { rel: "stylesheet", href: appCss },
       { rel: "preconnect", href: "https://fonts.googleapis.com" },
       { rel: "preconnect", href: "https://fonts.gstatic.com", crossOrigin: "anonymous" },
-      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;500;600;700;900&family=Playfair+Display:wght@700;900&family=Inter:wght@400;500;600;700&display=swap" },
+      // Fraunces (variable, with SOFT axis) for display + Inter for body
+      { rel: "stylesheet", href: "https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght,SOFT@9..144,400..700,0..100&family=Inter:wght@400;500;600;700&display=swap" },
     ],
   }),
   shellComponent: RootShell,
@@ -73,6 +74,8 @@ function RootShell({ children }: { children: React.ReactNode }) {
 function RootComponent() {
   const location = useLocation();
 
+  // Apply a one-time CSS reveal to non-hero sections (lightweight progressive
+  // enhancement). Components that need crafted choreography opt in via <Reveal>.
   useEffect(() => {
     if (typeof window === "undefined") return;
     if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
@@ -81,9 +84,10 @@ function RootComponent() {
     if (!main) return;
 
     const sections = Array.from(main.querySelectorAll("main > section")) as HTMLElement[];
-    // Skip the first section (hero) — that animates via CSS on mount.
-    const targets = sections.slice(1);
-    targets.forEach((s) => s.classList.add("lov-reveal"));
+    const targets = sections.slice(1); // skip hero
+    targets.forEach((s) => {
+      if (!s.classList.contains("lov-reveal-skip")) s.classList.add("lov-reveal");
+    });
 
     const io = new IntersectionObserver(
       (entries) => {
@@ -94,7 +98,8 @@ function RootComponent() {
           }
         });
       },
-      { threshold: 0.1, rootMargin: "0px 0px -60px 0px" },
+      // 70% threshold = element is 30% into view
+      { threshold: 0, rootMargin: "0px 0px -30% 0px" },
     );
     targets.forEach((t) => io.observe(t));
 
