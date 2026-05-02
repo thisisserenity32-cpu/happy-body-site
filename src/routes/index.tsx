@@ -132,8 +132,8 @@ function Hero() {
             Southern California. Telehealth available statewide.
           </p>
           <div className="mt-8 flex flex-wrap gap-3">
-            <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm transition-transform hover:scale-[1.02]">
-              Book Now <ArrowRight className="h-4 w-4" />
+            <Link to="/contact" className="btn-recovery inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground shadow-sm">
+              Start Your Recovery <ArrowRight className="h-4 w-4" />
             </Link>
             <Link to="/services" className="inline-flex items-center gap-2 rounded-full border border-primary/20 bg-cream px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
               See Treatment
@@ -322,8 +322,8 @@ function HowWeServe() {
           ))}
         </div>
         <div className="mt-10 text-center">
-          <Link to="/contact" className="inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90">
-            Book Your Visit <ArrowRight className="h-4 w-4" />
+          <Link to="/contact" className="btn-recovery inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground">
+            Start Your Recovery <ArrowRight className="h-4 w-4" />
           </Link>
         </div>
       </div>
@@ -372,11 +372,11 @@ function CTASection() {
           Schedule your free 15–20 minute consultation and take the first step toward recovery.
         </p>
         <div className="mt-8 flex flex-wrap justify-center gap-3">
-          <a href="tel:310-704-7177" className="rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
+          <a href="tel:310-704-7177" className="rounded-full border border-primary/20 bg-cream px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
             Call 310-704-7177
           </a>
-          <Link to="/contact" className="rounded-full border border-primary/20 bg-cream px-6 py-3 text-sm font-semibold text-primary hover:bg-primary-soft">
-            Send a Message
+          <Link to="/contact" className="btn-recovery rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground">
+            Start Your Recovery
           </Link>
         </div>
       </div>
