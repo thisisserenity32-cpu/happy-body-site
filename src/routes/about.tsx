@@ -354,7 +354,7 @@ function AboutPage() {
             margin: "0 auto",
           }}
         >
-          <div className="about-bio-photo" style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
+          <div className="about-bio-photo">
             <div style={{ position: "relative" }}>
               <img
                 src={portrait}
@@ -389,7 +389,7 @@ function AboutPage() {
             </div>
           </div>
 
-          <div>
+          <div className="about-bio-text" style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
             <Reveal>
               <div style={{ display: "flex", alignItems: "center", gap: "0.5rem" }}>
                 <span
