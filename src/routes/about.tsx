@@ -600,6 +600,7 @@ function AboutPage() {
         }
         @media (max-width: 700px) {
           .about-stat-divider { display: none !important; }
+          .about-bio-photo { position: static !important; top: auto !important; }
         }
         .about-cta:hover { background: #145c38 !important; transform: translateY(-2px); }
       `}</style>
