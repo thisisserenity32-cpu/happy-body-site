@@ -10,9 +10,9 @@ import { InteractiveGuide } from "@/components/InteractiveGuide";
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
-      { title: "Absolute PT South Bay — Concierge Physical Therapy in Your Home" },
+      { title: "Absolute PT South Bay. Concierge Physical Therapy in Your Home" },
       { name: "description", content: "Expert orthopedic and sports physical therapy delivered to your door across South Bay. Telehealth available statewide." },
-      { property: "og:title", content: "Absolute PT South Bay — Concierge Physical Therapy" },
+      { property: "og:title", content: "Absolute PT South Bay. Concierge Physical Therapy" },
       { property: "og:description", content: "Real results. Your home. Expert care from Dr. Uriah, DPT." },
     ],
   }),
@@ -20,16 +20,16 @@ export const Route = createFileRoute("/")({
 });
 
 const clients = [
-  { name: "Jonathan Chaimberg", tag: "Strength & Conditioning Coach", note: "Mentor — Owner of Adrenaline Performance Center, Montreal", img: "https://static.wixstatic.com/media/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg" },
-  { name: "Voráček & Letang", tag: "NHL — Ice Hockey", note: "Philadelphia Flyers · 3× Stanley Cup Champion", img: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg" },
-  { name: "Firas Zahabi & GSP", tag: "Tristar Gym — UFC", note: "3× UFC Welterweight Champion", img: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg" },
-  { name: "Chad Laprise", tag: "UFC — Mixed Martial Arts", note: "Winner — The Ultimate Fighter Nations", img: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg" },
-  { name: "Jiří Hudler", tag: "NHL — Ice Hockey", note: "Calgary Flames · Detroit Red Wings", img: "https://static.wixstatic.com/media/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg" },
-  { name: "Jean Pascal", tag: "Boxing — Professional", note: "World Boxing Champion", img: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg" },
-  { name: "Cheick Kongo", tag: "MMA — Professional", note: "Heavyweight MMA & Kickboxing", img: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg" },
-  { name: "Alex Garcia", tag: "UFC — Mixed Martial Arts", note: "'Dominican Nightmare' — UFC Welterweight", img: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg" },
-  { name: "Rory MacDonald", tag: "UFC — Mixed Martial Arts", note: "Bellator Welterweight Champion — 'The Red King'", img: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg" },
-  { name: "Kris Letang", tag: "NHL — Pittsburgh Penguins", note: "3× Stanley Cup Champion Defenseman", img: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg" },
+  { name: "Jonathan Chaimberg", tag: "Strength & Conditioning Coach", note: "Mentor. Owner of Adrenaline Performance Center, Montreal", img: "https://static.wixstatic.com/media/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_8b8ed6d3837c4f3c9c5f900311824ac9~mv2.jpg" },
+  { name: "Voráček & Letang", tag: "NHL. Ice Hockey", note: "Philadelphia Flyers · 3× Stanley Cup Champion", img: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg" },
+  { name: "Firas Zahabi & GSP", tag: "Tristar Gym. UFC", note: "3× UFC Welterweight Champion", img: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg" },
+  { name: "Chad Laprise", tag: "UFC. Mixed Martial Arts", note: "Winner. The Ultimate Fighter Nations", img: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg" },
+  { name: "Jiří Hudler", tag: "NHL. Ice Hockey", note: "Calgary Flames · Detroit Red Wings", img: "https://static.wixstatic.com/media/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg" },
+  { name: "Jean Pascal", tag: "Boxing. Professional", note: "World Boxing Champion", img: "https://static.wixstatic.com/media/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_9be03d3bc0774b0fbe957d158e177528~mv2.jpg" },
+  { name: "Cheick Kongo", tag: "MMA. Professional", note: "Heavyweight MMA & Kickboxing", img: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg" },
+  { name: "Alex Garcia", tag: "UFC. Mixed Martial Arts", note: "'Dominican Nightmare'. UFC Welterweight", img: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg" },
+  { name: "Rory MacDonald", tag: "UFC. Mixed Martial Arts", note: "Bellator Welterweight Champion. 'The Red King'", img: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg" },
+  { name: "Kris Letang", tag: "NHL. Pittsburgh Penguins", note: "3× Stanley Cup Champion Defenseman", img: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg" },
   { name: "Antoni Mckee", tag: "MMA Professional Fighter and Coach", note: "Professional MMA Fighter and Coach", img: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg" },
 ];
 
@@ -84,11 +84,11 @@ function FAQSection() {
     },
     {
       q: "How long is each session?",
-      a: "Initial in-home evaluations run 60+ minutes. Follow-up sessions are 50 minutes, and telehealth visits are 60 minutes — fully personalized one-on-one with Dr. Uriah.",
+      a: "Initial in-home evaluations run 60+ minutes. Follow-up sessions are 50 minutes, and telehealth visits are 60 minutes. fully personalized one-on-one with Dr. Uriah.",
     },
     {
       q: "What should I expect during my first visit?",
-      a: "A comprehensive evaluation, hands-on treatment, and a personalized plan with home exercises — all in the comfort of your own space, with no commute or waiting room.",
+      a: "A comprehensive evaluation, hands-on treatment, and a personalized plan with home exercises. all in the comfort of your own space, with no commute or waiting room.",
     },
   ];
   return (
@@ -185,7 +185,7 @@ function ClientsCarousel() {
           <div className="eyebrow">Notable Clients</div>
           <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">Patients & Clients</h2>
           <p className="mt-3 max-w-xl text-muted-foreground">
-            Dr. Uriah has trained alongside world champions and elite athletes —
+            Dr. Uriah has trained alongside world champions and elite athletes , 
             bringing that same caliber of expertise to every patient.
           </p>
         </div>
@@ -339,7 +339,7 @@ function WhatWeTreat() {
           <div className="eyebrow">Specialties</div>
           <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">Treatment</h2>
           <p className="mt-3 max-w-xl text-muted-foreground">
-            Comprehensive physical therapy across 11 specialties — delivered with personalized attention in your home.
+            Comprehensive physical therapy across 11 specialties. delivered with personalized attention in your home.
           </p>
         </div>
         <Link to="/services" className="hidden shrink-0 items-center gap-2 rounded-full border border-primary/20 px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary-soft md:inline-flex">

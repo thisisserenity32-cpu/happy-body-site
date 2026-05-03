@@ -52,7 +52,7 @@ export function SiteFooter() {
       <div className="border-t border-primary-foreground/10">
         <div className="container-prose flex flex-col items-center justify-between gap-2 py-6 text-xs text-primary-foreground/70 md:flex-row">
           <div>© {new Date().getFullYear()} Absolute PT South Bay. All rights reserved.</div>
-          <div>PT, DPT, CSCS, EP-C — Licensed in California</div>
+          <div>PT, DPT, CSCS, EP-C. Licensed in California</div>
         </div>
       </div>
     </footer>

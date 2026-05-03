@@ -5,10 +5,10 @@ import { X, ChevronLeft, ChevronRight } from "lucide-react";
 export const Route = createFileRoute("/patients-clients")({
   head: () => ({
     meta: [
-      { title: "Patients & Clients — Absolute PT South Bay" },
+      { title: "Patients & Clients. Absolute PT South Bay" },
       { name: "description", content: "Dr. Uriah trained alongside UFC champions, NHL stars, and boxing legends at the Adrenaline Performance Center in Montreal." },
-      { property: "og:title", content: "Trained Alongside Legends — Absolute PT South Bay" },
-      { property: "og:description", content: "UFC Champions, NHL Stars, Boxing Legends — Dr. Uriah's journey through elite athletic performance." },
+      { property: "og:title", content: "Trained Alongside Legends. Absolute PT South Bay" },
+      { property: "og:description", content: "UFC Champions, NHL Stars, Boxing Legends. Dr. Uriah's journey through elite athletic performance." },
     ],
   }),
   component: PatientsClientsPage,
@@ -27,38 +27,38 @@ const featured: FeaturedCard[] = [
     alt: "Dr. Uriah with Jonathan Chaimberg", badge: "Strength & Conditioning Coach", name: "Jonathan Chaimberg",
     description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
   { src: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg",
-    alt: "Jakub Voracek and Kris Letang", badge: "NHL — Ice Hockey", name: "Voráček & Letang",
-    description: "Jakub Voráček (left) — former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right) — 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
+    alt: "Jakub Voracek and Kris Letang", badge: "NHL. Ice Hockey", name: "Voráček & Letang",
+    description: "Jakub Voráček (left). former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right). 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
   { src: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg",
-    alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym — UFC", name: "Firas Zahabi & GSP",
-    description: "Firas Zahabi — Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre — retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
+    alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym. UFC", name: "Firas Zahabi & GSP",
+    description: "Firas Zahabi. Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre. retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
   { src: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg",
-    alt: "Chad Laprise", badge: "UFC — Mixed Martial Arts", name: "Chad Laprise",
+    alt: "Chad Laprise", badge: "UFC. Mixed Martial Arts", name: "Chad Laprise",
     description: "Canadian MMA fighter competing in the UFC Lightweight division. Winner of The Ultimate Fighter Nations: Canada vs. Australia." },
   { src: "https://static.wixstatic.com/media/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_494866173fe7436e9479c556850ed8a9~mv2.jpg",
-    alt: "Jiri Hudler", badge: "NHL — Ice Hockey", name: "Jiří Hudler",
+    alt: "Jiri Hudler", badge: "NHL. Ice Hockey", name: "Jiří Hudler",
     description: "Czech professional ice hockey player with the Calgary Flames of the National Hockey League." },
   { src: "https://static.wixstatic.com/media/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_1d853b354f88496f90cf0535875f99f8~mv2.jpg",
-    alt: "Cheick Kongo", badge: "MMA — Professional", name: "Cheick Kongo",
+    alt: "Cheick Kongo", badge: "MMA. Professional", name: "Cheick Kongo",
     description: "MMA Professional Fighter and former Kickboxer. A powerful heavyweight competitor with a long career in professional MMA and kickboxing." },
   { src: "https://static.wixstatic.com/media/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_e8eab62fd8784ec6b5c8fbbfc2a30fe8~mv2.jpg",
-    alt: "Alex Garcia", badge: "UFC — Mixed Martial Arts", name: "Alex Garcia",
-    description: "'Dominican Nightmare' — Dominican-Canadian MMA fighter competing in the UFC Welterweight division. Known for his aggressive power striking." },
+    alt: "Alex Garcia", badge: "UFC. Mixed Martial Arts", name: "Alex Garcia",
+    description: "'Dominican Nightmare'. Dominican-Canadian MMA fighter competing in the UFC Welterweight division. Known for his aggressive power striking." },
   { src: "https://static.wixstatic.com/media/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_ff40f4315e774eaf84a12179ee23b06a~mv2.jpeg",
-    alt: "Rory MacDonald", badge: "UFC — Mixed Martial Arts", name: "Rory MacDonald",
-    description: "Canadian MMA fighter signed with the UFC Welterweight division. Former King of the Cage and Bellator Welterweight Champion — 'The Red King.'" },
+    alt: "Rory MacDonald", badge: "UFC. Mixed Martial Arts", name: "Rory MacDonald",
+    description: "Canadian MMA fighter signed with the UFC Welterweight division. Former King of the Cage and Bellator Welterweight Champion. 'The Red King.'" },
   { src: "https://static.wixstatic.com/media/64b1f1_3c5a787ed95d488fbfd3475599bf3f85~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_3c5a787ed95d488fbfd3475599bf3f85~mv2.jpg",
     alt: "Nordine Taleb", badge: "Bellator MMA", name: "Nordine Taleb",
     description: "French professional MMA fighter. Competed in Bellator Fighting Championships and the Bellator Season 7 Welterweight Tournament." },
   { src: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg",
-    alt: "Kris Letang", badge: "NHL — Pittsburgh Penguins", name: "Kris Letang",
-    description: "3x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins — one of the NHL's most elite blue-liners." },
+    alt: "Kris Letang", badge: "NHL. Pittsburgh Penguins", name: "Kris Letang",
+    description: "3x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins. one of the NHL's most elite blue-liners." },
   { src: "https://static.wixstatic.com/media/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg",
-    alt: "Jean Pascal and Chris Byrd", badge: "Boxing — World Champions", name: "Pascal & Chris Byrd",
+    alt: "Jean Pascal and Chris Byrd", badge: "Boxing. World Champions", name: "Pascal & Chris Byrd",
     description: "Boxing Champions Jean Pascal and Chris Byrd (left to right). Chris Byrd is a former IBF and WBO Heavyweight Champion of the World." },
   { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg",
     alt: "Antoni Mckee", badge: "MMA Professional Fighter and Coach", name: "Antoni Mckee",
-    description: "MMA Professional Fighter and Coach Antoni Mckee — a highly skilled fighter connected to the elite performance world." },
+    description: "MMA Professional Fighter and Coach Antoni Mckee. a highly skilled fighter connected to the elite performance world." },
 ];
 
 type ExtraImage = { src: string; alt: string; height: number };
@@ -79,8 +79,8 @@ const extras: ExtraImage[] = [
 type LightboxItem = { src: string; alt: string; name?: string; description?: string };
 
 const allLightboxItems: LightboxItem[] = [
-  ...featured.map((f) => ({ src: f.src, alt: f.alt, name: f.name, description: f.description })),
-  ...extras.map((e) => ({ src: e.src, alt: e.alt })),
+  ..featured.map((f) => ({ src: f.src, alt: f.alt, name: f.name, description: f.description })),
+  ..extras.map((e) => ({ src: e.src, alt: e.alt })),
 ];
 
 function PatientsClientsPage() {
@@ -129,7 +129,7 @@ function PatientsClientsPage() {
         </div>
       </section>
 
-      {/* SECTION 1 — FEATURED GALLERY */}
+      {/* SECTION 1. FEATURED GALLERY */}
       <section style={{ background: "#ffffff", padding: "80px 6%" }}>
         <div className="mx-auto max-w-7xl">
           <Reveal>
@@ -179,7 +179,7 @@ function PatientsClientsPage() {
         </div>
       </section>
 
-      {/* SECTION 2 — ADDITIONAL PHOTOS */}
+      {/* SECTION 2. ADDITIONAL PHOTOS */}
       <section style={{ background: "#0f1a12", padding: "80px 6%" }}>
         <div className="mx-auto max-w-7xl">
           <Reveal>
@@ -254,7 +254,7 @@ function PatientsClientsPage() {
         </div>
       </section>
 
-      {/* SECTION 3 — CTA */}
+      {/* SECTION 3. CTA */}
       <section className="text-center" style={{ background: "#1a7a4a", padding: "90px 7%" }}>
         <div className="mx-auto max-w-2xl">
           <div style={{ color: "white", fontSize: "0.74rem", fontWeight: 700, letterSpacing: "0.14em", textTransform: "uppercase", opacity: 0.72 }}>
@@ -273,7 +273,7 @@ function PatientsClientsPage() {
           >
             Every person on this page started exactly where you are right now. Whether you're
             recovering from injury, preparing for surgery, managing chronic pain, or looking to
-            move and perform better — Dr. Uriah builds a plan around you specifically.
+            move and perform better. Dr. Uriah builds a plan around you specifically.
             <br /><br />
             Join the roster of people who trusted Absolute PT South Bay with their health, their
             performance, and their future.
@@ -308,7 +308,7 @@ function PatientsClientsPage() {
           </div>
 
           <p className="italic text-white" style={{ opacity: 0.6, fontSize: "0.8rem", marginTop: "1.2rem" }}>
-            Free 15–20 minute consultation — no commitment required.
+            Free 15–20 minute consultation. no commitment required.
           </p>
         </div>
       </section>

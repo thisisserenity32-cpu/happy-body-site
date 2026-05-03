@@ -1,5 +1,5 @@
 /**
- * Editorial bracket accent — wraps a key phrase in headings to create
+ * Editorial bracket accent. wraps a key phrase in headings to create
  * the brand's small visual signature.
  *
  *   <h1>Expert care. <BracketAccent>Your home.</BracketAccent> Real results.</h1>

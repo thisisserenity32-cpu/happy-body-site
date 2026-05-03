@@ -5,7 +5,7 @@ import portrait from "@/assets/dr-uriah-portrait.png";
 export const Route = createFileRoute("/about")({
   head: () => ({
     meta: [
-      { title: "About Dr. Uriah — Absolute PT South Bay" },
+      { title: "About Dr. Uriah. Absolute PT South Bay" },
       { name: "description", content: "South Bay native with over 20 years in performance and rehabilitation. Trained alongside UFC champions and NHL stars." },
       { property: "og:title", content: "About Dr. Uriah J. Maimone, DPT" },
       { property: "og:description", content: "Doctor of Physical Therapy with elite-level training experience, serving South Bay in your home." },
@@ -75,17 +75,17 @@ const STATS: Array<[string, string]> = [
 ];
 
 const CREDENTIALS = [
-  "University of St. Augustine — Doctor of Physical Therapy (DPT)",
-  "Cal Polytechnic Humboldt — MS, Kinesiology: Exercise Science",
-  "Cal Polytechnic Humboldt — BS, Kinesiology: Exercise Science",
-  "ACSM — Certified Exercise Physiologist (EP-C)",
-  "NSCA — Certified Strength & Conditioning Specialist (CSCS)",
+  "University of St. Augustine. Doctor of Physical Therapy (DPT)",
+  "Cal Polytechnic Humboldt. MS, Kinesiology: Exercise Science",
+  "Cal Polytechnic Humboldt. BS, Kinesiology: Exercise Science",
+  "ACSM. Certified Exercise Physiologist (EP-C)",
+  "NSCA. Certified Strength & Conditioning Specialist (CSCS)",
 ];
 
 function AboutPage() {
   return (
     <div style={{ fontFamily: "Inter, system-ui, sans-serif" }}>
-      {/* ============ SECTION 1 — HERO ============ */}
+      {/* ============ SECTION 1. HERO ============ */}
       <section
         style={{
           background: "#ffffff",
@@ -202,7 +202,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ============ SECTION 2 — MISSION ============ */}
+      {/* ============ SECTION 2. MISSION ============ */}
       <section
         style={{
           background: "#1a7a4a",
@@ -248,9 +248,9 @@ function AboutPage() {
           <Reveal delay={120}>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
               {[
-                "Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to enhance the quality of life for those facing mobility challenges, pain, disease, and disorders — helping people regain movement and prevent future injuries and disabilities.",
-                "From geriatrics to youth, recreational to elite athletes — we understand that people want to push themselves to greater heights. Our mission is to communicate and treat all aspects of pre-habilitation, rehabilitation, exercise, sports science, and physiology in a way that is relevant, easy to understand, backed by facts, and results-driven.",
-                "We are confident that you will enjoy and use our services to enhance your performance and abilities — in your daily life, household chores, job duties, and sports. Thank you for visiting and hopefully choosing APTSB.",
+                "Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to enhance the quality of life for those facing mobility challenges, pain, disease, and disorders. helping people regain movement and prevent future injuries and disabilities.",
+                "From geriatrics to youth, recreational to elite athletes. we understand that people want to push themselves to greater heights. Our mission is to communicate and treat all aspects of pre-habilitation, rehabilitation, exercise, sports science, and physiology in a way that is relevant, easy to understand, backed by facts, and results-driven.",
+                "We are confident that you will enjoy and use our services to enhance your performance and abilities. in your daily life, household chores, job duties, and sports. Thank you for visiting and hopefully choosing APTSB.",
               ].map((p) => (
                 <p
                   key={p.slice(0, 30)}
@@ -272,7 +272,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ============ SECTION 3 — STATS BAND ============ */}
+      {/* ============ SECTION 3. STATS BAND ============ */}
       <section
         style={{
           background: "#0f1a12",
@@ -337,7 +337,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ============ SECTION 4 — BIO ============ */}
+      {/* ============ SECTION 4. BIO ============ */}
       <section
         style={{
           background: "#f3f7f4",
@@ -431,7 +431,7 @@ function AboutPage() {
             {[
               {
                 h: "Education & Research",
-                p: "Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of Science in Kinesiology from Cal Polytechnic Humboldt with a focus in Exercise Science Human Performance. His thesis — the first of its kind — compared elite and amateur MMA athletes in body composition, skill-related physical tests, and muscular fitness. Submitted to the Journal of Strength and Conditioning.",
+                p: "Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of Science in Kinesiology from Cal Polytechnic Humboldt with a focus in Exercise Science Human Performance. His thesis. the first of its kind. compared elite and amateur MMA athletes in body composition, skill-related physical tests, and muscular fitness. Submitted to the Journal of Strength and Conditioning.",
               },
               {
                 h: "Elite Performance Training",
@@ -439,7 +439,7 @@ function AboutPage() {
               },
               {
                 h: "Clinical Expertise",
-                p: "He earned his Doctorate in Physical Therapy from the University of St. Augustine for Health Sciences in San Marcos, CA. His training includes manual techniques, movement-based methods, and weight training — using functional movement assessments and current research to create personalized rehabilitation programs that help patients manage pain, regain movement, and prevent future injury.",
+                p: "He earned his Doctorate in Physical Therapy from the University of St. Augustine for Health Sciences in San Marcos, CA. His training includes manual techniques, movement-based methods, and weight training. using functional movement assessments and current research to create personalized rehabilitation programs that help patients manage pain, regain movement, and prevent future injury.",
               },
             ].map((b, i) => (
               <Reveal key={b.h} delay={i * 90}>
@@ -535,7 +535,7 @@ function AboutPage() {
         </div>
       </section>
 
-      {/* ============ SECTION 5 — CLOSING ============ */}
+      {/* ============ SECTION 5. CLOSING ============ */}
       <section
         style={{
           background: "#0f1a12",

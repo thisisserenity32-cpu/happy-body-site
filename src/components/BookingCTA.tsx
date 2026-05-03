@@ -82,7 +82,7 @@ export function BookingCTA({
                       : "text-muted-foreground"
                   }`}
                 >
-                  No commitment — just a conversation about your goals and how
+                  No commitment. just a conversation about your goals and how
                   Dr. Uriah can help.
                 </p>
               </div>
