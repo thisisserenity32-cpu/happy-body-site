@@ -354,7 +354,7 @@ function AboutPage() {
             margin: "0 auto",
           }}
         >
-          <div style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
+          <div className="about-bio-photo" style={{ position: "sticky", top: "6rem", alignSelf: "start" }}>
             <div style={{ position: "relative" }}>
               <img
                 src={portrait}
