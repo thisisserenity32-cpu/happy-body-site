@@ -240,7 +240,16 @@ a[href]:active,
   }
   .btn-recovery,
   .btn-recovery:hover,
-  .btn-recovery:active {
+  .btn-recovery:active,
+  button,
+  button:hover,
+  button:active,
+  a[href],
+  a[href]:hover,
+  a[href]:active,
+  [role="button"],
+  [role="button"]:hover,
+  [role="button"]:active {
     transform: none !important;
     transition: none !important;
   }
