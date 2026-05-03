@@ -82,7 +82,7 @@ export function SectionDivider(props: Props) {
       </div>
     );
   }
-  // topo. a dotted topographic line motif used as a horizontal break inside a section
+  // topo. A dotted topographic line motif used as a horizontal break inside a section
   const tone = props.tone ?? "primary";
   const h = props.height ?? 28;
   const stroke = tokenToVar[tone];

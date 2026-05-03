@@ -7,7 +7,7 @@ export const Route = createFileRoute("/services")({
   head: () => ({
     meta: [
       { title: "Treatment. Absolute PT South Bay" },
-      { name: "description", content: "Comprehensive physical therapy across 11 specialties. orthopedic, sports, geriatrics, Parkinson's, and more, delivered to your home." },
+      { name: "description", content: "Comprehensive physical therapy across 11 specialties. Orthopedic, sports, geriatrics, Parkinson's, and more, delivered to your home." },
       { property: "og:title", content: "Treatment. Absolute PT South Bay" },
       { property: "og:description", content: "Eleven specialties, fully personalized, delivered in your home across South Bay." },
       { property: "og:image", content: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?auto=format&fit=crop&w=1600&q=80" },
@@ -18,7 +18,7 @@ export const Route = createFileRoute("/services")({
 
 const services = [
   { id: "orthopedic-sports", title: "Orthopedic & Sports Injuries", lead: "Expert treatment for musculoskeletal injuries and sports-related conditions.",
-    body: "Dr. Uriah uses evidence-based manual therapy and therapeutic exercise to restore function after injury. from weekend recreation to elite competition.",
+    body: "Dr. Uriah uses evidence-based manual therapy and therapeutic exercise to restore function after injury. From weekend recreation to elite competition.",
     img: "https://images.unsplash.com/photo-1535743686920-55e4145369b9?w=800&q=80", alt: "Sports rehabilitation treatment",
     points: ["Fractures, sprains, strains, post-surgical recovery", "ACL/MCL tears and rotator cuff injuries", "Tennis & golfer's elbow, repetitive stress", "Sport-specific return-to-play protocols"] },
   { id: "prehab-rehab", title: "Pre-habilitation & Rehabilitation", lead: "Prepare for surgery or recover post-operatively with guided protocols.",
@@ -26,11 +26,11 @@ const services = [
     img: "https://images.unsplash.com/photo-1576091160399-112ba8d25d1d?w=800&q=80", alt: "Post surgical recovery therapy",
     points: ["Pre-surgical strengthening and mobility", "Joint replacement recovery (hip, knee, shoulder)", "Arthroscopic surgery rehab", "Progressive return to daily activities and sport"] },
   { id: "geriatrics", title: "Geriatrics", lead: "Specialized care for aging adults to maintain mobility and independence.",
-    body: "Gentle yet effective therapy tailored for seniors. focused on independence, fall prevention, and quality of life through evidence-based exercise and balance training.",
+    body: "Gentle yet effective therapy tailored for seniors. Focused on independence, fall prevention, and quality of life through evidence-based exercise and balance training.",
     img: "https://images.unsplash.com/photo-1559757175-5700dde675bc?w=800&q=80", alt: "Back and neck pain treatment",
     points: ["Fall prevention and balance training", "Mobility restoration and gait training", "Osteoporosis-safe programs", "Home safety assessment"] },
   { id: "parkinsons", title: "Parkinson's Dynamic Movement", lead: "Evidence-based movement therapy for Parkinson's disease management.",
-    body: "Using LSVT BIG and other evidence-based protocols to combat the movement challenges of Parkinson's. large-amplitude movements, functional mobility, and independence.",
+    body: "Using LSVT BIG and other evidence-based protocols to combat the movement challenges of Parkinson's. Large-amplitude movements, functional mobility, and independence.",
     img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b?w=800&q=80", alt: "Parkinson's dynamic movement therapy balance training",
     points: ["LSVT BIG–style movement therapy", "Large-amplitude movement training", "Balance & fall prevention strategies", "Caregiver education and support"] },
   { id: "medical-exercise", title: "Medical Exercise Programs", lead: "Physician-guided exercise prescriptions for chronic conditions.",
@@ -50,7 +50,7 @@ const services = [
     img: "https://images.unsplash.com/photo-1544161515-4ab6ce6db874?w=800&q=80", alt: "Sports massage therapy hands on treatment",
     points: ["Deep tissue & myofascial release", "Pre/post-event sports massage", "Trigger point therapy", "Scar tissue management"] },
   { id: "biomechanics", title: "Optimal Biomechanics Education", lead: "Education and training for efficient, injury-free movement patterns.",
-    body: "Learn how your body moves and how to move it better. gait analysis, posture correction, and movement pattern training.",
+    body: "Learn how your body moves and how to move it better. Gait analysis, posture correction, and movement pattern training.",
     img: "https://images.unsplash.com/photo-1576678927484-cc907957088c?w=800&q=80", alt: "Biomechanics movement education physical therapy",
     points: ["Gait analysis and correction", "Posture assessment & retraining", "Running mechanics", "Ergonomic workspace evaluation"] },
   { id: "modalities", title: "Modalities for Faster Recovery", lead: "Advanced recovery techniques alongside manual therapy and exercise.",
@@ -69,7 +69,7 @@ function ServicesPage() {
       <PageHero
         eyebrow="Specialties"
         title="Treatment"
-        subtitle="Comprehensive physical therapy across 11 specialties. all delivered to your home across South Bay."
+        subtitle="Comprehensive physical therapy across 11 specialties. All delivered to your home across South Bay."
         image="https://images.unsplash.com/photo-1519824145371-296894a0daa9?w=1600&q=80"
         imageAlt="Therapist massaging the back of a woman during treatment"
         variant="dark"
@@ -107,8 +107,8 @@ function ServicesPage() {
 
       <BookingCTA
         eyebrow="How Dr. Uriah Treats"
-        title="A personalized, hands-on approach. delivered in your home"
-        body="Every session begins with a thorough evaluation: movement screens, joint and muscle testing, and a deep conversation about your goals. From there, Dr. Uriah blends manual therapy, corrective exercise, and progressive strength work into a plan built specifically for you. No cookie-cutter protocols. just one-on-one care, focused outcomes, and the convenience of treatment in your own home or via telehealth across California."
+        title="A personalized, hands-on approach. Delivered in your home"
+        body="Every session begins with a thorough evaluation: movement screens, joint and muscle testing, and a deep conversation about your goals. From there, Dr. Uriah blends manual therapy, corrective exercise, and progressive strength work into a plan built specifically for you. No cookie-cutter protocols. Just one-on-one care, focused outcomes, and the convenience of treatment in your own home or via telehealth across California."
         primaryLabel="Start Your Recovery"
       />
     </>

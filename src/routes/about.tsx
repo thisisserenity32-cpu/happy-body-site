@@ -248,9 +248,9 @@ function AboutPage() {
           <Reveal delay={120}>
             <div style={{ display: "flex", flexDirection: "column", gap: "1.4rem" }}>
               {[
-                "Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to enhance the quality of life for those facing mobility challenges, pain, disease, and disorders. helping people regain movement and prevent future injuries and disabilities.",
-                "From geriatrics to youth, recreational to elite athletes. we understand that people want to push themselves to greater heights. Our mission is to communicate and treat all aspects of pre-habilitation, rehabilitation, exercise, sports science, and physiology in a way that is relevant, easy to understand, backed by facts, and results-driven.",
-                "We are confident that you will enjoy and use our services to enhance your performance and abilities. in your daily life, household chores, job duties, and sports. Thank you for visiting and hopefully choosing APTSB.",
+                "Absolute Physical Therapy South Bay's (APTSB) Home Health Services exists to enhance the quality of life for those facing mobility challenges, pain, disease, and disorders. Helping people regain movement and prevent future injuries and disabilities.",
+                "From geriatrics to youth, recreational to elite athletes. We understand that people want to push themselves to greater heights. Our mission is to communicate and treat all aspects of pre-habilitation, rehabilitation, exercise, sports science, and physiology in a way that is relevant, easy to understand, backed by facts, and results-driven.",
+                "We are confident that you will enjoy and use our services to enhance your performance and abilities. In your daily life, household chores, job duties, and sports. Thank you for visiting and hopefully choosing APTSB.",
               ].map((p) => (
                 <p
                   key={p.slice(0, 30)}
@@ -431,7 +431,7 @@ function AboutPage() {
             {[
               {
                 h: "Education & Research",
-                p: "Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of Science in Kinesiology from Cal Polytechnic Humboldt with a focus in Exercise Science Human Performance. His thesis. the first of its kind. compared elite and amateur MMA athletes in body composition, skill-related physical tests, and muscular fitness. Submitted to the Journal of Strength and Conditioning.",
+                p: "Dr. Uriah Maimone, a South Bay native, holds a Bachelor of Science and Master of Science in Kinesiology from Cal Polytechnic Humboldt with a focus in Exercise Science Human Performance. His thesis. The first of its kind. Compared elite and amateur MMA athletes in body composition, skill-related physical tests, and muscular fitness. Submitted to the Journal of Strength and Conditioning.",
               },
               {
                 h: "Elite Performance Training",
@@ -439,7 +439,7 @@ function AboutPage() {
               },
               {
                 h: "Clinical Expertise",
-                p: "He earned his Doctorate in Physical Therapy from the University of St. Augustine for Health Sciences in San Marcos, CA. His training includes manual techniques, movement-based methods, and weight training. using functional movement assessments and current research to create personalized rehabilitation programs that help patients manage pain, regain movement, and prevent future injury.",
+                p: "He earned his Doctorate in Physical Therapy from the University of St. Augustine for Health Sciences in San Marcos, CA. His training includes manual techniques, movement-based methods, and weight training. Using functional movement assessments and current research to create personalized rehabilitation programs that help patients manage pain, regain movement, and prevent future injury.",
               },
             ].map((b, i) => (
               <Reveal key={b.h} delay={i * 90}>

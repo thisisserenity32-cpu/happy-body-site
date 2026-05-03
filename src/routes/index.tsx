@@ -84,11 +84,11 @@ function FAQSection() {
     },
     {
       q: "How long is each session?",
-      a: "Initial in-home evaluations run 60+ minutes. Follow-up sessions are 50 minutes, and telehealth visits are 60 minutes. fully personalized one-on-one with Dr. Uriah.",
+      a: "Initial in-home evaluations run 60+ minutes. Follow-up sessions are 50 minutes, and telehealth visits are 60 minutes. Fully personalized one-on-one with Dr. Uriah.",
     },
     {
       q: "What should I expect during my first visit?",
-      a: "A comprehensive evaluation, hands-on treatment, and a personalized plan with home exercises. all in the comfort of your own space, with no commute or waiting room.",
+      a: "A comprehensive evaluation, hands-on treatment, and a personalized plan with home exercises. All in the comfort of your own space, with no commute or waiting room.",
     },
   ];
   return (
@@ -339,7 +339,7 @@ function WhatWeTreat() {
           <div className="eyebrow">Specialties</div>
           <h2 className="mt-3 font-display text-4xl font-semibold text-foreground md:text-5xl">Treatment</h2>
           <p className="mt-3 max-w-xl text-muted-foreground">
-            Comprehensive physical therapy across 11 specialties. delivered with personalized attention in your home.
+            Comprehensive physical therapy across 11 specialties. Delivered with personalized attention in your home.
           </p>
         </div>
         <Link to="/services" className="hidden shrink-0 items-center gap-2 rounded-full border border-primary/20 px-5 py-2.5 text-sm font-semibold text-primary hover:bg-primary-soft md:inline-flex">

@@ -41,7 +41,7 @@ const regions: Region[] = [
     label: "Arm & Elbow",
     intro: "Tendinopathies, nerve entrapments, and overuse injuries of the elbow and forearm.",
     conditions: [
-      { name: "Tennis elbow (lateral epicondylalgia)", desc: "Outer-elbow pain from repetitive gripping or wrist extension. common in racquet sports, painters, and desk workers." },
+      { name: "Tennis elbow (lateral epicondylalgia)", desc: "Outer-elbow pain from repetitive gripping or wrist extension. Common in racquet sports, painters, and desk workers." },
       { name: "Golfer's elbow (medial epicondylalgia)", desc: "Inner-elbow pain from repeated wrist flexion or gripping, common in golf, throwing sports, and manual labor." },
       { name: "Cubital / radial tunnel syndrome", desc: "Numbness or tingling into the hand from a nerve being compressed at the elbow, often from leaning on the elbow or repetitive bending." },
       { name: "Distal biceps strain", desc: "Front-of-elbow pain after sudden heavy lifting or an awkward catch that overstretched the biceps tendon." },
@@ -56,7 +56,7 @@ const regions: Region[] = [
       { name: "SI joint dysfunction", desc: "One-sided low back or buttock pain from the joint between the pelvis and spine, often from pregnancy, a fall, or repetitive asymmetric activity." },
       { name: "Lumbar strain", desc: "Acute muscle pain and guarding in the low back, typically after lifting something heavy, twisting, or a sudden movement." },
       { name: "Thoracic stiffness / postural pain", desc: "Mid-back tightness and ache from prolonged sitting, slouched posture, or long hours at a desk or driving." },
-      { name: "Sciatica", desc: "Sharp pain radiating from the low back down the leg, caused by irritation of the sciatic nerve. often from a disc, tight muscles, or prolonged sitting." },
+      { name: "Sciatica", desc: "Sharp pain radiating from the low back down the leg, caused by irritation of the sciatic nerve. Often from a disc, tight muscles, or prolonged sitting." },
     ],
   },
   {
@@ -65,7 +65,7 @@ const regions: Region[] = [
     intro: "Hip impingement, bursitis, labral injuries, and post-replacement rehab.",
     conditions: [
       { name: "Femoroacetabular impingement (FAI)", desc: "A pinching sensation deep in the hip with squatting or sitting, caused by extra bone shape in the hip joint." },
-      { name: "Greater trochanteric bursitis", desc: "Pain on the side of the hip when lying on it or walking, from inflammation of the bursa. often linked to weak glutes or repetitive activity." },
+      { name: "Greater trochanteric bursitis", desc: "Pain on the side of the hip when lying on it or walking, from inflammation of the bursa. Often linked to weak glutes or repetitive activity." },
       { name: "Labral tear", desc: "Catching, clicking, or deep groin pain from a tear of the cartilage rim of the hip socket, often from sports or repetitive twisting." },
       { name: "Total hip replacement rehab", desc: "Recovery after surgery to replace the hip joint, usually following years of arthritis pain and stiffness." },
       { name: "Hip flexor / adductor strain", desc: "Front or inner-thigh pain from a sudden sprint, kick, or change of direction that overstretched the muscle." },
@@ -76,8 +76,8 @@ const regions: Region[] = [
     label: "Leg & Knee",
     intro: "ACL/MCL injuries, patellar tracking issues, tendinopathies, and arthritis.",
     conditions: [
-      { name: "ACL reconstruction rehab", desc: "Recovery after surgery to repair a torn ACL. a ligament commonly injured during pivoting sports like soccer, basketball, or skiing." },
-      { name: "Patellofemoral pain", desc: "Aching at the front of the knee with stairs, squatting, or sitting too long. often from muscle imbalance, overuse, or kneecap tracking." },
+      { name: "ACL reconstruction rehab", desc: "Recovery after surgery to repair a torn ACL. A ligament commonly injured during pivoting sports like soccer, basketball, or skiing." },
+      { name: "Patellofemoral pain", desc: "Aching at the front of the knee with stairs, squatting, or sitting too long. Often from muscle imbalance, overuse, or kneecap tracking." },
       { name: "Meniscus injury", desc: "Pain along the joint line, sometimes with catching or locking, from a twist or squat that tore the cartilage cushion." },
       { name: "Patellar / quad tendinopathy", desc: "Pain just below the kneecap, common in jumping sports, from repetitive loading that irritated the tendon." },
       { name: "Knee osteoarthritis", desc: "Stiffness and ache that worsens with activity, from gradual wearing down of the cartilage in the knee over years." },
@@ -88,7 +88,7 @@ const regions: Region[] = [
     label: "Foot & Ankle",
     intro: "Plantar fasciitis, sprains, Achilles issues, and post-fracture recovery.",
     conditions: [
-      { name: "Plantar fasciitis", desc: "Sharp heel pain with the first steps in the morning, from inflammation of the band of tissue along the bottom of the foot. often from long standing or new running." },
+      { name: "Plantar fasciitis", desc: "Sharp heel pain with the first steps in the morning, from inflammation of the band of tissue along the bottom of the foot. Often from long standing or new running." },
       { name: "Lateral ankle sprain", desc: "Pain on the outside of the ankle after rolling it on uneven ground, in sports, or stepping off a curb." },
       { name: "Achilles tendinopathy", desc: "Pain at the back of the heel that warms up with activity but stiffens after rest, often from a sudden increase in running or jumping." },
       { name: "Post-fracture recovery", desc: "Restoring motion and strength after a broken bone in the foot or ankle, typically caused by a fall, twist, or impact." },
@@ -97,7 +97,7 @@ const regions: Region[] = [
   },
 ];
 
-// (hotspot dots removed per design. labels flank the figure instead)
+// (hotspot dots removed per design. Labels flank the figure instead)
 
 export function InteractiveGuide() {
   const [active, setActive] = useState<string | null>(null);

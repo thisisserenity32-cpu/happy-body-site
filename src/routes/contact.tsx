@@ -26,7 +26,7 @@ function ContactPage() {
       <PageHero
         eyebrow="Concierge Services"
         title="Contact Us"
-        subtitle="Concierge services from the comfort of your home. let's start with a free 15–20 minute call."
+        subtitle="Concierge services from the comfort of your home. Let's start with a free 15–20 minute call."
         image="https://images.unsplash.com/photo-1596351049218-e43f5009a016?w=1600&q=80"
         imageAlt="Green trees near body of water during daytime"
         variant="dark"

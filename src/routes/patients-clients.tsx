@@ -28,10 +28,10 @@ const featured: FeaturedCard[] = [
     description: "Dr. Uriah's mentor. President and Owner of Adrenaline Performance Center in Montreal. Trainer to GSP, Jon Jones, Rashad Evans, and Shane Carwin." },
   { src: "https://static.wixstatic.com/media/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_c4d17ddcea7c4c808a2a970410d2ac59~mv2.jpg",
     alt: "Jakub Voracek and Kris Letang", badge: "NHL. Ice Hockey", name: "Voráček & Letang",
-    description: "Jakub Voráček (left). former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right). 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
+    description: "Jakub Voráček (left). Former Philadelphia Flyers winger, 7th overall pick in the 2007 NHL Draft. Kris Letang (right). 3x Stanley Cup Champion defenseman, Pittsburgh Penguins." },
   { src: "https://static.wixstatic.com/media/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg/v1/fill/w_450,h_600,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_52bb4b9a1aeb4b2bb256b6a3bdc6407d~mv2.jpeg",
     alt: "Firas Zahabi and Georges St-Pierre", badge: "Tristar Gym. UFC", name: "Firas Zahabi & GSP",
-    description: "Firas Zahabi. Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre. retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
+    description: "Firas Zahabi. Owner of legendary Tristar Fight Gym, former world kickboxing champion. Georges St-Pierre. Retired 3-time UFC Welterweight Champion, greatest MMA fighter of all time." },
   { src: "https://static.wixstatic.com/media/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg/v1/fill/w_449,h_336,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_01eb9b2deca94c1aa5cfab183757f6f4~mv2.jpg",
     alt: "Chad Laprise", badge: "UFC. Mixed Martial Arts", name: "Chad Laprise",
     description: "Canadian MMA fighter competing in the UFC Lightweight division. Winner of The Ultimate Fighter Nations: Canada vs. Australia." },
@@ -52,13 +52,13 @@ const featured: FeaturedCard[] = [
     description: "French professional MMA fighter. Competed in Bellator Fighting Championships and the Bellator Season 7 Welterweight Tournament." },
   { src: "https://static.wixstatic.com/media/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_4653d7aff21f4ec69dad80e7efa992d3~mv2.jpg",
     alt: "Kris Letang", badge: "NHL. Pittsburgh Penguins", name: "Kris Letang",
-    description: "3x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins. one of the NHL's most elite blue-liners." },
+    description: "3x Stanley Cup Champion. Canadian professional ice hockey defenseman for the Pittsburgh Penguins. One of the NHL's most elite blue-liners." },
   { src: "https://static.wixstatic.com/media/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_aabecb5eedc745f797e7ca14d49bf918~mv2.jpg",
     alt: "Jean Pascal and Chris Byrd", badge: "Boxing. World Champions", name: "Pascal & Chris Byrd",
     description: "Boxing Champions Jean Pascal and Chris Byrd (left to right). Chris Byrd is a former IBF and WBO Heavyweight Champion of the World." },
   { src: "https://static.wixstatic.com/media/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg/v1/fill/w_450,h_450,al_c,q_80,usm_0.66_1.00_0.01,enc_avif,quality_auto/64b1f1_42bd0562829c4071acae7cf943cf02cf~mv2.jpg",
     alt: "Antoni Mckee", badge: "MMA Professional Fighter and Coach", name: "Antoni Mckee",
-    description: "MMA Professional Fighter and Coach Antoni Mckee. a highly skilled fighter connected to the elite performance world." },
+    description: "MMA Professional Fighter and Coach Antoni Mckee. A highly skilled fighter connected to the elite performance world." },
 ];
 
 type ExtraImage = { src: string; alt: string; height: number };
@@ -308,7 +308,7 @@ function PatientsClientsPage() {
           </div>
 
           <p className="italic text-white" style={{ opacity: 0.6, fontSize: "0.8rem", marginTop: "1.2rem" }}>
-            Free 15–20 minute consultation. no commitment required.
+            Free 15–20 minute consultation. No commitment required.
           </p>
         </div>
       </section>
