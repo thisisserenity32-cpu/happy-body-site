@@ -75,9 +75,9 @@ function ContactPage() {
           >
             <h3 className="font-display text-2xl font-semibold text-foreground">Send a Message</h3>
             <div className="grid gap-4 sm:grid-cols-2">
-              <Field label="Full Name *"><input required className="field-input" /></Field>
-              <Field label="Email *"><input type="email" required className="field-input" /></Field>
-              <Field label="Phone *"><input type="tel" required className="field-input" /></Field>
+              <Field label="Full Name *"><input required placeholder=" " className="field-input" /></Field>
+              <Field label="Email *"><input type="email" required placeholder=" " className="field-input" /></Field>
+              <Field label="Phone *"><input type="tel" required placeholder=" " className="field-input" /></Field>
               <Field label="Visit Type Preference *">
                 <select required className="field-input">
                   <option value="">Select visit type</option>
