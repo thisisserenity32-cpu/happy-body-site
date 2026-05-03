@@ -249,9 +249,9 @@ function AboutPreview() {
           </p>
           <div className="mt-8 grid grid-cols-2 gap-4 sm:grid-cols-4">
             {[["20+","Years"],["3","Degrees"],["11","Specialties"],["100%","Personalized"]].map(([n,l]) => (
-              <div key={l} className="rounded-2xl border border-border bg-cream p-4 text-center">
-                <div className="font-display text-3xl font-semibold text-primary">{n}</div>
-                <div className="mt-1 text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
+              <div key={l} className="flex min-h-[110px] flex-col items-center justify-center rounded-2xl border border-border bg-cream p-4 text-center">
+                <div className="font-display text-3xl font-semibold leading-none text-primary">{n}</div>
+                <div className="mt-2 text-xs uppercase tracking-wider text-muted-foreground">{l}</div>
               </div>
             ))}
           </div>

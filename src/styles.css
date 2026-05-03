@@ -191,6 +191,27 @@
   .btn-recovery:active { transform: scale(0.98); }
 }
 
+/* ----- Global micro-interactions for clickable elements ----- */
+button,
+a[href],
+[role="button"] {
+  transition: transform 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              box-shadow 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              background-color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              color 180ms cubic-bezier(0.22, 1, 0.36, 1),
+              opacity 180ms cubic-bezier(0.22, 1, 0.36, 1);
+}
+button:not(:disabled):hover,
+a[href]:hover,
+[role="button"]:not([aria-disabled="true"]):hover {
+  transform: translateY(-1px);
+}
+button:not(:disabled):active,
+a[href]:active,
+[role="button"]:not([aria-disabled="true"]):active {
+  transform: translateY(0) scale(0.98);
+}
+
 /* ----- Animation primitives (CSS fallback; Framer Motion handles the rest) ----- */
 
 @keyframes lov-rise {
@@ -219,7 +240,16 @@
   }
   .btn-recovery,
   .btn-recovery:hover,
-  .btn-recovery:active {
+  .btn-recovery:active,
+  button,
+  button:hover,
+  button:active,
+  a[href],
+  a[href]:hover,
+  a[href]:active,
+  [role="button"],
+  [role="button"]:hover,
+  [role="button"]:active {
     transform: none !important;
     transition: none !important;
   }
