@@ -98,7 +98,7 @@ function ContactPage() {
               <Send className="h-4 w-4" /> Send Message
             </button>
             {sent && <p className="text-sm text-primary">Thanks — Dr. Uriah will be in touch shortly.</p>}
-            <style>{`.field-input{width:100%;border-radius:0.75rem;border:1px solid var(--color-border);background:var(--color-cream);padding:0.75rem 1rem;font-size:0.875rem;color:var(--color-foreground);outline:none;transition:border-color .15s}.field-input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 18%, transparent)}`}</style>
+            <style>{`.field-input{width:100%;border-radius:0.75rem;border:1.5px solid var(--color-border);background:var(--color-cream);padding:0.75rem 1rem;font-size:0.875rem;color:var(--color-foreground);outline:none;transition:border-color .2s, box-shadow .2s, background-color .2s}.field-input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 18%, transparent)}.field-input:user-valid:not(:placeholder-shown){border-color:var(--color-primary);background:color-mix(in oklab, var(--color-primary) 6%, var(--color-cream));box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 14%, transparent)}.field-input:user-invalid{border-color:var(--color-destructive);background:color-mix(in oklab, var(--color-destructive) 5%, var(--color-cream));box-shadow:0 0 0 3px color-mix(in oklab, var(--color-destructive) 16%, transparent)}select.field-input:user-valid{border-color:var(--color-primary);background:color-mix(in oklab, var(--color-primary) 6%, var(--color-cream))}`}</style>
           </form>
         </div>
 
