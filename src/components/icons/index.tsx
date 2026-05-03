@@ -143,7 +143,7 @@ export const PerformanceIcon = (p: IconProps) => (
   </Base>
 );
 
-/* Convenience export — useful for typed maps */
+/* Convenience export. Useful for typed maps */
 export const Icons = {
   spine: SpineIcon,
   knee: KneeIcon,

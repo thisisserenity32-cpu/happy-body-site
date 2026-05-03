@@ -6,7 +6,7 @@ import { PageHero } from "./services";
 export const Route = createFileRoute("/contact")({
   head: () => ({
     meta: [
-      { title: "Contact — Absolute PT South Bay" },
+      { title: "Contact. Absolute PT South Bay" },
       { name: "description", content: "Schedule a free 15–20 minute consultation with Dr. Uriah. In-home physical therapy across South Bay, telehealth statewide." },
       { property: "og:title", content: "Contact Absolute PT South Bay" },
       { property: "og:description", content: "Concierge physical therapy from the comfort of your home." },
@@ -26,7 +26,7 @@ function ContactPage() {
       <PageHero
         eyebrow="Concierge Services"
         title="Contact Us"
-        subtitle="Concierge services from the comfort of your home — let's start with a free 15–20 minute call."
+        subtitle="Concierge services from the comfort of your home. Let's start with a free 15–20 minute call."
         image="https://images.unsplash.com/photo-1596351049218-e43f5009a016?w=1600&q=80"
         imageAlt="Green trees near body of water during daytime"
         variant="dark"
@@ -37,11 +37,11 @@ function ContactPage() {
         <div className="ring-soft mb-14 rounded-3xl bg-primary p-10 text-center text-primary-foreground md:p-14">
           <h2 className="font-display text-3xl font-semibold md:text-4xl">Schedule Your Free 15–20 Minute Consultation</h2>
           <p className="mx-auto mt-3 max-w-xl text-primary-foreground/85">
-            Not sure if in-home physical therapy is right for you? Talk directly with Dr. Uriah —
+            Not sure if in-home physical therapy is right for you? Talk directly with Dr. Uriah , 
             no commitment, no cost.
           </p>
           <a href="tel:310-704-7177" className="mt-7 inline-flex items-center gap-2 rounded-full bg-accent px-7 py-3 text-sm font-semibold text-accent-foreground hover:opacity-90">
-            <Phone className="h-4 w-4" /> Call Now — It's Free
+            <Phone className="h-4 w-4" /> Call Now. It's Free
           </a>
         </div>
 
@@ -97,7 +97,7 @@ function ContactPage() {
             <button type="submit" className="inline-flex items-center gap-2 rounded-full bg-primary px-6 py-3 text-sm font-semibold text-primary-foreground hover:bg-primary/90">
               <Send className="h-4 w-4" /> Send Message
             </button>
-            {sent && <p className="text-sm text-primary">Thanks — Dr. Uriah will be in touch shortly.</p>}
+            {sent && <p className="text-sm text-primary">Thanks. Dr. Uriah will be in touch shortly.</p>}
             <style>{`.field-input{width:100%;border-radius:0.75rem;border:1.5px solid var(--color-border);background:var(--color-cream);padding:0.75rem 1rem;font-size:0.875rem;color:var(--color-foreground);outline:none;transition:border-color .2s, box-shadow .2s, background-color .2s}.field-input:focus{border-color:var(--color-primary);box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 18%, transparent)}.field-input:user-valid:not(:placeholder-shown){border-color:var(--color-primary);background:color-mix(in oklab, var(--color-primary) 6%, var(--color-cream));box-shadow:0 0 0 3px color-mix(in oklab, var(--color-primary) 14%, transparent)}.field-input:user-invalid{border-color:var(--color-destructive);background:color-mix(in oklab, var(--color-destructive) 5%, var(--color-cream));box-shadow:0 0 0 3px color-mix(in oklab, var(--color-destructive) 16%, transparent)}select.field-input:user-valid{border-color:var(--color-primary);background:color-mix(in oklab, var(--color-primary) 6%, var(--color-cream))}`}</style>
           </form>
         </div>

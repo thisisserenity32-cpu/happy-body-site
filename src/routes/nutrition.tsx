@@ -6,7 +6,7 @@ import { Bone, Beef, Wheat, Droplets, Sun, Apple, Leaf } from "lucide-react";
 export const Route = createFileRoute("/nutrition")({
   head: () => ({
     meta: [
-      { title: "Nutrition — Absolute PT South Bay" },
+      { title: "Nutrition. Absolute PT South Bay" },
       { name: "description", content: "Fuel your body for optimal performance, recovery, and long-term health with evidence-based nutrition guidance." },
       { property: "og:title", content: "Nutrition for Performance & Recovery" },
       { property: "og:description", content: "Foundational nutrients for bone health, muscle growth, and athletic performance." },
@@ -21,7 +21,7 @@ const boneNutrients = [
     name: "Calcium",
     icon: Bone,
     img: "https://images.unsplash.com/photo-1563636619-e9143da7973b?auto=format&fit=crop&w=900&q=80",
-    body: "Stored inside bones for strength and protection from fractures. 99% is found in the bone — the most abundant mineral in our body. Adults need ~1,000mg per day.",
+    body: "Stored inside bones for strength and protection from fractures. 99% is found in the bone. The most abundant mineral in our body. Adults need ~1,000mg per day.",
     foods: "Cheese, milk, cauliflower, nuts, yogurt, broccoli, cabbage, greens",
   },
   {
@@ -58,7 +58,7 @@ const macros = [
   {
     name: "Protein",
     icon: Beef,
-    body: "The building blocks for gaining and maintaining muscle. Broken down into amino acids — the most basic structure of proteins. Composes actin and myosin, the filaments that drive muscle contraction. Critical for immune function.",
+    body: "The building blocks for gaining and maintaining muscle. Broken down into amino acids. The most basic structure of proteins. Composes actin and myosin, the filaments that drive muscle contraction. Critical for immune function.",
     foods: "Meat, low-fat milk, eggs, whey, legumes",
   },
   {
@@ -79,7 +79,7 @@ const performance = [
   {
     name: "Water",
     icon: Droplets,
-    body: "Water is 60% of body weight — the most abundant substance in the body. Fluid intake vs loss matters during training, influenced by temperature, humidity, altitude, and sweat rate.",
+    body: "Water is 60% of body weight. The most abundant substance in the body. Fluid intake vs loss matters during training, influenced by temperature, humidity, altitude, and sweat rate.",
     rec: "5–7 ml/kg at least 4 hours before exercise. 1.5L per kg body weight lost after exercise.",
   },
   {
@@ -130,7 +130,7 @@ function NutritionPage() {
           </h2>
           <p className="mt-4 text-muted-foreground">
             Five key nutrients for optimal bone health: Calcium, Vitamin D, Vitamin K, Potassium, and Magnesium.
-            Athletes — recreational, collegiate, or professional — should regulate daily intake to support performance.
+            Athletes. Recreational, collegiate, or professional. Should regulate daily intake to support performance.
           </p>
         </div>
 
@@ -167,7 +167,7 @@ function NutritionPage() {
               Why Macronutrients Matter
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Macronutrients are needed by the body in relatively large amounts — energy, carbohydrate, fat, protein, and fiber.
+              Macronutrients are needed by the body in relatively large amounts. Energy, carbohydrate, fat, protein, and fiber.
             </p>
           </div>
           <div className="mt-12 grid gap-6 md:grid-cols-3">
@@ -288,7 +288,7 @@ function NutritionPage() {
       <BookingCTA
         eyebrow="Personalized Nutrition Coaching"
         title="Pair smart fueling with expert physical therapy"
-        body="Nutrition and movement go hand in hand. In a free consultation, Dr. Uriah will discuss your training, recovery, and health goals — and how an in-home program that combines targeted physical therapy with practical nutrition guidance can help you perform, recover, and feel your best."
+        body="Nutrition and movement go hand in hand. In a free consultation, Dr. Uriah will discuss your training, recovery, and health goals. And how an in-home program that combines targeted physical therapy with practical nutrition guidance can help you perform, recover, and feel your best."
         primaryLabel="Start Your Recovery"
       />
     </>
