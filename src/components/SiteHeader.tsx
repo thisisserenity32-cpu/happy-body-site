@@ -4,16 +4,15 @@ import { Menu, X, ChevronDown } from "lucide-react";
 
 const primaryNav = [
   { to: "/" as const, label: "Home" },
-  { to: "/services" as const, label: "Treatment" },
   { to: "/about" as const, label: "About" },
-  // Resources dropdown is rendered separately
+  // Resources dropdown is rendered separately (before Treatment)
+  { to: "/services" as const, label: "Treatment" },
   { to: "/contact" as const, label: "Contact" },
 ];
 
 const resources = [
   { to: "/fitness-principles" as const, label: "Fitness Principles", desc: "Strength, conditioning, mobility" },
-  { to: "/nutrition" as const, label: "Nutrition", desc: "Fuel for performance & recovery" },
-  { to: "/patients-clients" as const, label: "Clients", desc: "UFC champions, NHL stars, real patients" },
+  { to: "/nutrition" as const, label: "Nutrition", desc: "Fuel for performance and recovery" },
 ];
 
 const resourcePaths = new Set(resources.map((r) => r.to));
