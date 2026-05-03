@@ -79,8 +79,8 @@ const extras: ExtraImage[] = [
 type LightboxItem = { src: string; alt: string; name?: string; description?: string };
 
 const allLightboxItems: LightboxItem[] = [
-  ..featured.map((f) => ({ src: f.src, alt: f.alt, name: f.name, description: f.description })),
-  ..extras.map((e) => ({ src: e.src, alt: e.alt })),
+  ...featured.map((f) => ({ src: f.src, alt: f.alt, name: f.name, description: f.description })),
+  ...extras.map((e) => ({ src: e.src, alt: e.alt })),
 ];
 
 function PatientsClientsPage() {
